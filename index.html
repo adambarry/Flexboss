@@ -1,0 +1,371 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Flexbox Grid</title>
+        <meta name="viewport" content="initial-scale=1,width=device-width">
+        <style type="text/css">
+
+            /* apply a natural box layout model to all elements */
+            *, *:before, *:after {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            /*******************************************************************************
+            Test page styles
+            *******************************************************************************/
+            body {
+                margin: 0;
+                background-color: #c0c0c0;
+                background-image: url(data:image/png;base64,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);
+                background-position: center top;
+            }
+
+            .test {
+                width: 800px;
+                padding: 12px;
+                margin: 0 auto;
+                background-color: white;
+            }
+
+            .test-section {
+                border: 1px solid #5bc0de;
+                padding: 12px;
+                margin: 24px 0;
+                position: relative;
+            }
+
+            .test-section:last-child {
+                margin-bottom: 0;
+            }
+
+            .test-section > :first-child {
+                margin-top: 0;
+            }
+
+            .test-section > :last-child {
+                margin-bottom: 0;
+            }
+
+            .test-section > h2 {
+                width: calc(100% + 24px);
+                padding: 4px 12px;
+                position: relative;
+                top: -12px;
+                left: -12px;
+                background-color: #5bc0de;
+                color: white;
+            }
+
+            .test-title {
+            }
+
+            .test-example {
+                border: 1px solid #e1e1e8;
+                border-radius: 4px;
+                padding: 24px 12px 12px 12px;
+                margin-bottom: 24px;
+                position: relative;
+            }
+
+            .test-example:before {
+                content: "Example";
+                border-right: 1px solid #e1e1e8;
+                border-bottom: 1px solid #e1e1e8;
+                border-bottom-right-radius: 4px;
+                padding: 4px;
+                margin-bottom: 14px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #f7f7f9;
+                font-size: 9px;
+                color: gray;
+            }
+
+            code {
+                border-radius: 4px;
+                padding: 2px 4px;
+                background-color: #f9f2f4;
+                font-size: 90%;
+                color: #c7254e;
+                white-space: nowrap;
+            }
+
+            .highlight {
+                border: 1px solid #e1e1e8;
+                border-radius: 4px;
+                padding: 10px;
+                margin-bottom: 14px;
+                background-color: #f7f7f9;
+            }
+
+            pre code {
+                white-space: pre-wrap;
+            }
+
+            .highlight code {
+                background-color: transparent;
+            }
+
+
+            /*: Callouts
+            *******************************************************************************/
+            .test-callout {
+                border-left: 3px solid #eee;
+                padding: 10px;
+                margin: 1.5em 0;
+            }
+
+            .test-callout--info {
+                border-color: #5bc0de;
+                background-color: #f4f8fa;
+            }
+
+            .test-callout--interface {
+                border-color: #8ee66c;
+                background-color: #dff0d8;
+            }
+
+            .test-callout--warning {
+                border-color: #f0ad4e;
+                background-color: #fcf8f2;
+            }
+
+            .test-callout--danger {
+                border-color: #d9534f;
+                background-color: #fdf7f7;
+            }
+        </style>
+
+        <style type="text/css">
+
+            .spacing-medium {
+                margin: 8px;
+            }
+
+            .u-textCenter {
+                text-align: center !important
+            }
+
+        </style>
+
+
+        <style type="text/css">
+            .grid {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                list-style: none;
+            }
+
+            .grid--y {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .grid-cell,
+            .grid > .grid {
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -moz-box-flex: 1;
+                -ms-flex: 1;
+                flex: 1
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .grid.spacing-medium:not(.grid--y) > .grid-cell,
+            .grid-cell.spacing-medium {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+
+            .grid.grid--y > .grid-cell {
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+
+
+            :not(.grid--y) > .grid-cell:first-child {
+                /* background-color: green; */
+                margin-left: 0 !important;
+            }
+
+            :not(.grid--y) > .grid-cell:last-child {
+                /* background-color: red; */
+                margin-right: 0 !important;
+            }
+
+            .grid--y > .grid-cell:first-child {
+                margin-top: 0 !important;
+            }
+
+            .grid--y > .grid-cell:last-child {
+                margin-bottom: 0 !important;
+            }
+        </style>
+
+        <style type="text/css">
+            .test-example .grid {
+                border: 1px solid magenta;
+                background-color: #ffcf9c;
+            }
+
+            .test-example > .grid {
+                margin-bottom: 1em !important;
+            }
+
+            .test-example .grid-cell {
+                background: rgba(147, 128, 108, .1);
+                background-color: rgba(255, 255, 255, .5)
+            }
+
+            .demo {
+                padding: 8px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <article class="test">
+            <h1>Flexbox Grid test page</h1>
+
+            <div class="test-section">
+                <h2>Basic Grids</h2>
+
+                <div class="test-example">
+                    <div class="grid spacing-medium u-textCenter">
+                        <div class="grid-cell">1/1</div>
+                    </div>
+
+                    <div class="grid spacing-medium">
+                        <div class="grid-cell">1/2</div>
+
+                        <div class="grid-cell">1/2</div>
+                    </div>
+
+                    <div class="grid spacing-medium">
+                        <div class="grid-cell">1/3</div>
+
+                        <div class="grid-cell">1/3</div>
+
+                        <div class="grid-cell">1/3</div>
+                    </div>
+
+                    <div class="grid spacing-medium">
+                        <div class="grid-cell">1/4</div>
+
+                        <div class="grid-cell">1/4</div>
+
+                        <div class="grid-cell">1/4</div>
+
+                        <div class="grid-cell">1/4</div>
+                    </div>
+
+                    <div class="grid spacing-medium">
+                        <div class="grid-cell">1/5</div>
+
+                        <div class="grid-cell">1/5</div>
+
+                        <div class="grid-cell">1/5</div>
+
+                        <div class="grid-cell">1/5</div>
+
+                        <div class="grid-cell">1/5</div>
+                    </div>
+
+
+                    <div class="grid spacing-medium">
+                        <div class="grid-cell">
+                            <div class="demo">Full-height, even when my content doesn't fill the space.</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div class="demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="test-section">
+                <h2>Vertical</h2>
+
+                <div class="test-example">
+                    <div class="grid grid--y spacing-medium">
+                        <div class="grid-cell">
+                            Cell 1
+                        </div>
+                    </div>
+
+                    <div class="grid grid--y spacing-medium">
+                        <div class="grid-cell">
+                            Cell 1
+                        </div>
+
+                        <div class="grid-cell">
+                            Cell 2
+                        </div>
+                    </div>
+
+                    <div class="grid grid--y spacing-medium">
+                        <div class="grid-cell">Cell 1</div>
+
+                        <div class="grid-cell">Cell 2</div>
+
+                        <div class="grid-cell">Cell 3</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="test-example">
+                <div class="grid spacing-medium">
+                    <div class="grid spacing-medium">
+                        <div class="grid-cell">
+                            Cell 1
+                        </div>
+
+                        <div class="grid-cell">
+                            Cell 2
+                        </div>
+                    </div>
+
+                    <div class="grid-cell">
+                        Cell 2<br/>
+                        Line 2
+                    </div>
+
+                    <div class="grid-cell">
+                        Cell 3
+                    </div>
+
+                    <div class="grid-cell">
+                        Cell 4
+                    </div>
+                </div>
+            </div>
+
+
+        </article>
+
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    </body>
+</html>
