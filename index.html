@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Flexbox Grid</title>
+        <title>Flexbox Grid Test Page</title>
         <meta name="viewport" content="initial-scale=1,width=device-width">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
         <style type="text/css">
@@ -102,6 +102,10 @@
                 padding: 10px;
                 margin-bottom: 14px;
                 background-color: #f7f7f9;
+            }
+
+            textarea.highlight {
+                width: 100%;
             }
 
             pre code {
@@ -256,7 +260,7 @@
 
             .test-example .grid-cell:after {
                 counter-increment: grid-cell;
-                content: "grid-cell " counter(grid-cell);
+                content: ".grid-cell " counter(grid-cell);
                 border-radius: 4px;
                 padding: .2em .5em;
                 position: absolute;
@@ -287,7 +291,29 @@
     <body>
 
         <article class="test">
-            <h1>Flexbox Grid test page</h1>
+            <h1>Flexbox Grid Test Page</h1>
+
+<!--
+            <pre class="highlight">
+                <code>
+
+                    &lt;div class="grid">
+
+                    &lt;/div>
+
+                </code>
+            </pre>
+-->
+
+<!--
+            <textarea class="highlight code">
+                <div class="grid">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </textarea>
+-->
 
             <div class="test-section">
                 <h2>Basic Grids</h2>
@@ -376,11 +402,48 @@
                     </div>
                 </div>
 
+
+                <h3>Stretch (default) and Wrap</h3>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--wrap</code> modifier class added to wrapped elements.</p>
+                </div>
+
+                <div class="test-example">
+
+                    <div class="grid">
+                        <div class="grid-cell spacing--medium">Stretch</div>
+                        <div class="grid-cell g--wrap spacing--medium">Wrap</div>
+                    </div>
+
+                    <div class="grid">
+                        <div class="grid-cell g--wrap spacing--medium">Wrap</div>
+                        <div class="grid-cell spacing--medium">Stretch</div>
+                    </div>
+
+                    <div class="grid">
+                        <div class="grid-cell spacing--medium">Stretch</div>
+                        <div class="grid-cell g--wrap spacing--medium">Wrap</div>
+                        <div class="grid-cell g--wrap spacing--medium">Wrap</div>
+                    </div>
+
+                    <div class="grid">
+                        <div class="grid-cell g--wrap spacing--medium">Wrap</div>
+                        <div class="grid-cell g--wrap spacing--medium">Wrap</div>
+                        <div class="grid-cell spacing--medium">Stretch</div>
+                    </div>
+
+                </div>
+
             </div>
 
 
             <div class="test-section">
                 <h2>Vertical</h2>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--y</code> modifier class added to <code>grid</code> class elements</p>
+                </div>
 
                 <div class="test-example">
                     <div class="grid grid--y spacing--medium">
