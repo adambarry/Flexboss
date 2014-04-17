@@ -3,10 +3,13 @@
         <meta charset="utf-8">
         <title>Flexbox Grid</title>
         <meta name="viewport" content="initial-scale=1,width=device-width">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
         <style type="text/css">
 
             /* apply a natural box layout model to all elements */
-            *, *:before, *:after {
+            *,
+            *:before,
+            *:after {
                 -moz-box-sizing: border-box;
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
@@ -141,7 +144,7 @@
 
         <style type="text/css">
 
-            .spacing-medium {
+            .spacing--medium {
                 margin: 8px;
             }
 
@@ -186,10 +189,13 @@
                 display: -moz-box;
                 display: -ms-flexbox;
                 display: flex;
+                position: relative;
+
+                flex-wrap: wrap;
             }
 
-            .grid.spacing-medium:not(.grid--y) > .grid-cell,
-            .grid-cell.spacing-medium {
+            .grid.spacing--medium:not(.grid--y) > .grid-cell,
+            .grid-cell.spacing--medium {
                 margin-left: 8px;
                 margin-right: 8px;
             }
@@ -217,25 +223,62 @@
             .grid--y > .grid-cell:last-child {
                 margin-bottom: 0 !important;
             }
+
+            .g--wrap {
+                flex: 0 0 auto;
+            }
         </style>
 
         <style type="text/css">
             .test-example .grid {
                 border: 1px solid magenta;
-                background-color: #ffcf9c;
+                /* background-color: #ffcf9c; */
+            }
+
+            .test-example > .grid {
+                counter-reset: grid-cell;
             }
 
             .test-example > .grid {
                 margin-bottom: 1em !important;
             }
 
+            .test-example .grid--y .grid-cell {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
             .test-example .grid-cell {
-                background: rgba(147, 128, 108, .1);
+                border: 1px solid cyan;
+                /* background: rgba(147, 128, 108, .1); */
                 background-color: rgba(255, 255, 255, .5)
+            }
+
+            .test-example .grid-cell:after {
+                counter-increment: grid-cell;
+                content: "grid-cell " counter(grid-cell);
+                border-radius: 4px;
+                padding: .2em .5em;
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                background-color: rgba(0, 0, 0, .5);
+                color: white;
+                font-size: .5em;
             }
 
             .demo {
                 padding: 8px;
+            }
+
+            .grid-cell p:first-child,
+            .grid p:first-child {
+                margin-top: 0;
+            }
+
+            .grid-cell p:last-child,
+            .grid p:last-child {
+                margin-bottom: 0;
             }
 
         </style>
@@ -250,17 +293,17 @@
                 <h2>Basic Grids</h2>
 
                 <div class="test-example">
-                    <div class="grid spacing-medium u-textCenter">
+                    <div class="grid spacing--medium u-textCenter">
                         <div class="grid-cell">1/1</div>
                     </div>
 
-                    <div class="grid spacing-medium">
+                    <div class="grid spacing--medium">
                         <div class="grid-cell">1/2</div>
 
                         <div class="grid-cell">1/2</div>
                     </div>
 
-                    <div class="grid spacing-medium">
+                    <div class="grid spacing--medium">
                         <div class="grid-cell">1/3</div>
 
                         <div class="grid-cell">1/3</div>
@@ -268,7 +311,7 @@
                         <div class="grid-cell">1/3</div>
                     </div>
 
-                    <div class="grid spacing-medium">
+                    <div class="grid spacing--medium">
                         <div class="grid-cell">1/4</div>
 
                         <div class="grid-cell">1/4</div>
@@ -278,7 +321,7 @@
                         <div class="grid-cell">1/4</div>
                     </div>
 
-                    <div class="grid spacing-medium">
+                    <div class="grid spacing--medium">
                         <div class="grid-cell">1/5</div>
 
                         <div class="grid-cell">1/5</div>
@@ -291,7 +334,38 @@
                     </div>
 
 
-                    <div class="grid spacing-medium">
+                    <div class="grid spacing--medium">
+                        <div class="grid-cell">1/6</div>
+
+                        <div class="grid-cell">1/6</div>
+
+                        <div class="grid-cell">1/6</div>
+
+                        <div class="grid-cell">1/6</div>
+
+                        <div class="grid-cell">1/6</div>
+
+                        <div class="grid-cell">1/6</div>
+                    </div>
+
+                    <div class="grid spacing--medium">
+                        <div class="grid-cell">1/7</div>
+
+                        <div class="grid-cell">1/7</div>
+
+                        <div class="grid-cell">1/7</div>
+
+                        <div class="grid-cell">1/7</div>
+
+                        <div class="grid-cell">1/7</div>
+
+                        <div class="grid-cell">1/7</div>
+
+                        <div class="grid-cell">1/7</div>
+                    </div>
+
+
+                    <div class="grid spacing--medium">
                         <div class="grid-cell">
                             <div class="demo">Full-height, even when my content doesn't fill the space.</div>
                         </div>
@@ -309,13 +383,13 @@
                 <h2>Vertical</h2>
 
                 <div class="test-example">
-                    <div class="grid grid--y spacing-medium">
+                    <div class="grid grid--y spacing--medium">
                         <div class="grid-cell">
                             Cell 1
                         </div>
                     </div>
 
-                    <div class="grid grid--y spacing-medium">
+                    <div class="grid grid--y spacing--medium">
                         <div class="grid-cell">
                             Cell 1
                         </div>
@@ -325,7 +399,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid--y spacing-medium">
+                    <div class="grid grid--y spacing--medium">
                         <div class="grid-cell">Cell 1</div>
 
                         <div class="grid-cell">Cell 2</div>
@@ -335,34 +409,89 @@
                 </div>
             </div>
 
+            <div class="test-section">
+                <h2>Nested Grids</h2>
+                <div class="test-example">
+                    <div class="grid spacing--medium">
+                        <div class="grid grid--y spacing--medium">
+                            <div class="grid-cell">2,1</div>
 
-            <div class="test-example">
-                <div class="grid spacing-medium">
-                    <div class="grid spacing-medium">
-                        <div class="grid-cell">
-                            Cell 1
+                            <div class="grid-cell">2,2</div>
                         </div>
 
-                        <div class="grid-cell">
-                            Cell 2
+                        <div class="grid-cell">1,2</div>
+                    </div>
+
+                    <div class="grid grid--y">
+                        <div class="grid-cell">1,1</div>
+
+                        <div class="grid">
+                            <div class="grid-cell">2,1</div>
+
+                            <div class="grid">
+                                <div class="grid-cell">3,1</div>
+
+                                <div class="grid-cell">3,2</div>
+
+                                <div class="grid grid--y">
+                                    <div class="grid-cell">4,1</div>
+
+                                    <div class="grid-cell">4,2</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="grid-cell">
-                        Cell 2<br/>
-                        Line 2
-                    </div>
-
-                    <div class="grid-cell">
-                        Cell 3
-                    </div>
-
-                    <div class="grid-cell">
-                        Cell 4
                     </div>
                 </div>
             </div>
 
+            <div class="test-section">
+                <h2>Media Object</h2>
+
+                <h3>Normal</h3>
+
+                <div class="test-example">
+
+                    <div class="grid">
+                        <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/75x75" alt="" />
+
+                        <div class="grid-cell spacing--medium">
+                            <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere, a faucibus elit porta. Nunc lobortis eros quis felis porttitor volutpat. Curabitur porttitor bibendum metus, vehicula varius mi pharetra tristique. Phasellus sit amet nibh eu justo suscipit placerat eu id arcu. Vestibulum tempus diam in erat scelerisque, et lobortis erat congue. Suspendisse pretium hendrerit mi sit amet vulputate. Pellentesque interdum fringilla metus quis tincidunt. Nam vulputate, sem ac auctor eleifend, sem orci tincidunt dui, id lobortis libero quam eget purus. Mauris vulputate ligula eu massa dignissim, sed mollis turpis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat orci a consectetur scelerisque. Maecenas vel mi semper, tincidunt lorem ac, elementum risus. Curabitur non erat enim.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <h3>Nested</h3>
+
+                <div class="test-example">
+
+                    <div class="grid">
+                        <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/75x75" alt="" />
+
+                        <div class="grid-cell spacing--medium">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nibh ipsum. Fusce nec felis arcu. Quisque cursus posuere justo, lobortis pharetra libero facilisis interdum. Sed nec sem ut erat volutpat elementum. Cras sit amet tincidunt risus. Duis cursus elit magna, in auctor erat faucibus vitae. Ut pharetra rhoncus facilisis.</p>
+
+                            <div class="grid">
+                                <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/75x75" alt="" />
+
+                                <div class="grid-cell spacing--medium">
+                                    <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere, a faucibus elit porta. Nunc lobortis eros quis felis porttitor volutpat. Curabitur porttitor bibendum metus, vehicula varius mi pharetra tristique. Phasellus sit amet nibh eu justo suscipit placerat eu id arcu. Vestibulum tempus diam in erat scelerisque, et lobortis erat congue. Suspendisse pretium hendrerit mi sit amet vulputate. Pellentesque interdum fringilla metus quis tincidunt. Nam vulputate, sem ac auctor eleifend, sem orci tincidunt dui, id lobortis libero quam eget purus. Mauris vulputate ligula eu massa dignissim, sed mollis turpis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat orci a consectetur scelerisque. Maecenas vel mi semper, tincidunt lorem ac, elementum risus. Curabitur non erat enim.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid">
+                                <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/75x75" alt="" />
+
+                                <div class="grid-cell spacing--medium">
+                                    <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </article>
 
