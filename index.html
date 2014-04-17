@@ -163,9 +163,9 @@
 
         <style type="text/css">
             .grid {
-                width: 100%;
-                margin: 0;
+                width: 100%; /* make sure that g--wrapped .grid elements span the entire width */
                 padding: 0;
+                margin: 0;
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -moz-box;
@@ -187,7 +187,7 @@
             .grid > .grid {
                 -webkit-box-flex: 1;
                 -webkit-flex: 1;
-                -moz-box-flex: 1;
+                -moz-box-flex: 1 ;
                 -ms-flex: 1;
                 flex: 1;
                 display: -webkit-box;
@@ -235,7 +235,7 @@
                 -moz-box-flex: 0;
                 -webkit-flex: 0 0 auto;
                 -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
+                flex: 0 0 auto !important;
 
                 -webkit-align-self: flex-start;
                 -ms-flex-item-align: start;
@@ -525,7 +525,7 @@
                 <div class="test-example">
 
                     <div class="grid">
-                        <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/75x75" alt="" />
+                        <img class="grid-cell g--wrap spacing--medium" src="http://placehold.it/75x75" alt="" />
 
                         <div class="grid-cell spacing--medium">
                             <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere, a faucibus elit porta. Nunc lobortis eros quis felis porttitor volutpat. Curabitur porttitor bibendum metus, vehicula varius mi pharetra tristique. Phasellus sit amet nibh eu justo suscipit placerat eu id arcu. Vestibulum tempus diam in erat scelerisque, et lobortis erat congue. Suspendisse pretium hendrerit mi sit amet vulputate. Pellentesque interdum fringilla metus quis tincidunt. Nam vulputate, sem ac auctor eleifend, sem orci tincidunt dui, id lobortis libero quam eget purus. Mauris vulputate ligula eu massa dignissim, sed mollis turpis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat orci a consectetur scelerisque. Maecenas vel mi semper, tincidunt lorem ac, elementum risus. Curabitur non erat enim.</p>
@@ -540,21 +540,21 @@
                 <div class="test-example">
 
                     <div class="grid">
-                        <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/75x75" alt="" />
+                        <img class="grid-cell g--wrap spacing--medium" src="http://placehold.it/75x75" alt="" />
 
                         <div class="grid grid--y spacing--medium">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nibh ipsum. Fusce nec felis arcu. Quisque cursus posuere justo, lobortis pharetra libero facilisis interdum. Sed nec sem ut erat volutpat elementum. Cras sit amet tincidunt risus. Duis cursus elit magna, in auctor erat faucibus vitae. Ut pharetra rhoncus facilisis.</p>
 
-                            <div class="grid">
-                                <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/50x50" alt="" />
+                            <div class="grid g--wrap">
+                                <img class="grid-cell g--wrap spacing--medium" src="http://placehold.it/50x50" alt="" />
 
                                 <div class="grid-cell spacing--medium">
                                     <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere, a faucibus elit porta. Nunc lobortis eros quis felis porttitor volutpat. Curabitur porttitor bibendum metus, vehicula varius mi pharetra tristique. Phasellus sit amet nibh eu justo suscipit placerat eu id arcu. Vestibulum tempus diam in erat scelerisque, et lobortis erat congue. Suspendisse pretium hendrerit mi sit amet vulputate. Pellentesque interdum fringilla metus quis tincidunt. Nam vulputate, sem ac auctor eleifend, sem orci tincidunt dui, id lobortis libero quam eget purus. Mauris vulputate ligula eu massa dignissim, sed mollis turpis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat orci a consectetur scelerisque. Maecenas vel mi semper, tincidunt lorem ac, elementum risus. Curabitur non erat enim.</p>
                                 </div>
                             </div>
 
-                            <div class="grid">
-                                <img class="grid-cell spacing--medium g--wrap" style="align-self: flex-start;" src="http://placehold.it/50x50" alt="" />
+                            <div class="grid g--wrap">
+                                <img class="grid-cell g--wrap spacing--medium" src="http://placehold.it/50x50" alt="" />
 
                                 <div class="grid-cell spacing--medium">
                                     <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere.</p>
