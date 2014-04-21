@@ -311,7 +311,7 @@
                     </div>
                 </div>
 
-                <h3>Fit (Y-Axis Grid)</h3>
+                <h4>Fit (Y-Axis Grid)</h4>
 
                 <div class="test-callout test-callout--warning">
                     <h4>Hardcoded height</h4>
@@ -365,7 +365,7 @@
                     </div>
                 </div>
 
-                <h3>Wrap (Y-Axis Grid)</h3>
+                <h4>Wrap (Y-Axis Grid)</h4>
 
                 <div class="test-callout test-callout--warning">
                     <h4>Hardcoded height</h4>
@@ -506,6 +506,118 @@
                     </div>
 
                 </div>
+            </div>
+
+
+            <div class="test-section">
+                <h2>Alignment</h2>
+
+                <h3>Main-Axis Alignment</h3>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Wrapped elements</h4>
+                    <p>For the main-axis alignment test-cases the <code>g--wrap</code> modifier class has been added to the <code>grid-cell</code> elements to prevent them from spanning the width of the <code>grid</code>.</p>
+                </div>
+
+<!--
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--main-start</code> modifier class added to <code>grid</code> element.</p>
+                </div>
+-->
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell g--wrap">Start</div>
+                        <div class="grid-cell g--wrap">Start</div>
+                    </div>
+                </div>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--main-center</code> modifier class added to <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid g--main-center">
+                        <div class="grid-cell g--wrap ">Center</div>
+                        <div class="grid-cell g--wrap ">Center</div>
+                    </div>
+                </div>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--main-end</code> modifier class added to <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid g--main-end">
+                        <div class="grid-cell g--wrap ">End</div>
+                        <div class="grid-cell g--wrap ">End</div>
+                    </div>
+                </div>
+
+
+                <h3>Cross-Axis Alignment</h3>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell g--cross-start">Top</div>
+
+                        <div class="grid-cell">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
+
+                        <div class="grid-cell g--cross-center">Center</div>
+
+                        <div class="grid-cell g--cross-end">Bottom</div>
+                    </div>
+                </div>
+
+                <h4>Cross-Axis Alignment (Y-Axis Grid)</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--y">
+                        <div class="grid-cell g--cross-start">Left</div>
+
+                        <div class="grid-cell">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
+
+                        <div class="grid-cell g--cross-center">Center</div>
+
+                        <div class="grid-cell g--cross-end">Right</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="test-section">
+                <h2>Ordering (use with caution - see callout)</h2>
+
+                <p>With flexbox you can change the order of appearance for flex-items without having to change the order of the HTML.</p>
+                <p>By default, each flex-item has an <code>order: 0</code> (<code>box-ordinal-group: 1</code> in older browsers) - and the higher the <code>order</code> value, the farther back the element will be rendered. This means that if you only specify an <code>order</code> value higher than 0 on a single <code>grid-cell</code> in a collection (leaving the rest unspecified), the element with the <code>order</code> value higher than 0 will be rendered at the end of the collection, as the rest of the elements will have <code>order: 0</code> by default.</p>
+
+                <div class="test-callout test-callout--danger">
+                    <h4>CSS Pseudo Classes Not Respected</h4>
+                    <p>When using flexbox's reordering capabilities it seems that style-definitions for the CSS pseudo classes <code>:first-child</code> and <code>:last-child</code> are not respected as content is rendered according to the HTML element order.</p>
+                </div>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--order1</code> modifier class added to the first <code>grid-cell</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell g--order1">First in HTML</div>
+
+                        <div class="grid-cell">Second in HTML</div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell g--order1">First in HTML</div>
+
+                        <div class="grid-cell">Second in HTML</div>
+
+                        <div class="grid-cell">Third in HTML</div>
+                    </div>
+                </div>
+
             </div>
 
 
