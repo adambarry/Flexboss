@@ -21,22 +21,6 @@
         </style>
 
         <style type="text/css">
-
-            . {
-                margin: 8px;
-            }
-
-            .u-textCenter {
-                text-align: center !important
-            }
-
-        </style>
-
-
-        <style type="text/css">
-        </style>
-
-        <style type="text/css">
             .test-example .grid {
                 border: 1px solid magenta;
             }
@@ -51,35 +35,38 @@
                 /* background-color: rgba(255, 255, 255, .5) */
             }
 
+            .test-example .grid-cell:before,
             .test-example .grid-cell:after {
-                counter-increment: grid-cell;
-                content: ".grid-cell " counter(grid-cell);
                 border-radius: 4px;
                 padding: .2em .5em;
                 position: absolute;
                 top: 2px;
-                right: 2px;
                 background-color: rgba(0, 0, 0, .5);
                 color: white;
                 font-size: .5em;
             }
 
-            .demo {
-                padding: 8px;
-            }
-
-            /*
-.grid-cell :first-child,
-            .grid :first-child {
-                margin-top: 0;
-            }
-
-            .grid-cell :last-child,
-            .grid :last-child {
-                margin-bottom: 0;
+/*
+            .test-example .grid-cell:after {
+                counter-increment: grid-cell;
+                content: "(" counter(grid-cell) ")";
+                right: 2px;
             }
 */
 
+            .test-show-classes .test-example .grid-cell:after {
+                content: attr(class);
+                border-radius: 4px;
+                padding: 2px 4px;
+                right: 2px;
+                background-color: rgba(249, 242, 244, .9);
+                font-size: .5em;
+                color: #c7254e;
+            }
+
+            .demo {
+                padding: 8px;
+            }
 
             .test-example :not(.grid--y) > .grid-cell,
             .test-example :not(.grid--y) > .grid {
@@ -95,7 +82,6 @@
             .test-example :not(.grid--y) > .grid:last-child {
                 margin-right: 0;
             }
-
 
             .test-example .grid--y > .grid-cell,
             .test-example .grid--y > .grid {
@@ -116,7 +102,7 @@
 
     <body>
 
-        <article class="test">
+        <article class="test test-show-classes">
             <h1>Flexbox Grid Test Page</h1>
 
 <!--
@@ -142,7 +128,7 @@
 -->
 
             <div class="test-section">
-                <h2>Basic Grids</h2>
+                <h2>Basic Grids: Horizontal (X-Axis)</h2>
 
                 <div class="test-example">
                     <div class="grid ">
@@ -239,51 +225,12 @@
                         </div>
                     </div>
                 </div>
-
-
-                <h3>Stretch (default) and Wrap</h3>
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>g--wrap</code> modifier class added to wrapped elements.</p>
-                </div>
-
-                <div class="test-example">
-
-                    <div class="grid">
-                        <div class="grid-cell ">Stretch</div>
-                        <div class="grid-cell g--wrap ">Wrap</div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <div class="grid-cell g--wrap ">Wrap</div>
-                        <div class="grid-cell ">Stretch</div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <div class="grid-cell ">Stretch</div>
-                        <div class="grid-cell g--wrap ">Wrap</div>
-                        <div class="grid-cell g--wrap ">Wrap</div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <div class="grid-cell g--wrap ">Wrap</div>
-                        <div class="grid-cell g--wrap ">Wrap</div>
-                        <div class="grid-cell ">Stretch</div>
-                    </div>
-
-                </div>
-
             </div>
 
-
             <div class="test-section">
-                <h2>Vertical</h2>
+                <h2>Vertical (Y-Axis) Grids</h2>
+
+                <p>When you want to lay out the <code>grid-cell</code> elements vertically, you can simply add a modifier class to a <code>grid</code> element and its child <code>grid-cell</code> elements will subsequently be ordered along the y-axis.</p>
 
                 <div class="test-callout test-callout--interface">
                     <p><code>grid--y</code> modifier class added to <code>grid</code> class elements</p>
@@ -318,6 +265,121 @@
                         <div class="grid-cell">Cell 3</div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="test-section">
+                <h2>Fit and Wrap</h2>
+
+                <p>By default <code>grid-cell</code> elements stretch and divide the available space within a <code>grid</code> element equally, but you can change this by adding modifier classes to the individual <code>grid-cell</code> elements.</p>
+
+                <h3>Fit</h3>
+
+                <p>When you want to limit the width of a <code>grid-cell</code> element to fit its content, but still want it to expand to the height of the <code>grid</code>, you can apply the <code>g--fit</code> modifier class to the element itself.</p>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--fit</code> modifier class added to fitted elements.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell">Stretch</div>
+                        <div class="grid-cell g--fit">Fit</div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell g--fit">Fit</div>
+                        <div class="grid-cell">Stretch</div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell">Stretch</div>
+                        <div class="grid-cell g--fit">Fit</div>
+                        <div class="grid-cell g--fit">Fit</div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell">Stretch<br/>second line (fitted elements fill the height of the grid)</div>
+                        <div class="grid-cell g--fit">Fit</div>
+                        <div class="grid-cell g--fit">Fit</div>
+                    </div>
+                </div>
+
+                <h3>Fit (Y-Axis Grid)</h3>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Hardcoded height</h4>
+                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the height is not equally divided by the <code>grid-cell</code> elements.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--y" style="height: 150px;">
+                        <div class="grid-cell">Stretch</div>
+                        <div class="grid-cell g--fit">Fit</div>
+                        <div class="grid-cell g--fit">Fit</div>
+                    </div>
+                </div>
+
+
+                <h3>Wrap</h3>
+
+                <p>When you want a <code>grid-cell</code> element to only fill up the space for its contents (horizontally and vertically), you can apply <code>g--wrap</code> modifier class to the element itself.</p>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--wrap</code> modifier class added to wrapped elements.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell ">Stretch</div>
+                        <div class="grid-cell g--wrap ">Wrap</div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell g--wrap ">Wrap</div>
+                        <div class="grid-cell ">Stretch</div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell ">Stretch</div>
+                        <div class="grid-cell g--wrap ">Wrap</div>
+                        <div class="grid-cell g--wrap ">Wrap</div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <div class="grid-cell ">Stretch<br/>second line (notice how the wrapped elements don't fill the height of the grid)</div>
+                        <div class="grid-cell g--wrap ">Wrap</div>
+                        <div class="grid-cell g--wrap ">Wrap</div>
+                    </div>
+                </div>
+
+                <h3>Wrap (Y-Axis Grid)</h3>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Hardcoded height</h4>
+                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the <code>grid-cell</code> elements neither fit the width nor the height of the <code>grid</code>, but rather wrap around their contents.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--y" style="height: 150px;">
+                        <div class="grid-cell">Stretch</div>
+                        <div class="grid-cell g--wrap">Wrap</div>
+                        <div class="grid-cell g--wrap">Wrap</div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="test-section">
@@ -448,13 +510,14 @@
 
 
             <div class="test-section">
-                <h2>Desktop Container</h2>
+                <h2>Desktop Container Prototype</h2>
 
                 <div class="test-example">
 
                     <div class="grid grid--y" style="height: 400px;">
 
-                        <header class="grid grid--y g--wrap">
+                        <!--
+<header class="grid grid--y g--wrap">
                             <div class="grid">
 
                                 <div class="grid-cell g--fit">WLC Logo</div>
@@ -477,9 +540,30 @@
                                 <div class="grid-cell g--fit">Search</div>
                             </div>
                         </header>
+-->
+
+                        <header class="grid g--wrap">
+                            <div class="grid-cell g--wrap">WLC Logo</div>
+
+                            <div class="grid grid--y">
+                                <div class="grid g--wrap g--main-end">
+                                    <div class="grid-cell g--fit">AJAX loader</div>
+                                    <div class="grid-cell g--fit">John Doe</div>
+                                    <div class="grid-cell g--fit">Notifications</div>
+                                    <div class="grid-cell g--fit">Dashboard</div>
+                                    <div class="grid-cell g--fit">Account</div>
+                                    <div class="grid-cell g--fit">Sign out</div>
+                                </div>
+
+                                <div class="grid g--main-end">
+                                    <div class="grid-cell g--fit">Help</div>
+                                    <div class="grid-cell g--fit">Search</div>
+                                </div>
+                            </div>
+                        </header>
 
                         <article class="grid">
-                            <div class="grid-cell g--1of3">OU browser</div>
+                            <div class="grid-cell g--1of3">Organizational Unit browser</div>
 
                             <div class="grid-cell">Workbench</div>
                         </article>

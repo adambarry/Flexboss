@@ -36,37 +36,6 @@
     /* flex-wrap: wrap; */
 }
 
-/*
-.grid.spacing--medium:not(.grid--y) > .grid-cell,
-.grid-cell.spacing--medium {
-    margin-left: 8px;
-    margin-right: 8px;
-}
-*/
-
-/*
-.grid.grid--y > .grid-cell {
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-*/
-
-
-/*
-:not(.grid--y) > .grid-cell:first-child {
-    margin-left: 0 !important;
-}
-
-:not(.grid--y) > .grid-cell:last-child {
-    margin-right: 0 !important;
-}
-
-.grid--y > .grid-cell:first-child {
-}
-
-.grid--y > .grid-cell:last-child {
-}
-*/
 
 .g--fit {
     -webkit-box-flex: 0 !important;
