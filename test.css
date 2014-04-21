@@ -9,10 +9,13 @@ body {
 }
 
 .test {
-    max-width: 800px;
     padding: 12px;
     margin: 0 auto;
     background-color: white;
+}
+
+.test--constrain-width {
+    max-width: 800px;
 }
 
 .test-section {
