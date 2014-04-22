@@ -1,8 +1,17 @@
 /*******************************************************************************
 Flexbox Grid Styles
 *******************************************************************************/
+
+/*
+    1:  width: 100%; was initially added to make sure that g--fit'ed .grid
+        elements would span the entire width of its parent.
+
+    2:  width: 100%; was removed because it makes y-axis grid-cells exceed their
+        grids. SO NO WIDTH: 100% FOR .GRID ELEMENTS! Instead a special style
+        definition has been made for ".grid.g--wrap" which sets the width: 100%
+*/
 .grid {
-    /* width: 100%; */ /* make sure that g--fit'ed .grid elements span the entire width */
+    /*width: 100%; /* 1, 2 */
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -114,21 +123,6 @@ Flexbox Grid Styles
 .grid.g--wrap {
     width: 100%; /* make sure that g--fit'ed .grid elements span the entire width */
 }
-
-
-/*
-[class*="g--space"] > .grid-cell {
-    margin: 0 4px;
-}
-
-[class*="g--space"] > .grid-cell:first-child {
-    margin-left: 0;
-}
-
-[class*="g--space"] > .grid-cell:last-child {
-    margin-right: 0;
-}
-*/
 
 
 /* Grid Cell Alignment
