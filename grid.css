@@ -2,7 +2,8 @@
 Flexbox Grid Styles
 *******************************************************************************/
 .grid {
-    width: 100%; /* make sure that g--fit'ed .grid elements span the entire width */
+    /* width: 100%; */ /* make sure that g--fit'ed .grid elements span the entire width */
+    max-width: 100%;
     padding: 0;
     margin: 0;
     display: -webkit-box;
@@ -40,8 +41,52 @@ Flexbox Grid Styles
 }
 
 
-/* Spacing (gutters)
+/* Grid Spacing (gutters): X-Axis Grid
 *******************************************************************************/
+.grid--gutters:not(.grid--y) > .grid,
+.grid--gutters :not(.grid--y) > .grid,
+.grid--gutters:not(.grid--y) > .grid-cell,
+.grid--gutters :not(.grid--y) > .grid-cell {
+    margin: 8px 4px;
+}
+
+.grid--gutters:not(.grid--y) > .grid-cell:first-child,
+.grid--gutters .grid:not(.grid--y) > .grid-cell:first-child,
+.grid--gutters:not(.grid--y) > .grid:first-child,
+.grid--gutters .grid:not(.grid--y) > .grid:first-child {
+    margin-left: 8px;
+}
+
+.grid--gutters:not(.grid--y) > .grid-cell:last-child,
+.grid--gutters .grid:not(.grid--y) > .grid-cell:last-child,
+.grid--gutters:not(.grid--y) .grid:last-child,
+.grid--gutters .grid:not(.grid--y) .grid:last-child {
+    margin-right: 8px;
+}
+
+
+/* Grid Spacing (gutters): Y-Axis Grid
+*******************************************************************************/
+.grid--gutters[class*="grid--y"] > .grid,
+.grid--gutters [class*="grid--y"] > .grid,
+.grid--gutters[class*="grid--y"] > .grid-cell,
+.grid--gutters [class*="grid--y"] > .grid-cell {
+    margin: 4px 8px;
+}
+
+.grid--gutters[class*="grid--y"] > .grid-cell:first-child,
+.grid--gutters .grid--y > .grid-cell:first-child,
+.grid--gutters[class*="grid--y"] > .grid:first-child,
+.grid--gutters .grid--y > .grid:first-child {
+    margin-top: 8px;
+}
+
+.grid--gutters[class*="grid--y"] > .grid-cell:last-child,
+.grid--gutters .grid--y > .grid-cell:last-child,
+.grid--gutters[class*="grid--y"] > .grid:last-child,
+.grid--gutters .grid--y > .grid:last-child {
+    margin-bottom: 8px;
+}
 
 
 /* Wrapping
@@ -64,6 +109,10 @@ Flexbox Grid Styles
     -webkit-align-self: flex-start; /* Safari */
     -ms-flex-item-align: start;
     align-self: flex-start;
+}
+
+.grid.g--wrap {
+    width: 100%; /* make sure that g--fit'ed .grid elements span the entire width */
 }
 
 
