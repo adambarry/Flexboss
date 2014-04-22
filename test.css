@@ -8,6 +8,9 @@ body {
     background-position: center top;
 }
 
+
+/* Test: General Styles
+*******************************************************************************/
 .test {
     padding: 12px;
     margin: 0 auto;
@@ -18,6 +21,42 @@ body {
     max-width: 800px;
 }
 
+.test code {
+    border-radius: 4px;
+    padding: 2px 4px;
+    background-color: rgba(249, 242, 244, 1);
+    font-size: 90%;
+    color: #c7254e;
+    white-space: nowrap;
+}
+
+.test .highlight {
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+}
+
+.test pre code {
+    white-space: pre-wrap;
+}
+
+.test .highlight code {
+    background-color: transparent;
+}
+
+.test > dl dt {
+    font-weight: bold;
+}
+
+.test > dl dd {
+    margin-left: 0;
+}
+
+
+/* Test Section
+*******************************************************************************/
 .test-section {
     border: 1px solid #5bc0de;
     padding: 12px;
@@ -47,9 +86,9 @@ body {
     color: white;
 }
 
-.test-title {
-}
 
+/* Test Example
+*******************************************************************************/
 .test-example {
     border: 1px solid #e1e1e8;
     border-radius: 4px;
@@ -73,37 +112,8 @@ body {
     color: gray;
 }
 
-code {
-    border-radius: 4px;
-    padding: 2px 4px;
-    background-color: rgba(249, 242, 244, 1);
-    font-size: 90%;
-    color: #c7254e;
-    white-space: nowrap;
-}
 
-.highlight {
-    border: 1px solid #e1e1e8;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 14px;
-    background-color: #f7f7f9;
-}
-
-textarea.highlight {
-    width: 100%;
-}
-
-pre code {
-    white-space: pre-wrap;
-}
-
-.highlight code {
-    background-color: transparent;
-}
-
-
-/*: Callouts
+/* Callouts
 *******************************************************************************/
 .test-callout {
     border-left: 3px solid #eee;
@@ -129,4 +139,43 @@ pre code {
 .test-callout--danger {
     border-color: #d9534f;
     background-color: #ffdada;
+}
+
+
+/* SyntaxHighlighter Style-Overrides
+*******************************************************************************/
+.test .syntaxhighlighter {
+    background-color: #f7f7f9 !important;
+}
+
+.test .syntaxhighlighter code {
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.test .syntaxhighlighter {
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+}
+
+.test .syntaxhighlighter .toolbar {
+    display: none;
+}
+
+.test .syntaxhighlighter .line {
+    font-size: normal;
+    font-family: monospace;
+}
+
+.test .syntaxhighlighter .line.alt1,
+.test .syntaxhighlighter .line.alt2 {
+    background-color: transparent !important;
+}
+
+.test .syntaxhighlighter .code {
+    padding-left: 8px;
 }
