@@ -7,8 +7,7 @@ Flexbox Grid Styles
         elements would span the entire width of its parent.
 
     2:  width: 100%; was removed because it makes y-axis grid-cells exceed their
-        grids. SO NO WIDTH: 100% FOR .GRID ELEMENTS! Instead a special style
-        definition has been made for ".grid.g--wrap" which sets the width: 100%
+        grids. SO NO WIDTH: 100% FOR .GRID ELEMENTS!
 */
 .grid {
     /*width: 100%; /* 1, 2 */
@@ -115,13 +114,16 @@ Flexbox Grid Styles
     -ms-flex: 0 0 auto !important;
     flex: 0 0 auto !important;
 
-    -webkit-align-self: flex-start; /* Safari */
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-}
+    /*
+        1:  Make sure that the flex container/item wraps its content on the
+            cross-axis
 
-.grid.g--wrap {
-    width: 100%; /* make sure that g--fit'ed .grid elements span the entire width */
+        2:  Safari
+    */
+
+    -webkit-align-self: flex-start; /* 1, 2 */
+    -ms-flex-item-align: start; /* 1 */
+    align-self: flex-start; /* 1 */
 }
 
 

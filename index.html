@@ -102,51 +102,7 @@
 
             <p>The <code>grid</code> class elements represent <em>flex containers</em> and <code>grid-cell</code> class elements represent <em>flex items</em>.</p>
 
-            <div class="test-section">
-                <h2>Grid-Cell Spacing (Gutters)</h2>
 
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--gutters</code> modifier class added to <code>grid</code> element.</p>
-                </div>
-
-
-                <div class="test-example">
-                    <div class="grid grid--gutters">
-                        <div class="grid-cell">One</div>
-
-                        <div class="grid-cell">Two</div>
-
-                        <div class="grid">
-                            <div class="grid-cell">Three</div>
-
-                            <div class="grid grid--y">
-                                <div class="grid-cell">Four</div>
-
-                                <div class="grid-cell">Five</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="test-example">
-                    <div class="grid grid--y grid--gutters">
-                        <div class="grid-cell">One</div>
-
-                        <div class="grid-cell">Two</div>
-
-                        <div class="grid">
-                            <div class="grid-cell">Three</div>
-
-                            <div class="grid-cell">Four</div>
-
-                            <div class="grid-cell">Five</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
             <div class="test-section">
                 <h2>Basic Grids: Horizontal (X-Axis)</h2>
@@ -282,6 +238,52 @@
                         <div class="grid-cell">Cell 3</div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="test-section">
+                <h2>Grid-Cell Spacing (Gutters)</h2>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--gutters</code> modifier class added to wrapper <code>grid</code> elements.</p>
+                </div>
+
+
+                <div class="test-example">
+                    <div class="grid grid--gutters">
+                        <div class="grid-cell">One</div>
+
+                        <div class="grid-cell">Two</div>
+
+                        <div class="grid">
+                            <div class="grid-cell">Three</div>
+
+                            <div class="grid grid--y">
+                                <div class="grid-cell">Four</div>
+
+                                <div class="grid-cell">Five</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--gutters">
+                        <div class="grid-cell">One</div>
+
+                        <div class="grid-cell">Two</div>
+
+                        <div class="grid">
+                            <div class="grid-cell">Three</div>
+
+                            <div class="grid-cell">Four</div>
+
+                            <div class="grid-cell">Five</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -611,6 +613,7 @@
                 <div class="test-callout test-callout--danger">
                     <h4>CSS Pseudo Classes Not Respected</h4>
                     <p>When using flexbox's reordering capabilities it seems that style-definitions for the CSS pseudo classes <code>:first-child</code> and <code>:last-child</code> are not respected as content is rendered according to the HTML element order.</p>
+                    <p>The <code>grid--gutters</code> modifier class has been added to the <code>grid</code> elements to showcase the problem.</p>
                 </div>
 
                 <div class="test-callout test-callout--interface">
@@ -618,7 +621,7 @@
                 </div>
 
                 <div class="test-example">
-                    <div class="grid">
+                    <div class="grid grid--gutters">
                         <div class="grid-cell g--order1">First in HTML</div>
 
                         <div class="grid-cell">Second in HTML</div>
@@ -626,7 +629,7 @@
                 </div>
 
                 <div class="test-example">
-                    <div class="grid">
+                    <div class="grid grid--gutters">
                         <div class="grid-cell g--order1">First in HTML</div>
 
                         <div class="grid-cell">Second in HTML</div>
@@ -647,12 +650,12 @@
 
                 <div class="test-example">
 
-                    <div class="grid grid--y" style="height: 400px;">
-                        <header class="grid g--wrap">
+                    <div class="grid grid--y grid--gutters" style="height: 400px;">
+                        <header class="grid g--fit">
                             <div class="grid-cell g--wrap">WLC Logo</div>
 
                             <div class="grid grid--y">
-                                <div class="grid g--wrap g--main-end">
+                                <div class="grid g--fit g--main-end">
                                     <div class="grid-cell g--fit">AJAX loader</div>
                                     <div class="grid-cell g--fit">John Doe</div>
                                     <div class="grid-cell g--fit">Notifications</div>
@@ -661,7 +664,7 @@
                                     <div class="grid-cell g--fit">Sign out</div>
                                 </div>
 
-                                <div class="grid g--main-end">
+                                <div class="grid g--fit g--main-end">
                                     <div class="grid-cell g--fit">Help</div>
                                     <div class="grid-cell g--fit">Search</div>
                                 </div>
