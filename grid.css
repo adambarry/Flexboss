@@ -75,7 +75,7 @@ Flexbox Grid Styles
 }
 
 
-/* Grid Spacing (gutters): X-Axis Grid (right-to-left)
+/* Grid Spacing (gutters): X-Axis Grid (right-to-left text direction)
 *******************************************************************************/
 [dir="rtl"] .grid--gutters:not(.grid--y) > .grid-cell:first-child,
 [dir="rtl"] .grid--gutters:not(.grid--y) > .grid:first-child,
