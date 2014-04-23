@@ -31,8 +31,12 @@ Flexbox Grid Styles
     flex-direction: column;
 }
 
+/*
+    1:  Prevent overflowing content from destroying the layout
+*/
 .grid-cell,
 .grid > .grid {
+    overflow: hidden; /* 1 */
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -moz-box-flex: 1 ;
@@ -44,8 +48,6 @@ Flexbox Grid Styles
     display: -ms-flexbox;
     display: flex;
     position: relative;
-
-    /* flex-wrap: wrap; */
 }
 
 
