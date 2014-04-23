@@ -52,46 +52,65 @@ Flexbox Grid Styles
 /* Grid Spacing (gutters): X-Axis Grid
 *******************************************************************************/
 .grid--gutters:not(.grid--y) > .grid,
-.grid--gutters :not(.grid--y) > .grid,
 .grid--gutters:not(.grid--y) > .grid-cell,
+.grid--gutters :not(.grid--y) > .grid,
 .grid--gutters :not(.grid--y) > .grid-cell {
     margin: 8px 4px;
 }
 
 .grid--gutters:not(.grid--y) > .grid-cell:first-child,
-.grid--gutters .grid:not(.grid--y) > .grid-cell:first-child,
 .grid--gutters:not(.grid--y) > .grid:first-child,
+.grid--gutters .grid:not(.grid--y) > .grid-cell:first-child,
 .grid--gutters .grid:not(.grid--y) > .grid:first-child {
     margin-left: 8px;
 }
 
 .grid--gutters:not(.grid--y) > .grid-cell:last-child,
+.grid--gutters:not(.grid--y) > .grid:last-child,
 .grid--gutters .grid:not(.grid--y) > .grid-cell:last-child,
-.grid--gutters:not(.grid--y) .grid:last-child,
-.grid--gutters .grid:not(.grid--y) .grid:last-child {
+.grid--gutters .grid:not(.grid--y) > .grid:last-child {
     margin-right: 8px;
+}
+
+
+/* Grid Spacing (gutters): X-Axis Grid (right-to-left)
+*******************************************************************************/
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid-cell:first-child,
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid:first-child,
+[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid-cell:first-child,
+[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid:first-child {
+    margin-right: 8px;
+    margin-left: 4px;
+}
+
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid-cell:last-child,
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid:last-child,
+[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid-cell:last-child,
+[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid:last-child {
+    margin-right: 4px;
+    margin-left: 8px;
 }
 
 
 /* Grid Spacing (gutters): Y-Axis Grid
 *******************************************************************************/
 .grid--gutters[class*="grid--y"] > .grid,
-.grid--gutters [class*="grid--y"] > .grid,
 .grid--gutters[class*="grid--y"] > .grid-cell,
+.grid--gutters [class*="grid--y"] > .grid,
 .grid--gutters [class*="grid--y"] > .grid-cell {
     margin: 4px 8px;
 }
 
 .grid--gutters[class*="grid--y"] > .grid-cell:first-child,
-.grid--gutters .grid--y > .grid-cell:first-child,
 .grid--gutters[class*="grid--y"] > .grid:first-child,
+.grid--gutters .grid--y > .grid-cell:first-child,
 .grid--gutters .grid--y > .grid:first-child {
     margin-top: 8px;
 }
 
 .grid--gutters[class*="grid--y"] > .grid-cell:last-child,
-.grid--gutters .grid--y > .grid-cell:last-child,
 .grid--gutters[class*="grid--y"] > .grid:last-child,
+.grid--gutters .grid--y > .grid-cell:last-child,
 .grid--gutters .grid--y > .grid:last-child {
     margin-bottom: 8px;
 }

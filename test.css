@@ -58,6 +58,9 @@ body {
     margin-left: 0;
 }
 
+[dir="rtl"] .test > dl dd {
+    margin-right: 0;
+}
 
 /* Test Section
 *******************************************************************************/
@@ -90,6 +93,11 @@ body {
     color: white;
 }
 
+[dir="rtl"] .test-section > h2 {
+    left: auto;
+    right: -12px;
+}
+
 
 /* Test Example
 *******************************************************************************/
@@ -120,9 +128,17 @@ body {
 /* Callouts
 *******************************************************************************/
 .test-callout {
-    border-left: 3px solid #eee;
+    border-color: #eee;
+    border-left-width: 3px;
+    border-left-style: solid;
     padding: 10px;
     margin: 1.5em 0;
+}
+
+[dir="rtl"] .test-callout {
+    border-left: none;
+    border-right-width: 3px;
+    border-right-style: solid;
 }
 
 .test-callout--info {
@@ -148,8 +164,14 @@ body {
 
 /* SyntaxHighlighter Style-Overrides
 *******************************************************************************/
+/*
+    1:  Force code-blocks to be oriented left-to-right regardless of text
+        direction
+*/
+
 .test .syntaxhighlighter {
     background-color: #f7f7f9 !important;
+    direction: ltr; /* 1 */
 }
 
 .test .syntaxhighlighter code {
