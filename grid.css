@@ -151,16 +151,19 @@ Flexbox Grid Styles
 /* Grid Cell Alignment
 *******************************************************************************/
 /*
-.g--main-start- {
+    //justify-content: flex-start is the default, so there's no need to have
+    //a specific definition for that
+*/
+
+.grid--main-start {
     -webkit-box-pack: start;
     -moz-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
 }
-*/
 
-.g--main-center {
+.grid--main-center {
     -webkit-box-pack: center;
     -moz-box-pack: center;
     -webkit-justify-content: center;
@@ -168,7 +171,7 @@ Flexbox Grid Styles
     justify-content: center;
 }
 
-.g--main-end {
+.grid--main-end {
     -webkit-box-pack: end;
     -moz-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -176,15 +179,59 @@ Flexbox Grid Styles
     justify-content: flex-end;
 }
 
+
+/* General Cross-Axis Alignment
+*******************************************************************************/
+.grid.g--cross-start {
+ -webkit-align-items: flex-start;
+   align-items: flex-start;
+}
+
+.grid.g--cross-center {
+ -webkit-align-items: center;
+   align-items: center;
+}
+
+.grid.g--cross-stretch {
+ -webkit-align-items: stretch;
+   align-items: stretch;
+}
+
+.grid.g--cross-baseline {
+ -webkit-align-items: baseline;
+   align-items: baseline;
+}
+
+.grid.g--cross-end {
+ -webkit-align-items: flex-end;
+   align-items: flex-end;
+}
+
+
+/* Individual Cross-Axis Grid Cell Alignment
+*******************************************************************************/
 .g--cross-start {
     -webkit-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
 }
+
 .g--cross-center {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
+}
+
+.g--cross-stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
+.g--cross-baseline {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
 }
 
 .g--cross-end {
