@@ -18,7 +18,7 @@ body {
 }
 
 .test--constrain-width {
-    max-width: 800px;
+    max-width: 799px;
 }
 
 .test code {
@@ -36,6 +36,10 @@ body {
     padding: 10px;
     margin-bottom: 14px;
     background-color: #f7f7f9;
+}
+
+.test > img {
+    max-width: 100%;
 }
 
 .test pre code {
