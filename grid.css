@@ -37,6 +37,7 @@ Flexbox Grid Styles
 .grid-cell,
 .grid > .grid {
     overflow: hidden; /* 1 */
+    position: relative;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -moz-box-flex: 1 ;
@@ -47,7 +48,6 @@ Flexbox Grid Styles
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
 }
 
 
