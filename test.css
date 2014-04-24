@@ -17,7 +17,7 @@ body {
     background-color: white;
 }
 
-.test--constrain-width {
+.test__constrain-width {
     max-width: 799px;
 }
 
@@ -141,22 +141,22 @@ body {
     border-right-style: solid;
 }
 
-.test-callout--info {
+.test-callout__info {
     border-color: #5bc0de;
     background-color: #f4f8fa;
 }
 
-.test-callout--interface {
+.test-callout__interface {
     border-color: #8ee66c;
     background-color: #dff0d8;
 }
 
-.test-callout--warning {
+.test-callout__warning {
     border-color: #f0ad4e;
     background-color: #fcf8f2;
 }
 
-.test-callout--danger {
+.test-callout__danger {
     border-color: #d9534f;
     background-color: #ffdada;
 }
