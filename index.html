@@ -26,18 +26,18 @@
                 border: 1px solid magenta;
             }
 
-            .test-example > .grid {
-                counter-reset: grid-cell;
+            .test_example > .grid {
+                counter-reset: grid_cell;
             }
 
-            .test__grids .grid-cell {
+            .test__grids .grid_cell {
                 border: 1px solid cyan;
                 /* background: rgba(147, 128, 108, .1); */
                 /* background-color: rgba(255, 255, 255, .5) */
             }
 
-            /* .test-example .grid-cell:before, */
-            .test-example .grid-cell:after {
+            /* .test_example .grid_cell:before, */
+            .test_example .grid_cell:after {
                 border-radius: 4px;
                 padding: .2em .5em;
                 position: absolute;
@@ -48,14 +48,14 @@
             }
 
 /*
-            .test-example .grid-cell:before {
-                counter-increment: grid-cell;
-                content: "(" counter(grid-cell) ")";
+            .test_example .grid_cell:before {
+                counter-increment: grid_cell;
+                content: "(" counter(grid_cell) ")";
                 right: 2px;
             }
 */
 
-            .test__show-classes .test-example .grid-cell:after {
+            .test__show-classes .test_example .grid_cell:after {
                 content: attr(class);
                 border-radius: 4px;
                 padding: 2px 4px;
@@ -96,369 +96,369 @@
 
                 <!-- Single level grid: -->
                 <div class="grid">
-                    <div class="grid-cell"></div>
+                    <div class="grid_cell"></div>
 
-                    <div class="grid-cell"></div>
+                    <div class="grid_cell"></div>
 
-                    <div class="grid-cell"></div>
+                    <div class="grid_cell"></div>
                 </div>
 
                 <!-- Nested grid: -->
                 <div class="grid">
-                    <div class="grid-cell"></div>
+                    <div class="grid_cell"></div>
 
                     <div class="grid">
-                        <div class="grid-cell"></div>
+                        <div class="grid_cell"></div>
 
-                        <div class="grid-cell"></div>
+                        <div class="grid_cell"></div>
                     </div>
                 </div>
 
             ]]></script>
 
-            <p>The <code>grid</code> class elements represent <em>flex containers</em> and <code>grid-cell</code> class elements represent <em>flex items</em>.</p>
+            <p>The <code>grid</code> class elements represent <em>flex containers</em> and <code>grid_cell</code> class elements represent <em>flex items</em>.</p>
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Basic Grids: Horizontal (X-Axis)</h2>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">1/1</div>
+                        <div class="grid_cell">1/1</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">1/2</div>
+                        <div class="grid_cell">1/2</div>
 
-                        <div class="grid-cell">1/2</div>
+                        <div class="grid_cell">1/2</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">1/3</div>
+                        <div class="grid_cell">1/3</div>
 
-                        <div class="grid-cell">1/3</div>
+                        <div class="grid_cell">1/3</div>
 
-                        <div class="grid-cell">1/3</div>
+                        <div class="grid_cell">1/3</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">1/4</div>
+                        <div class="grid_cell">1/4</div>
 
-                        <div class="grid-cell">1/4</div>
+                        <div class="grid_cell">1/4</div>
 
-                        <div class="grid-cell">1/4</div>
+                        <div class="grid_cell">1/4</div>
 
-                        <div class="grid-cell">1/4</div>
+                        <div class="grid_cell">1/4</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">1/5</div>
+                        <div class="grid_cell">1/5</div>
 
-                        <div class="grid-cell">1/5</div>
+                        <div class="grid_cell">1/5</div>
 
-                        <div class="grid-cell">1/5</div>
+                        <div class="grid_cell">1/5</div>
 
-                        <div class="grid-cell">1/5</div>
+                        <div class="grid_cell">1/5</div>
 
-                        <div class="grid-cell">1/5</div>
+                        <div class="grid_cell">1/5</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">1/6</div>
+                        <div class="grid_cell">1/6</div>
 
-                        <div class="grid-cell">1/6</div>
+                        <div class="grid_cell">1/6</div>
 
-                        <div class="grid-cell">1/6</div>
+                        <div class="grid_cell">1/6</div>
 
-                        <div class="grid-cell">1/6</div>
+                        <div class="grid_cell">1/6</div>
 
-                        <div class="grid-cell">1/6</div>
+                        <div class="grid_cell">1/6</div>
 
-                        <div class="grid-cell">1/6</div>
+                        <div class="grid_cell">1/6</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">1/7</div>
+                        <div class="grid_cell">1/7</div>
 
-                        <div class="grid-cell">1/7</div>
+                        <div class="grid_cell">1/7</div>
 
-                        <div class="grid-cell">1/7</div>
+                        <div class="grid_cell">1/7</div>
 
-                        <div class="grid-cell">1/7</div>
+                        <div class="grid_cell">1/7</div>
 
-                        <div class="grid-cell">1/7</div>
+                        <div class="grid_cell">1/7</div>
 
-                        <div class="grid-cell">1/7</div>
+                        <div class="grid_cell">1/7</div>
 
-                        <div class="grid-cell">1/7</div>
+                        <div class="grid_cell">1/7</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">Full-height, even when my content doesn't fill the space.</div>
+                        <div class="grid_cell">Full-height, even when my content doesn't fill the space.</div>
 
-                        <div class="grid-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        <div class="grid_cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Vertical (Y-Axis) Grids</h2>
 
-                <p>When you want to lay out the <code>grid-cell</code> elements vertically, you can simply add a modifier class to a <code>grid</code> element and its child <code>grid-cell</code> elements will subsequently be ordered along the y-axis.</p>
+                <p>When you want to lay out the <code>grid_cell</code> elements vertically, you can simply add a modifier class to a <code>grid</code> element and its child <code>grid_cell</code> elements will subsequently be ordered along the y-axis.</p>
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>grid__y</code> modifier class added to <code>grid</code> class elements</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y">
-                        <div class="grid-cell">
+                        <div class="grid_cell">
                             Cell 1
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y">
-                        <div class="grid-cell">
+                        <div class="grid_cell">
                             Cell 1
                         </div>
 
-                        <div class="grid-cell">
+                        <div class="grid_cell">
                             Cell 2
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y">
-                        <div class="grid-cell">Cell 1</div>
+                        <div class="grid_cell">Cell 1</div>
 
-                        <div class="grid-cell">Cell 2</div>
+                        <div class="grid_cell">Cell 2</div>
 
-                        <div class="grid-cell">Cell 3</div>
+                        <div class="grid_cell">Cell 3</div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Fit and Wrap</h2>
 
-                <p>By default <code>grid-cell</code> elements stretch and divide the available space within a <code>grid</code> element equally, but you can change this by adding modifier classes to the individual <code>grid-cell</code> elements.</p>
+                <p>By default <code>grid_cell</code> elements stretch and divide the available space within a <code>grid</code> element equally, but you can change this by adding modifier classes to the individual <code>grid_cell</code> elements.</p>
 
                 <h3>Fit</h3>
 
-                <p>When you want to limit the width of a <code>grid-cell</code> element to fit its content, but still want it to expand to the height of the <code>grid</code>, you can apply the <code>g__fit</code> modifier class to the element itself.</p>
+                <p>When you want to limit the width of a <code>grid_cell</code> element to fit its content, but still want it to expand to the height of the <code>grid</code>, you can apply the <code>g__fit</code> modifier class to the element itself.</p>
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>g__fit</code> modifier class added to fitted elements.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">Stretch</div>
-                        <div class="grid-cell g__fit">Fit</div>
+                        <div class="grid_cell">Stretch</div>
+                        <div class="grid_cell g__fit">Fit</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell g__fit">Fit</div>
-                        <div class="grid-cell">Stretch</div>
+                        <div class="grid_cell g__fit">Fit</div>
+                        <div class="grid_cell">Stretch</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">Stretch</div>
-                        <div class="grid-cell g__fit">Fit</div>
-                        <div class="grid-cell g__fit">Fit</div>
+                        <div class="grid_cell">Stretch</div>
+                        <div class="grid_cell g__fit">Fit</div>
+                        <div class="grid_cell g__fit">Fit</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">Stretch<br/>second line (fitted elements fill the height of the grid)</div>
-                        <div class="grid-cell g__fit">Fit</div>
-                        <div class="grid-cell g__fit">Fit</div>
+                        <div class="grid_cell">Stretch<br/>second line (fitted elements fill the height of the grid)</div>
+                        <div class="grid_cell g__fit">Fit</div>
+                        <div class="grid_cell g__fit">Fit</div>
                     </div>
                 </div>
 
 
                 <h4>Fit (Y-Axis Grid)</h4>
 
-                <div class="test-callout test-callout__warning">
+                <div class="test_callout test_callout__warning">
                     <h4>Hardcoded height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the height is not equally divided by the <code>grid-cell</code> elements.</p>
+                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the height is not equally divided by the <code>grid_cell</code> elements.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y" style="height: 150px;">
-                        <div class="grid-cell">Stretch</div>
-                        <div class="grid-cell g__fit">Fit</div>
-                        <div class="grid-cell g__fit">Fit</div>
+                        <div class="grid_cell">Stretch</div>
+                        <div class="grid_cell g__fit">Fit</div>
+                        <div class="grid_cell g__fit">Fit</div>
                     </div>
                 </div>
 
 
                 <h3>Wrap</h3>
 
-                <p>When you want a <code>grid-cell</code> element to only fill up the space for its contents (i.e. shrink-wrap horizontally and vertically), you can apply <code>g__wrap</code> modifier class to the element itself.</p>
+                <p>When you want a <code>grid_cell</code> element to only fill up the space for its contents (i.e. shrink-wrap horizontally and vertically), you can apply <code>g__wrap</code> modifier class to the element itself.</p>
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>g__wrap</code> modifier class added to wrapped elements.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">Stretch</div>
-                        <div class="grid-cell g__wrap">Wrap</div>
+                        <div class="grid_cell">Stretch</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell g__wrap">Wrap</div>
-                        <div class="grid-cell">Stretch</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
+                        <div class="grid_cell">Stretch</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">Stretch</div>
-                        <div class="grid-cell g__wrap">Wrap</div>
-                        <div class="grid-cell g__wrap">Wrap</div>
+                        <div class="grid_cell">Stretch</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell">Stretch<br/>second line (notice how the wrapped elements don't fill the height of the grid)</div>
-                        <div class="grid-cell g__wrap">Wrap</div>
-                        <div class="grid-cell g__wrap">Wrap</div>
+                        <div class="grid_cell">Stretch<br/>second line (notice how the wrapped elements don't fill the height of the grid)</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
                     </div>
                 </div>
 
 
                 <h4>Wrap (Y-Axis Grid)</h4>
 
-                <div class="test-callout test-callout__warning">
+                <div class="test_callout test_callout__warning">
                     <h4>Hardcoded height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the <code>grid-cell</code> elements neither fit the width nor the height of the <code>grid</code>, but rather wrap around their contents.</p>
+                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the <code>grid_cell</code> elements neither fit the width nor the height of the <code>grid</code>, but rather wrap around their contents.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y" style="height: 150px;">
-                        <div class="grid-cell">Stretch</div>
-                        <div class="grid-cell g__wrap">Wrap</div>
-                        <div class="grid-cell g__wrap">Wrap</div>
+                        <div class="grid_cell">Stretch</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
+                        <div class="grid_cell g__wrap">Wrap</div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Nested Grids</h2>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters">
+                <div class="test_example">
+                    <div class="grid grid_gutters">
                         <div class="grid grid__y">
-                            <div class="grid-cell">2,1</div>
+                            <div class="grid_cell">2,1</div>
 
-                            <div class="grid-cell">2,2</div>
+                            <div class="grid_cell">2,2</div>
                         </div>
 
-                        <div class="grid-cell">1,2</div>
+                        <div class="grid_cell">1,2</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters">
-                        <div class="grid-cell">1,1</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters">
+                        <div class="grid_cell">1,1</div>
 
                         <div class="grid">
-                            <div class="grid-cell">2,1</div>
+                            <div class="grid_cell">2,1</div>
 
                             <div class="grid">
-                                <div class="grid-cell">3,1</div>
+                                <div class="grid_cell">3,1</div>
 
-                                <div class="grid-cell">3,2</div>
+                                <div class="grid_cell">3,2</div>
 
                                 <div class="grid grid__y">
-                                    <div class="grid-cell">4,1</div>
+                                    <div class="grid_cell">4,1</div>
 
-                                    <div class="grid-cell">4,2</div>
+                                    <div class="grid_cell">4,2</div>
 
-                                    <div class="grid-cell">4,3</div>
+                                    <div class="grid_cell">4,3</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">5,1 (this cell creates the overflow when parent <code>grid</code> has <code>style="width: 100%;"</code>)</div>
+                            <div class="grid_cell">5,1 (this cell creates the overflow when parent <code>grid</code> has <code>style="width: 100%;"</code>)</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters">
-                        <div class="grid-cell">1,1</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters">
+                        <div class="grid_cell">1,1</div>
 
                         <div class="grid">
-                            <div class="grid-cell">2,1</div>
+                            <div class="grid_cell">2,1</div>
 
                             <div class="grid">
-                                <div class="grid-cell">3,1</div>
+                                <div class="grid_cell">3,1</div>
 
-                                <div class="grid-cell">3,2</div>
+                                <div class="grid_cell">3,2</div>
 
                                 <div class="grid grid__y">
-                                    <div class="grid-cell">4,1</div>
+                                    <div class="grid_cell">4,1</div>
 
-                                    <div class="grid-cell">4,2</div>
+                                    <div class="grid_cell">4,2</div>
 
-                                    <div class="grid-cell">4,3</div>
+                                    <div class="grid_cell">4,3</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="grid">
                             <div class="grid grid__y">
-                                <div class="grid-cell">6,1</div>
+                                <div class="grid_cell">6,1</div>
 
                                 <div class="grid">
-                                    <div class="grid-cell">7,1</div>
+                                    <div class="grid_cell">7,1</div>
 
                                     <div class="grid grid__y">
-                                        <div class="grid-cell">8,1</div>
+                                        <div class="grid_cell">8,1</div>
 
-                                        <div class="grid-cell">8,2</div>
+                                        <div class="grid_cell">8,2</div>
                                     </div>
                                 </div>
 
-                                <div class="grid-cell">6,3</div>
+                                <div class="grid_cell">6,3</div>
                             </div>
 
-                            <div class="grid-cell">5,1</div>
+                            <div class="grid_cell">5,1</div>
 
-                            <div class="grid-cell">5,2</div>
+                            <div class="grid_cell">5,2</div>
 
-                            <div class="grid-cell">5,3</div>
+                            <div class="grid_cell">5,3</div>
                         </div>
                     </div>
                 </div>
@@ -468,223 +468,223 @@
 
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Grid Spacing (Gutters)</h2>
 
                 <h3>Main-Axis Gutters</h3>
 
 <!--
-                <div class="test-callout test-callout__interface">
-                    <p><code>grid-gutters</code> modifier class added to wrapper <code>grid</code> element.</p>
+                <div class="test_callout test_callout__interface">
+                    <p><code>grid_gutters</code> modifier class added to wrapper <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">Four</div>
+                                <div class="grid_cell">Four</div>
 
-                                <div class="grid-cell">Five</div>
+                                <div class="grid_cell">Five</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
 -->
 
 
-                <div class="test-callout test-callout__interface">
-                    <p><code>grid-gutters__main</code> modifier class added to wrapper <code>grid</code> element.</p>
+                <div class="test_callout test_callout__interface">
+                    <p><code>grid_gutters__main</code> modifier class added to wrapper <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
-                        <div class="grid-cell">Three</div>
+                        <div class="grid_cell">Three</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
                         <div class="grid">
-                            <div class="grid-cell">One</div>
+                            <div class="grid_cell">One</div>
 
-                            <div class="grid-cell">Two</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
                         </div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
-
-                        <div class="grid">
-                            <div class="grid-cell">Two</div>
-
-                            <div class="grid-cell">Three</div>
-
-                            <div class="grid-cell">Four</div>
-                        </div>
-
-                        <div class="grid-cell">Five</div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
-
-                        <div class="grid-cell">Two</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Four</div>
+                        </div>
+
+                        <div class="grid_cell">Five</div>
+                    </div>
+                </div>
+
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
+
+                        <div class="grid_cell">Two</div>
+
+                        <div class="grid">
+                            <div class="grid_cell">Three</div>
+
+                            <div class="grid_cell">Four</div>
+
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
                         <div class="grid grid__y">
-                            <div class="grid-cell">One</div>
+                            <div class="grid_cell">One</div>
 
-                            <div class="grid-cell">Two</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
                         </div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">Two</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
                         </div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
 
                 <!--
-<div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
+<div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">Four</div>
+                                <div class="grid_cell">Four</div>
 
-                                <div class="grid-cell">Five</div>
+                                <div class="grid_cell">Five</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">Four</div>
+                                <div class="grid_cell">Four</div>
 
-                                <div class="grid-cell">Five</div>
+                                <div class="grid_cell">Five</div>
                             </div>
                         </div>
 
                         <div class="grid">
-                            <div class="grid-cell">Six</div>
+                            <div class="grid_cell">Six</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">Four</div>
+                                <div class="grid_cell">Four</div>
 
-                                <div class="grid-cell">Five</div>
+                                <div class="grid_cell">Five</div>
                             </div>
                         </div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">Six</div>
+                            <div class="grid_cell">Six</div>
 
-                            <div class="grid-cell">Seven</div>
+                            <div class="grid_cell">Seven</div>
                         </div>
                     </div>
                 </div>
@@ -694,212 +694,212 @@
                 <h4>Main-Axis Gutters: Y-Axis Grid</h4>
 
                 <!--
-<div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+<div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
-                        <div class="grid-cell">Three</div>
+                        <div class="grid_cell">Three</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
                         <div class="grid">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
 
-                        <div class="grid-cell">Six</div>
+                        <div class="grid_cell">Six</div>
                     </div>
                 </div>
 
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
 
-                        <div class="grid-cell">Six</div>
+                        <div class="grid_cell">Six</div>
                     </div>
                 </div>
 -->
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
-                        <div class="grid-cell">Three</div>
+                        <div class="grid_cell">Three</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
                         <div class="grid">
-                            <div class="grid-cell">One</div>
+                            <div class="grid_cell">One</div>
 
-                            <div class="grid-cell">Two</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
                         </div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
-
-                        <div class="grid">
-                            <div class="grid-cell">Two</div>
-
-                            <div class="grid-cell">Three</div>
-
-                            <div class="grid-cell">Four</div>
-                        </div>
-
-                        <div class="grid-cell">Five</div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
-
-                        <div class="grid-cell">Two</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
                         <div class="grid">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Four</div>
+                        </div>
+
+                        <div class="grid_cell">Five</div>
+                    </div>
+                </div>
+
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
+
+                        <div class="grid_cell">Two</div>
+
+                        <div class="grid">
+                            <div class="grid_cell">Three</div>
+
+                            <div class="grid_cell">Four</div>
+
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
                         <div class="grid grid__y">
-                            <div class="grid-cell">One</div>
+                            <div class="grid_cell">One</div>
 
-                            <div class="grid-cell">Two</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
                         </div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">Two</div>
+                            <div class="grid_cell">Two</div>
 
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
                         </div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">One</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">Three</div>
+                            <div class="grid_cell">Three</div>
 
-                            <div class="grid-cell">Four</div>
+                            <div class="grid_cell">Four</div>
 
-                            <div class="grid-cell">Five</div>
+                            <div class="grid_cell">Five</div>
                         </div>
                     </div>
                 </div>
@@ -907,95 +907,95 @@
 
                 <h4>Nest test</h4>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__new">
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__new">
                         <div class="grid">
-                            <div class="grid-cell">g1/c1</div>
+                            <div class="grid_cell">g1/c1</div>
 
-                            <div class="grid-cell">g1/c2</div>
+                            <div class="grid_cell">g1/c2</div>
 
-                            <div class="grid-cell">g1/c3</div>
+                            <div class="grid_cell">g1/c3</div>
                         </div>
 
                         <div class="grid">
-                            <div class="grid-cell">g1/c1</div>
+                            <div class="grid_cell">g1/c1</div>
 
-                            <div class="grid-cell">g1/c3</div>
+                            <div class="grid_cell">g1/c3</div>
                         </div>
 
                         <div class="grid">
-                            <div class="grid-cell">1</div>
+                            <div class="grid_cell">1</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">2,1</div>
+                                <div class="grid_cell">2,1</div>
 
                                 <div class="grid">
-                                    <div class="grid-cell">3,1</div>
+                                    <div class="grid_cell">3,1</div>
 
                                     <div class="grid">
-                                        <div class="grid-cell">4,1</div>
+                                        <div class="grid_cell">4,1</div>
 
                                         <div class="grid grid__y">
-                                            <div class="grid-cell">5,1</div>
+                                            <div class="grid_cell">5,1</div>
 
-                                            <div class="grid-cell">5,2</div>
+                                            <div class="grid_cell">5,2</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">2,1</div>
+                                <div class="grid_cell">2,1</div>
 
                                 <div class="grid">
-                                    <div class="grid-cell">3,1</div>
+                                    <div class="grid_cell">3,1</div>
 
                                     <div class="grid">
-                                        <div class="grid-cell">4,1</div>
+                                        <div class="grid_cell">4,1</div>
 
                                         <div class="grid grid__y">
-                                            <div class="grid-cell">5,1</div>
+                                            <div class="grid_cell">5,1</div>
 
-                                            <div class="grid-cell">5,2</div>
+                                            <div class="grid_cell">5,2</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid-cell">grid-cell</div>
+                        <div class="grid_cell">grid_cell</div>
 
                         <div class="grid">
-                            <div class="grid-cell">g3/c1</div>
+                            <div class="grid_cell">g3/c1</div>
                         </div>
 
                         <div class="grid grid__y">
-                            <div class="grid-cell">g4/c1</div>
+                            <div class="grid_cell">g4/c1</div>
 
-                            <div class="grid-cell">g4/c2</div>
+                            <div class="grid_cell">g4/c2</div>
 
-                            <div class="grid-cell">g4/c3</div>
+                            <div class="grid_cell">g4/c3</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
-                        <div class="grid-cell">1</div>
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
+                        <div class="grid_cell">1</div>
 
                         <div class="grid">
-                            <div class="grid-cell">2,1</div>
+                            <div class="grid_cell">2,1</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">3,1</div>
+                                <div class="grid_cell">3,1</div>
 
                                 <div class="grid grid__y">
-                                    <div class="grid-cell">4,1</div>
+                                    <div class="grid_cell">4,1</div>
 
                                     <div class="grid">
-                                        <div class="grid-cell">5,1</div>
+                                        <div class="grid_cell">5,1</div>
 
-                                        <div class="grid-cell">5,2</div>
+                                        <div class="grid_cell">5,2</div>
                                     </div>
                                 </div>
                             </div>
@@ -1003,87 +1003,87 @@
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main">
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main">
                         <div class="grid">
-                            <div class="grid-cell">1,1</div>
+                            <div class="grid_cell">1,1</div>
 
-                            <div class="grid-cell">1,2</div>
+                            <div class="grid_cell">1,2</div>
 
                             <div class="grid">
-                                <div class="grid-cell">1,3</div>
+                                <div class="grid_cell">1,3</div>
                             </div>
                         </div>
 
                         <div class="grid">
-                            <div class="grid-cell">2,1</div>
+                            <div class="grid_cell">2,1</div>
 
-                            <div class="grid-cell">2,2</div>
+                            <div class="grid_cell">2,2</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">2,1,1</div>
+                                <div class="grid_cell">2,1,1</div>
 
                                 <div class="grid grid__y">
-                                    <div class="grid-cell">2,1,1,1</div>
+                                    <div class="grid_cell">2,1,1,1</div>
 
-                                    <div class="grid-cell">2,1,1,2</div>
+                                    <div class="grid_cell">2,1,1,2</div>
                                 </div>
                             </div>
 
-                            <div class="grid-cell">2,1,2</div>
+                            <div class="grid_cell">2,1,2</div>
                         </div>
 
                         <div class="grid">
-                            <div class="grid-cell">3,1</div>
+                            <div class="grid_cell">3,1</div>
 
-                            <div class="grid-cell">3,2</div>
+                            <div class="grid_cell">3,2</div>
 
-                            <div class="grid-cell">3,3</div>
+                            <div class="grid_cell">3,3</div>
                         </div>
 
                     </div>
                 </div>
 
-                <div class="test-callout test-callout__danger">
-                    <p>The below example is incorrect, as it uses <code>grid-cell</code> elements on all levels instead of <code>grid</code> elements. However, it looks as it should <span class="highlight">;(</span></p>
+                <div class="test_callout test_callout__danger">
+                    <p>The below example is incorrect, as it uses <code>grid_cell</code> elements on all levels instead of <code>grid</code> elements. However, it looks as it should <span class="highlight">;(</span></p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid-cell grid__y grid-gutters__main">
-                        <div class="grid-cell">
-                            <div class="grid-cell">1,1</div>
+                <div class="test_example">
+                    <div class="grid_cell grid__y grid_gutters__main">
+                        <div class="grid_cell">
+                            <div class="grid_cell">1,1</div>
 
-                            <div class="grid-cell">1,2</div>
+                            <div class="grid_cell">1,2</div>
 
-                            <div class="grid-cell">
-                                <div class="grid-cell">1,3</div>
+                            <div class="grid_cell">
+                                <div class="grid_cell">1,3</div>
                             </div>
                         </div>
 
-                        <div class="grid-cell">
-                            <div class="grid-cell">2,1</div>
+                        <div class="grid_cell">
+                            <div class="grid_cell">2,1</div>
 
-                            <div class="grid-cell">2,2</div>
+                            <div class="grid_cell">2,2</div>
 
-                            <div class="grid-cell grid__y">
-                                <div class="grid-cell">2,1,1</div>
+                            <div class="grid_cell grid__y">
+                                <div class="grid_cell">2,1,1</div>
 
-                                <div class="grid-cell grid__y">
-                                    <div class="grid-cell">2,1,1,1</div>
+                                <div class="grid_cell grid__y">
+                                    <div class="grid_cell">2,1,1,1</div>
 
-                                    <div class="grid-cell">2,1,1,2</div>
+                                    <div class="grid_cell">2,1,1,2</div>
                                 </div>
                             </div>
 
-                            <div class="grid-cell">2,1,2</div>
+                            <div class="grid_cell">2,1,2</div>
                         </div>
 
-                        <div class="grid-cell">
-                            <div class="grid-cell">3,1</div>
+                        <div class="grid_cell">
+                            <div class="grid_cell">3,1</div>
 
-                            <div class="grid-cell">3,2</div>
+                            <div class="grid_cell">3,2</div>
 
-                            <div class="grid-cell">3,3</div>
+                            <div class="grid_cell">3,3</div>
                         </div>
 
                     </div>
@@ -1092,41 +1092,41 @@
 
                 <h3>Individual Cell Gutters</h3>
 
-                <div class="test-callout test-callout__interface">
-                    <p><code>g__gutter</code> added to <em>guttered</em> <code>grid-cell</code> elements.</p>
+                <div class="test_callout test_callout__interface">
+                    <p><code>g__gutter</code> added to <em>guttered</em> <code>grid_cell</code> elements.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell g__gutter">gutter</div>
+                        <div class="grid_cell g__gutter">gutter</div>
 
-                        <div class="grid-cell">auto</div>
+                        <div class="grid_cell">auto</div>
 
                         <div class="grid g__gutter">
-                            <div class="grid-cell g__gutter">gutter</div>
+                            <div class="grid_cell g__gutter">gutter</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">auto</div>
+                                <div class="grid_cell">auto</div>
 
-                                <div class="grid-cell g__gutter">gutter</div>
+                                <div class="grid_cell g__gutter">gutter</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y">
-                        <div class="grid-cell g__gutter">gutter</div>
+                        <div class="grid_cell g__gutter">gutter</div>
 
-                        <div class="grid-cell">auto</div>
+                        <div class="grid_cell">auto</div>
 
                         <div class="grid g__gutter">
-                            <div class="grid-cell g__gutter">gutter</div>
+                            <div class="grid_cell g__gutter">gutter</div>
 
                             <div class="grid grid__y">
-                                <div class="grid-cell">auto</div>
+                                <div class="grid_cell">auto</div>
 
-                                <div class="grid-cell g__gutter">gutter</div>
+                                <div class="grid_cell g__gutter">gutter</div>
                             </div>
                         </div>
                     </div>
@@ -1134,354 +1134,354 @@
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h3>Individual Sizing</h3>
 
-                <div class="test-example">
+                <div class="test_example">
 
                     <div class="grid">
-                        <div class="grid-cell g__1of2">1/2 <code>g__1of2</code></div>
+                        <div class="grid_cell g__1of2">1/2 <code>g__1of2</code></div>
 
-                        <div class="grid-cell"></div>
+                        <div class="grid_cell"></div>
 
-                        <div class="grid-cell"></div>
+                        <div class="grid_cell"></div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell"></div>
+                        <div class="grid_cell"></div>
 
-                        <div class="grid-cell g__1of3">1/3 <code>g__1of3</code></div>
+                        <div class="grid_cell g__1of3">1/3 <code>g__1of3</code></div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell g__1of4">1/4 <code>g__1of4</code></div>
+                        <div class="grid_cell g__1of4">1/4 <code>g__1of4</code></div>
 
-                        <div class="grid-cell"></div>
+                        <div class="grid_cell"></div>
 
-                        <div class="grid-cell g__1of3">1/3 <code>g__1of3</code></div>
+                        <div class="grid_cell g__1of3">1/3 <code>g__1of3</code></div>
                     </div>
 
                 </div>
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Alignment</h2>
 
                 <h3>Main-Axis Alignment</h3>
-                <p>The alignment of <code>grid-cell</code> and nested <code>grid</code> elements along the main-axis is controlled by applying modifier classes to the parent <code>grid</code> element.</p>
+                <p>The alignment of <code>grid_cell</code> and nested <code>grid</code> elements along the main-axis is controlled by applying modifier classes to the parent <code>grid</code> element.</p>
 
-                <div class="test-callout test-callout__warning">
+                <div class="test_callout test_callout__warning">
                     <h4>Wrapped elements</h4>
-                    <p>For the main-axis alignment test-cases the <code>g__wrap</code> modifier class has been added to the <code>grid-cell</code> elements to prevent them from spanning the width of the <code>grid</code>.</p>
+                    <p>For the main-axis alignment test-cases the <code>g__wrap</code> modifier class has been added to the <code>grid_cell</code> elements to prevent them from spanning the width of the <code>grid</code>.</p>
                 </div>
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>grid__main-start</code> modifier class added to parent <code>grid</code> element. In theory this is unnecessary as it is the default setting, but now we have a class so that we can apply the setting declaratively.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__main-start">
-                        <div class="grid-cell g__wrap">Start</div>
+                        <div class="grid_cell g__wrap">Start</div>
                         <div class="grid g__wrap">Start</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__main-start">
                         <div class="grid g__wrap">Start</div>
-                        <div class="grid-cell g__wrap">Start</div>
+                        <div class="grid_cell g__wrap">Start</div>
                     </div>
                 </div>
 
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>grid__main-center</code> modifier class added to parent <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__main-center">
-                        <div class="grid-cell g__wrap">Center</div>
+                        <div class="grid_cell g__wrap">Center</div>
                         <div class="grid g__wrap">Center</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__main-center">
                         <div class="grid g__wrap">Center</div>
-                        <div class="grid-cell g__wrap">Center</div>
+                        <div class="grid_cell g__wrap">Center</div>
                     </div>
                 </div>
 
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>grid__main-end</code> modifier class added to parent <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__main-end">
-                        <div class="grid-cell g__wrap">End</div>
+                        <div class="grid_cell g__wrap">End</div>
                         <div class="grid g__wrap">End</div>
                     </div>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__main-end">
                         <div class="grid g__wrap">End</div>
-                        <div class="grid-cell g__wrap">End</div>
+                        <div class="grid_cell g__wrap">End</div>
                     </div>
                 </div>
 
 
                 <h3>Cross-Axis Alignment</h3>
-                <p>Alignment of <code>grid-cell</code> elements along the cross-axis can either be generally controlled by specifying a modifier class on the parent <code>grid</code> element, or individually controlled by specifying a modifier class on the <code>grid-cell</code> element itself.</p>
+                <p>Alignment of <code>grid_cell</code> elements along the cross-axis can either be generally controlled by specifying a modifier class on the parent <code>grid</code> element, or individually controlled by specifying a modifier class on the <code>grid_cell</code> element itself.</p>
 
-                <h4>General Alignment of Child Grid-Cells</h4>
+                <h4>General Alignment of Child grid_cells</h4>
 
-                <div class="test-callout test-callout__warning">
+                <div class="test_callout test_callout__warning">
                     <h4>Absolute Heights Added to Examples</h4>
                     <p>In order to display the alignment options a <code>style="height"</code> attribute has been added to the wrapper <code>grid</code> elements.</p>
                 </div>
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>g__cross-start</code> modifier class added to <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid g__cross-start" style="height: 75px;">
-                        <div class="grid-cell">One</div>
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
-                        <div class="grid-cell">Three</div>
+                        <div class="grid_cell">Three</div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>g__cross-center</code> modifier class added to <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid g__cross-center" style="height: 75px;">
-                        <div class="grid-cell">One</div>
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
-                        <div class="grid-cell">Three</div>
+                        <div class="grid_cell">Three</div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>g__cross-stretch</code> modifier class added to <code>grid</code> element. This is the default behavior.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid g__cross-stretch" style="height: 75px;">
-                        <div class="grid-cell">One</div>
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
-                        <div class="grid-cell">Three</div>
+                        <div class="grid_cell">Three</div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
 
-                <div class="test-callout test-callout__warning">
+                <div class="test_callout test_callout__warning">
                     <h4>Font-Sizes Hard-Coded</h4>
-                    <p>The baseline alignment ensures the same baseline for elements regardless of their individual font-sizes. Hence, each <code>grid-cell</code> element in the following example has its own font-size, specified by a <code>style="font-size"</code> attribute.</p>
+                    <p>The baseline alignment ensures the same baseline for elements regardless of their individual font-sizes. Hence, each <code>grid_cell</code> element in the following example has its own font-size, specified by a <code>style="font-size"</code> attribute.</p>
                 </div>
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>g__cross-baseline</code> modifier class added to <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid g__cross-baseline" style="height: 75px;">
-                        <div class="grid-cell" style="font-size: 1em;">One</div>
+                        <div class="grid_cell" style="font-size: 1em;">One</div>
 
-                        <div class="grid-cell" style="font-size: 1.5em;">Two</div>
+                        <div class="grid_cell" style="font-size: 1.5em;">Two</div>
 
-                        <div class="grid-cell" style="font-size: 2em;">Three</div>
+                        <div class="grid_cell" style="font-size: 2em;">Three</div>
 
-                        <div class="grid-cell" style="font-size: 2.5em;">Four</div>
+                        <div class="grid_cell" style="font-size: 2.5em;">Four</div>
 
-                        <div class="grid-cell" style="font-size: 3em;">Five</div>
+                        <div class="grid_cell" style="font-size: 3em;">Five</div>
                     </div>
                 </div>
 
 
-                <div class="test-callout test-callout__interface">
+                <div class="test_callout test_callout__interface">
                     <p><code>g__cross-end</code> modifier class added to <code>grid</code> element.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid g__cross-end" style="height: 75px;">
-                        <div class="grid-cell">One</div>
+                        <div class="grid_cell">One</div>
 
-                        <div class="grid-cell">Two</div>
+                        <div class="grid_cell">Two</div>
 
-                        <div class="grid-cell">Three</div>
+                        <div class="grid_cell">Three</div>
 
-                        <div class="grid-cell">Four</div>
+                        <div class="grid_cell">Four</div>
 
-                        <div class="grid-cell">Five</div>
+                        <div class="grid_cell">Five</div>
                     </div>
                 </div>
 
 
-                <h4>Alignment of Individual Grid-Cells</h4>
+                <h4>Alignment of Individual grid_cells</h4>
 
-                <p>Alignment of <code>grid-cell</code> elements along the cross-axis is controlled by applying modifier classes to the elements themselves.</p>
+                <p>Alignment of <code>grid_cell</code> elements along the cross-axis is controlled by applying modifier classes to the elements themselves.</p>
 
-                <div class="test-callout test-callout__warning">
+                <div class="test_callout test_callout__warning">
                     <h4>Baseline Alignment</h4>
                     <p>In order for the baseline alignment to work, there has to be multiple baseline aligned items within a <code>grid</code>. Hence, the elements containing the text <strong>baseline 2</strong> have been added to the examples.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <div class="grid-cell g__cross-start">Start</div>
+                        <div class="grid_cell g__cross-start">Start</div>
 
-                        <div class="grid-cell g__cross-center">Center</div>
+                        <div class="grid_cell g__cross-center">Center</div>
 
-                        <div class="grid-cell g__cross-stretch">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
+                        <div class="grid_cell g__cross-stretch">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
 
-                        <div class="grid-cell g__cross-baseline">Baseline</div>
+                        <div class="grid_cell g__cross-baseline">Baseline</div>
 
-                        <div class="grid-cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+                        <div class="grid_cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
 
-                        <div class="grid-cell g__cross-end">End</div>
+                        <div class="grid_cell g__cross-end">End</div>
                     </div>
                 </div>
 
 
                 <h4>Cross-Axis Alignment (Y-Axis Grid)</h4>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y">
-                        <div class="grid-cell g__cross-start">Start</div>
+                        <div class="grid_cell g__cross-start">Start</div>
 
-                        <div class="grid-cell g__cross-center">Center</div>
+                        <div class="grid_cell g__cross-center">Center</div>
 
-                        <div class="grid-cell">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
+                        <div class="grid_cell">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
 
-                        <div class="grid-cell g__cross-baseline">Baseline</div>
+                        <div class="grid_cell g__cross-baseline">Baseline</div>
 
-                        <div class="grid-cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+                        <div class="grid_cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
 
-                        <div class="grid-cell g__cross-end">End</div>
+                        <div class="grid_cell g__cross-end">End</div>
                     </div>
                 </div>
 
 
                 <h4>Individual Cross-Axis Alignment in Generally Aligned Grid</h4>
 
-                <div class="test-callout test-callout__interface">
-                    <p><code>g__cross-end</code> modifier class added to parent <code>grid</code> element to align <code>grid-cell</code> elements along the bottom, but the modifier classes of the individual <code>grid-cell</code> elements overrides this setting.</p>
+                <div class="test_callout test_callout__interface">
+                    <p><code>g__cross-end</code> modifier class added to parent <code>grid</code> element to align <code>grid_cell</code> elements along the bottom, but the modifier classes of the individual <code>grid_cell</code> elements overrides this setting.</p>
                 </div>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid g__cross-end" style="height: 100px;">
-                        <div class="grid-cell">Auto</div>
+                        <div class="grid_cell">Auto</div>
 
-                        <div class="grid-cell g__cross-center">Center</div>
+                        <div class="grid_cell g__cross-center">Center</div>
 
-                        <div class="grid-cell g__cross-stretch">Stretch</div>
+                        <div class="grid_cell g__cross-stretch">Stretch</div>
 
-                        <div class="grid-cell g__cross-baseline">Baseline</div>
+                        <div class="grid_cell g__cross-baseline">Baseline</div>
 
-                        <div class="grid-cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+                        <div class="grid_cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
 
-                        <div class="grid-cell g__cross-start">Start</div>
+                        <div class="grid_cell g__cross-start">Start</div>
                     </div>
                 </div>
 
 
                 <h4>Individual Cross-Axis Alignment in Generally Aligned Grid (Y-Axis Grid)</h4>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid grid__y g__cross-end" style="height: 160px;">
-                        <div class="grid-cell">Auto</div>
+                        <div class="grid_cell">Auto</div>
 
-                        <div class="grid-cell g__cross-center">Center</div>
+                        <div class="grid_cell g__cross-center">Center</div>
 
-                        <div class="grid-cell g__cross-stretch">Stretch</div>
+                        <div class="grid_cell g__cross-stretch">Stretch</div>
 
-                        <div class="grid-cell g__cross-baseline">Baseline</div>
+                        <div class="grid_cell g__cross-baseline">Baseline</div>
 
-                        <div class="grid-cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+                        <div class="grid_cell g__cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
 
-                        <div class="grid-cell g__cross-start">Start</div>
+                        <div class="grid_cell g__cross-start">Start</div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Ordering</h2>
 
                 <p>With flexbox you can change the order of appearance for flex-items without having to change the order of the HTML.</p>
-                <p>By default, each flex-item has an <code>order: 0</code> (<code>box-ordinal-group: 1</code> in older browsers) - and the higher the <code>order</code> value, the farther back the element will be rendered. This means that if you only specify an <code>order</code> value higher than 0 on a single <code>grid-cell</code> in a collection (leaving the rest unspecified), the element with the <code>order</code> value higher than 0 will be rendered at the end of the collection, as the rest of the elements will have <code>order: 0</code> by default.</p>
+                <p>By default, each flex-item has an <code>order: 0</code> (<code>box-ordinal-group: 1</code> in older browsers) - and the higher the <code>order</code> value, the farther back the element will be rendered. This means that if you only specify an <code>order</code> value higher than 0 on a single <code>grid_cell</code> in a collection (leaving the rest unspecified), the element with the <code>order</code> value higher than 0 will be rendered at the end of the collection, as the rest of the elements will have <code>order: 0</code> by default.</p>
 
-                <div class="test-callout test-callout__danger">
+                <div class="test_callout test_callout__danger">
                     <h4>CSS Pseudo Classes Not Respected</h4>
                     <p>When using flexbox's reordering capabilities it seems that style-definitions for the CSS pseudo classes <code>:first-child</code> and <code>:last-child</code> are not respected as content is rendered according to the HTML element order.</p>
-                    <p>The <code>grid-gutters</code> modifier class has been added to the <code>grid</code> elements to showcase the problem.</p>
+                    <p>The <code>grid_gutters</code> modifier class has been added to the <code>grid</code> elements to showcase the problem.</p>
                 </div>
 
-                <div class="test-callout test-callout__interface">
-                    <p><code>g__order1</code> modifier class added to the first <code>grid-cell</code> element.</p>
+                <div class="test_callout test_callout__interface">
+                    <p><code>g__order1</code> modifier class added to the first <code>grid_cell</code> element.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters">
-                        <div class="grid-cell g__order1">First in HTML</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters">
+                        <div class="grid_cell g__order1">First in HTML</div>
 
-                        <div class="grid-cell">Second in HTML</div>
+                        <div class="grid_cell">Second in HTML</div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid-gutters">
-                        <div class="grid-cell g__order1">First in HTML</div>
+                <div class="test_example">
+                    <div class="grid grid_gutters">
+                        <div class="grid_cell g__order1">First in HTML</div>
 
-                        <div class="grid-cell">Second in HTML</div>
+                        <div class="grid_cell">Second in HTML</div>
 
-                        <div class="grid-cell">Third in HTML</div>
+                        <div class="grid_cell">Third in HTML</div>
                     </div>
                 </div>
 
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Media Object</h2>
 
                 <h3>Normal</h3>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <img class="grid-cell g__wrap" src="http://placehold.it/75x75" alt="" />
+                        <img class="grid_cell g__wrap" src="http://placehold.it/75x75" alt="" />
 
-                        <div class="grid-cell">
+                        <div class="grid_cell">
                             <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere, a faucibus elit porta. Nunc lobortis eros quis felis porttitor volutpat. Curabitur porttitor bibendum metus, vehicula varius mi pharetra tristique. Phasellus sit amet nibh eu justo suscipit placerat eu id arcu. Vestibulum tempus diam in erat scelerisque, et lobortis erat congue. Suspendisse pretium hendrerit mi sit amet vulputate. Pellentesque interdum fringilla metus quis tincidunt. Nam vulputate, sem ac auctor eleifend, sem orci tincidunt dui, id lobortis libero quam eget purus. Mauris vulputate ligula eu massa dignissim, sed mollis turpis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat orci a consectetur scelerisque. Maecenas vel mi semper, tincidunt lorem ac, elementum risus. Curabitur non erat enim.</p>
                         </div>
                     </div>
@@ -1490,27 +1490,27 @@
 
                 <h3>Nested</h3>
 
-                <div class="test-example">
+                <div class="test_example">
                     <div class="grid">
-                        <img class="grid-cell g__wrap" src="http://placehold.it/75x75" alt="" />
+                        <img class="grid_cell g__wrap" src="http://placehold.it/75x75" alt="" />
 
-                        <div class="grid-cell grid__y">
+                        <div class="grid_cell grid__y">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nibh ipsum. Fusce nec felis arcu. Quisque cursus posuere justo, lobortis pharetra libero facilisis interdum. Sed nec sem ut erat volutpat elementum. Cras sit amet tincidunt risus. Duis cursus elit magna, in auctor erat faucibus vitae. Ut pharetra rhoncus facilisis.</p>
 
                             <div class="grid grid__y">
 
                                 <div class="grid g__fit">
-                                    <img class="grid-cell g__wrap" src="http://placehold.it/50x50" alt="" />
+                                    <img class="grid_cell g__wrap" src="http://placehold.it/50x50" alt="" />
 
-                                    <div class="grid-cell">
+                                    <div class="grid_cell">
                                         <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere, a faucibus elit porta. Nunc lobortis eros quis felis porttitor volutpat. Curabitur porttitor bibendum metus, vehicula varius mi pharetra tristique. Phasellus sit amet nibh eu justo suscipit placerat eu id arcu. Vestibulum tempus diam in erat scelerisque, et lobortis erat congue. Suspendisse pretium hendrerit mi sit amet vulputate. Pellentesque interdum fringilla metus quis tincidunt. Nam vulputate, sem ac auctor eleifend, sem orci tincidunt dui, id lobortis libero quam eget purus. Mauris vulputate ligula eu massa dignissim, sed mollis turpis pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat orci a consectetur scelerisque. Maecenas vel mi semper, tincidunt lorem ac, elementum risus. Curabitur non erat enim.</p>
                                     </div>
                                 </div>
 
                                 <div class="grid g__fit">
-                                    <img class="grid-cell g__wrap" src="http://placehold.it/50x50" alt="" />
+                                    <img class="grid_cell g__wrap" src="http://placehold.it/50x50" alt="" />
 
-                                    <div class="grid-cell">
+                                    <div class="grid_cell">
                                         <p>Cras mattis interdum imperdiet. Vivamus semper tortor sit amet felis posuere.</p>
                                     </div>
                                 </div>
@@ -1521,61 +1521,61 @@
             </div>
 
 
-            <div class="test-section">
+            <div class="test_section">
                 <h2>Desktop Container Prototype</h2>
 
-                <div class="test-callout test-callout__info">
+                <div class="test_callout test_callout__info">
                     <p>In the below example/prototype an absolute height, i.e. <code>style="height: 400px"</code> has been assigned to the wrapper <code>grid</code> in order to simulate a screen.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid__y grid-gutters__main" style="height: 400px;">
+                <div class="test_example">
+                    <div class="grid grid__y grid_gutters__main" style="height: 400px;">
                         <!--
-<header class="grid-cell g__fit">
-                            <div class="grid-cell g__wrap">WLC Logo</div>
+<header class="grid_cell g__fit">
+                            <div class="grid_cell g__wrap">WLC Logo</div>
 
                             <div class="grid grid__y">
                                 <div class="grid g__fit grid__main-end">
-                                    <div class="grid-cell g__fit">AJAX loader</div>
-                                    <div class="grid-cell g__fit">John Doe</div>
-                                    <div class="grid-cell g__fit">Notifications</div>
-                                    <div class="grid-cell g__fit">Dashboard</div>
-                                    <div class="grid-cell g__fit">Account</div>
-                                    <div class="grid-cell g__fit">Sign out</div>
+                                    <div class="grid_cell g__fit">AJAX loader</div>
+                                    <div class="grid_cell g__fit">John Doe</div>
+                                    <div class="grid_cell g__fit">Notifications</div>
+                                    <div class="grid_cell g__fit">Dashboard</div>
+                                    <div class="grid_cell g__fit">Account</div>
+                                    <div class="grid_cell g__fit">Sign out</div>
                                 </div>
 
                                 <div class="grid g__fit grid__main-end">
-                                    <div class="grid-cell g__fit">Help</div>
-                                    <div class="grid-cell g__fit">Search</div>
+                                    <div class="grid_cell g__fit">Help</div>
+                                    <div class="grid_cell g__fit">Search</div>
                                 </div>
                             </div>
                         </header>
 -->
 
-                        <header class="grid g__fit"> <!-- This is correct semantically as it uses a grid element instead of a grid-cell -->
-                            <div class="grid-cell g__wrap">WLC Logo</div>
+                        <header class="grid g__fit"> <!-- This is correct semantically as it uses a grid element instead of a grid_cell -->
+                            <div class="grid_cell g__wrap">WLC Logo</div>
 
                             <div class="grid grid__y">
                                 <div class="grid g__fit grid__main-end">
-                                    <div class="grid-cell g__fit">AJAX loader</div>
-                                    <div class="grid-cell g__fit">John Doe</div>
-                                    <div class="grid-cell g__fit">Notifications</div>
-                                    <div class="grid-cell g__fit">Dashboard</div>
-                                    <div class="grid-cell g__fit">Account</div>
-                                    <div class="grid-cell g__fit">Sign out</div>
+                                    <div class="grid_cell g__fit">AJAX loader</div>
+                                    <div class="grid_cell g__fit">John Doe</div>
+                                    <div class="grid_cell g__fit">Notifications</div>
+                                    <div class="grid_cell g__fit">Dashboard</div>
+                                    <div class="grid_cell g__fit">Account</div>
+                                    <div class="grid_cell g__fit">Sign out</div>
                                 </div>
 
                                 <div class="grid g__fit grid__main-end">
-                                    <div class="grid-cell g__fit">Help</div>
-                                    <div class="grid-cell g__fit">Search</div>
+                                    <div class="grid_cell g__fit">Help</div>
+                                    <div class="grid_cell g__fit">Search</div>
                                 </div>
                             </div>
                         </header>
 
                         <article class="grid">
-                            <div class="grid-cell g__1of3">Organizational Unit browser</div>
+                            <div class="grid_cell g__1of3">Organizational Unit browser</div>
 
-                            <div class="grid-cell">Workbench</div>
+                            <div class="grid_cell">Workbench</div>
                         </article>
                     </div>
                 </div>

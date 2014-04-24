@@ -64,26 +64,26 @@ body {
 
 /* Test Section
 *******************************************************************************/
-.test-section {
+.test_section {
     border: 1px solid #5bc0de;
     padding: 12px;
     margin: 24px 0;
     position: relative;
 }
 
-.test-section:last-child {
+.test_section:last-child {
     margin-bottom: 0;
 }
 
-.test-section > :first-child {
+.test_section > :first-child {
     margin-top: 0;
 }
 
-.test-section > :last-child {
+.test_section > :last-child {
     margin-bottom: 0;
 }
 
-.test-section > h2 {
+.test_section > h2 {
     width: calc(100% + 24px);
     padding: 4px 12px;
     position: relative;
@@ -93,7 +93,7 @@ body {
     color: white;
 }
 
-[dir="rtl"] .test-section > h2 {
+[dir="rtl"] .test_section > h2 {
     left: auto;
     right: -12px;
 }
@@ -101,7 +101,7 @@ body {
 
 /* Test Example
 *******************************************************************************/
-.test-example {
+.test_example {
     border: 1px solid #e1e1e8;
     border-radius: 4px;
     padding: 24px 12px 12px 12px;
@@ -109,7 +109,7 @@ body {
     position: relative;
 }
 
-.test-example:before {
+.test_example:before {
     content: "Example";
     border-right: 1px solid #e1e1e8;
     border-bottom: 1px solid #e1e1e8;
@@ -127,7 +127,7 @@ body {
 
 /* Callouts
 *******************************************************************************/
-.test-callout {
+.test_callout {
     border-color: #eee;
     border-left-width: 3px;
     border-left-style: solid;
@@ -135,28 +135,28 @@ body {
     margin: 1.5em 0;
 }
 
-[dir="rtl"] .test-callout {
+[dir="rtl"] .test_callout {
     border-left: none;
     border-right-width: 3px;
     border-right-style: solid;
 }
 
-.test-callout__info {
+.test_callout__info {
     border-color: #5bc0de;
     background-color: #f4f8fa;
 }
 
-.test-callout__interface {
+.test_callout__interface {
     border-color: #8ee66c;
     background-color: #dff0d8;
 }
 
-.test-callout__warning {
+.test_callout__warning {
     border-color: #f0ad4e;
     background-color: #fcf8f2;
 }
 
-.test-callout__danger {
+.test_callout__danger {
     border-color: #d9534f;
     background-color: #ffdada;
 }
