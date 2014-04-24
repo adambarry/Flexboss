@@ -53,68 +53,314 @@ Flexbox Grid Styles
 
 /* Grid Spacing (gutters): X-Axis Grid
 *******************************************************************************/
-.grid--gutters:not(.grid--y) > .grid,
-.grid--gutters:not(.grid--y) > .grid-cell,
-.grid--gutters :not(.grid--y) > .grid,
-.grid--gutters :not(.grid--y) > .grid-cell {
+/*
+.grid-gutters:not(.grid--y) > .grid,
+.grid-gutters:not(.grid--y) > .grid-cell,
+.grid-gutters :not(.grid--y) > .grid,
+.grid-gutters :not(.grid--y) > .grid-cell {
     margin: 8px 4px;
 }
 
-.grid--gutters:not(.grid--y) > .grid-cell:first-child,
-.grid--gutters:not(.grid--y) > .grid:first-child,
-.grid--gutters .grid:not(.grid--y) > .grid-cell:first-child,
-.grid--gutters .grid:not(.grid--y) > .grid:first-child {
+.grid-gutters:not(.grid--y) > .grid-cell:first-child,
+.grid-gutters:not(.grid--y) > .grid:first-child,
+.grid-gutters .grid:not(.grid--y) > .grid-cell:first-child,
+.grid-gutters .grid:not(.grid--y) > .grid:first-child {
     margin-left: 8px;
 }
 
-.grid--gutters:not(.grid--y) > .grid-cell:last-child,
-.grid--gutters:not(.grid--y) > .grid:last-child,
-.grid--gutters .grid:not(.grid--y) > .grid-cell:last-child,
-.grid--gutters .grid:not(.grid--y) > .grid:last-child {
+.grid-gutters:not(.grid--y) > .grid-cell:last-child,
+.grid-gutters:not(.grid--y) > .grid:last-child,
+.grid-gutters .grid:not(.grid--y) > .grid-cell:last-child,
+.grid-gutters .grid:not(.grid--y) > .grid:last-child {
     margin-right: 8px;
 }
+*/
 
 
 /* Grid Spacing (gutters): X-Axis Grid (right-to-left text direction)
 *******************************************************************************/
-[dir="rtl"] .grid--gutters:not(.grid--y) > .grid-cell:first-child,
-[dir="rtl"] .grid--gutters:not(.grid--y) > .grid:first-child,
-[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid-cell:first-child,
-[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid:first-child {
+/*
+[dir="rtl"] .grid-gutters:not(.grid--y) > .grid-cell:first-child,
+[dir="rtl"] .grid-gutters:not(.grid--y) > .grid:first-child,
+[dir="rtl"] .grid-gutters .grid:not(.grid--y) > .grid-cell:first-child,
+[dir="rtl"] .grid-gutters .grid:not(.grid--y) > .grid:first-child {
     margin-right: 8px;
     margin-left: 4px;
 }
 
-[dir="rtl"] .grid--gutters:not(.grid--y) > .grid-cell:last-child,
-[dir="rtl"] .grid--gutters:not(.grid--y) > .grid:last-child,
-[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid-cell:last-child,
-[dir="rtl"] .grid--gutters .grid:not(.grid--y) > .grid:last-child {
+[dir="rtl"] .grid-gutters:not(.grid--y) > .grid-cell:last-child,
+[dir="rtl"] .grid-gutters:not(.grid--y) > .grid:last-child,
+[dir="rtl"] .grid-gutters .grid:not(.grid--y) > .grid-cell:last-child,
+[dir="rtl"] .grid-gutters .grid:not(.grid--y) > .grid:last-child {
     margin-right: 4px;
     margin-left: 8px;
 }
+*/
 
 
 /* Grid Spacing (gutters): Y-Axis Grid
 *******************************************************************************/
-.grid--gutters[class*="grid--y"] > .grid,
-.grid--gutters[class*="grid--y"] > .grid-cell,
-.grid--gutters [class*="grid--y"] > .grid,
-.grid--gutters [class*="grid--y"] > .grid-cell {
+/*
+.grid-gutters[class*="grid--y"] > .grid,
+.grid-gutters[class*="grid--y"] > .grid-cell,
+.grid-gutters [class*="grid--y"] > .grid,
+.grid-gutters [class*="grid--y"] > .grid-cell {
     margin: 4px 8px;
 }
 
-.grid--gutters[class*="grid--y"] > .grid-cell:first-child,
-.grid--gutters[class*="grid--y"] > .grid:first-child,
-.grid--gutters .grid--y > .grid-cell:first-child,
-.grid--gutters .grid--y > .grid:first-child {
+.grid-gutters[class*="grid--y"] > .grid-cell:first-child,
+.grid-gutters[class*="grid--y"] > .grid:first-child,
+.grid-gutters .grid--y > .grid-cell:first-child,
+.grid-gutters .grid--y > .grid:first-child {
     margin-top: 8px;
 }
 
-.grid--gutters[class*="grid--y"] > .grid-cell:last-child,
-.grid--gutters[class*="grid--y"] > .grid:last-child,
-.grid--gutters .grid--y > .grid-cell:last-child,
-.grid--gutters .grid--y > .grid:last-child {
+.grid-gutters[class*="grid--y"] > .grid-cell:last-child,
+.grid-gutters[class*="grid--y"] > .grid:last-child,
+.grid-gutters .grid--y > .grid-cell:last-child,
+.grid-gutters .grid--y > .grid:last-child {
     margin-bottom: 8px;
+}
+*/
+
+
+/* Grid Spacing (gutters--cells): X-Axis Grid
+*******************************************************************************/
+/*
+.grid-gutters--main:not(.grid--y) > .grid-cell,
+.grid-gutters--main :not(.grid--y) > .grid-cell {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid-cell:first-child,
+.grid-gutters--main :not(.grid--y) > .grid-cell:first-child {
+    margin-left: 0;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid:not(.grid--y) > .grid-cell:first-child,
+.grid-gutters--main :not(.grid--y) > .grid:not(.grid--y) > .grid-cell:first-child {
+    margin-left: 4px;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid:not(.grid--y) > .grid[class*="grid--y"] > .grid-cell,
+.grid-gutters--main :not(.grid--y) > .grid:not(.grid--y) > .grid[class*="grid--y"] > .grid-cell {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid:not(.grid--y):last-child > .grid[class*="grid--y"] > .grid-cell,
+.grid-gutters--main :not(.grid--y) > .grid:not(.grid--y):last-child > .grid[class*="grid--y"] > .grid-cell {
+    margin-right: 0;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid--y:last-child > .grid-cell {
+    margin-left: 4px;
+    margin-right: 0;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid-cell:last-child,
+.grid-gutters--main :not(.grid--y) > .grid-cell:last-child {
+    margin-right: 0;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid-cell,
+.grid-gutters--main [class*="grid--y"] > .grid-cell {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid-cell:first-child,
+.grid-gutters--main [class*="grid--y"] > .grid-cell:first-child {
+    margin-top: 0;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid-cell:last-child,
+.grid-gutters--main [class*="grid--y"] > .grid-cell:last-child {
+    margin-bottom: 0;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid:not(.grid--y) > .grid-cell,
+.grid-gutters--main [class*="grid--y"] > .grid:not(.grid--y) > .grid-cell{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid:not(.grid--y):last-child > .grid-cell,
+.grid-gutters--main [class*="grid--y"] > .grid:not(.grid--y):last-child > .grid-cell{
+    margin-bottom: 0;
+}
+*/
+
+
+.grid-gutters--main .grid-cell {
+    /* background: rgba(147, 128, 108, .1); */
+}
+
+
+/*------------------------------------------------------------------------------
+/*
+    X-Axis: Basic
+------------------------------------------------------------------------------*/
+.grid-gutters--main:not(.grid--y) > .grid-cell,
+.grid-gutters--main :not(.grid--y) > .grid-cell {
+    margin: 0 4px;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid-cell:first-child,
+.grid-gutters--main :not(.grid--y) > .grid-cell:first-child {
+    margin-left: 0;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid-cell:last-child,
+.grid-gutters--main :not(.grid--y) > .grid-cell:last-child {
+    margin-right: 0;
+}
+
+
+/* X-Axis: Nested horizontal grids
+------------------------------------------------------------------------------*/
+/*
+    When the child is an x-axis grid
+*/
+.grid-gutters--main:not(.grid--y) > .grid:not(.grid--y) > .grid-cell:first-child,
+.grid-gutters--main :not(.grid--y) > .grid:not(.grid--y) > .grid-cell:first-child {
+    margin-left: 4px;
+}
+
+.grid-gutters--main:not(.grid--y) > .grid:not(.grid--y) > .grid-cell:last-child,
+.grid-gutters--main :not(.grid--y) > .grid:not(.grid--y) > .grid-cell:last-child {
+    margin-right: 4px;
+}
+
+/*
+    When the first child is an x-axis grid
+*/
+.grid-gutters--main:not(.grid--y) > .grid:not(.grid--y):first-child > .grid-cell:first-child,
+.grid-gutters--main :not(.grid--y) > .grid:not(.grid--y):first-child > .grid-cell:first-child {
+    margin-left: 0;
+}
+
+/*
+    When the last child is an x-axis grid
+*/
+.grid-gutters--main:not(.grid--y) > .grid:not(.grid--y):last-child > .grid-cell:last-child,
+.grid-gutters--main :not(.grid--y) > .grid:not(.grid--y):last-child > .grid-cell:last-child {
+    margin-right: 0;
+}
+
+
+/* X-Axis: Nested vertical grids
+------------------------------------------------------------------------------*/
+/*
+    When the child is a y-axis grid
+*/
+.grid-gutters--main:not(.grid--y) > .grid[class*="grid--y"] > .grid-cell,
+.grid-gutters--main :not(.grid--y) > .grid[class*="grid--y"] > .grid-cell {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+/*
+    When the first child is a y-axis grid
+*/
+.grid-gutters--main:not(.grid--y) > .grid[class*="grid--y"]:first-child > .grid-cell,
+.grid-gutters--main :not(.grid--y) > .grid[class*="grid--y"]:first-child > .grid-cell {
+    margin-left: 0;
+}
+
+/*
+    When the last child is a y-axis grid
+*/
+.grid-gutters--main:not(.grid--y) > .grid[class*="grid--y"]:last-child > .grid-cell,
+.grid-gutters--main :not(.grid--y) > .grid[class*="grid--y"]:last-child > .grid-cell {
+    margin-right: 0;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    Y-Axis: Basic
+------------------------------------------------------------------------------*/
+.grid-gutters--main[class*="grid--y"] > .grid-cell,
+.grid-gutters--main [class*="grid--y"] > .grid-cell {
+    margin: 4px 0;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid-cell:first-child,
+.grid-gutters--main [class*="grid--y"] > .grid-cell:first-child {
+    margin-top: 0;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid-cell:last-child,
+.grid-gutters--main [class*="grid--y"] > .grid-cell:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Y-Axis: Nested vertical grids
+------------------------------------------------------------------------------*/
+/*
+    When the child is a y-axis grid
+*/
+.grid-gutters--main[class*="grid--y"] > .grid[class*="grid--y"] > .grid-cell:first-child,
+.grid-gutters--main [class*="grid--y"] > .grid[class*="grid--y"] > .grid-cell:first-child {
+    margin-top: 4px;
+}
+
+.grid-gutters--main[class*="grid--y"] > .grid[class*="grid--y"] > .grid-cell:last-child,
+.grid-gutters--main [class*="grid--y"] > .grid[class*="grid--y"] > .grid-cell:last-child {
+    margin-bottom: 4px;
+}
+
+/*
+    When the first child is a y-axis grid
+*/
+.grid-gutters--main[class*="grid--y"] > .grid[class*="grid--y"]:first-child > .grid-cell:first-child,
+.grid-gutters--main [class*="grid--y"] > .grid[class*="grid--y"]:first-child > .grid-cell:first-child {
+        margin-top: 0;
+}
+
+/*
+    When the last child is an x-axis grid
+*/
+.grid-gutters--main[class*="grid--y"] > .grid[class*="grid--y"]:last-child > .grid-cell:last-child,
+.grid-gutters--main [class*="grid--y"] > .grid[class*="grid--y"]:last-child > .grid-cell:last-child {
+    margin-bottom: 0;
+}
+
+/* Y-Axis: Nested horizontal grids
+------------------------------------------------------------------------------*/
+/*
+    When the child is an x-axis grid
+*/
+.grid-gutters--main[class*="grid--y"] > .grid:not(.grid--y) > .grid-cell,
+.grid-gutters--main [class*="grid--y"] > .grid:not(.grid--y) > .grid-cell {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/*
+    When the first child is a x-axis grid
+*/
+.grid-gutters--main[class*="grid--y"] > .grid:not(.grid--y):first-child > .grid-cell,
+.grid-gutters--main [class*="grid--y"] > .grid:not(.grid--y):first-child > .grid-cell {
+    margin-top: 0;
+}
+
+/*
+    When the last child is a x-axis grid
+*/
+.grid-gutters--main[class*="grid--y"] > .grid:not(.grid--y):last-child > .grid-cell,
+.grid-gutters--main [class*="grid--y"] > .grid:not(.grid--y):last-child > .grid-cell {
+    margin-bottom: 0;
+}
+
+
+/* Grid Cell Spacing (gutters)
+*******************************************************************************/
+.g--gutter {
+    margin: 8px;
 }
 
 
@@ -152,7 +398,8 @@ Flexbox Grid Styles
 *******************************************************************************/
 /*
     //justify-content: flex-start is the default, so there's no need to have
-    //a specific definition for that
+    //a specific definition for that, besides being able to make the HTML more
+    //declarative - so let's keep it (at least for now).
 */
 
 .grid--main-start {
@@ -272,4 +519,3 @@ Flexbox Grid Styles
     -ms-flex-order: 1;
     order: 1;
 }
-
