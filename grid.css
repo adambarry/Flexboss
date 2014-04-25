@@ -422,39 +422,45 @@ ______________________________________________________________________________*/
 
 /* Gutters New: General
 *******************************************************************************/
+.grid_gutters__new .grid_cell:before {
+    content: "c" counter(grid_cell);
+}
+
+.grid_gutters__new .grid {
+    counter-reset: grid_cell;
+    counter-increment: grid;
+}
+
 .grid_gutters__new .grid_cell {
+    margin: 4px;
     background: rgba(147, 99, 108, .3);
-}
-
-
-/* Gutters New: Vertical spacing
-______________________________________________________________________________*/
-.grid_gutters__new .grid,
-.grid_gutters__new > .grid_cell {
-    margin: 4px 0;
-}
-
-.grid_gutters__new .grid .grid {
-    margin: 0;
-}
-
-.grid_gutters__new > .grid:first-child,
-.grid_gutters__new > .grid_cell:first-child {
-    margin-top: 0;
-}
-
-.grid_gutters__new > .grid:last-child,
-.grid_gutters__new > .grid_cell:last-child {
-    margin-bottom: 0;
+    counter-increment: grid_cell;
 }
 
 
 /* Gutters New: Horisontal spacing
 ______________________________________________________________________________*/
-.grid_gutters__new .grid_cell {
-    margin-left: 4px;
-    margin-right: 4px;
+
+
+
+
+
+/* Gutters New: vertical spacing
+______________________________________________________________________________*/
+
+/*
+.grid_gutters__new .grid:not(.grid__y) > .grid[class*="grid__y"] > .grid_cell {
+    background-color: yellow;
 }
+*/
+
+
+
+
+
+
+
+
 
 
 
