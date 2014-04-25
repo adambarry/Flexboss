@@ -422,16 +422,16 @@ ______________________________________________________________________________*/
 
 /* Gutters New: General
 *******************************************************************************/
-.grid_gutters__new .grid_cell:before {
+.grid_gutters__all .grid_cell:before {
     content: "c" counter(grid_cell);
 }
 
-.grid_gutters__new .grid {
+.grid_gutters__all .grid {
     counter-reset: grid_cell;
     counter-increment: grid;
 }
 
-.grid_gutters__new .grid_cell {
+.grid_gutters__all .grid_cell {
     margin: 4px;
     background: rgba(147, 99, 108, .3);
     counter-increment: grid_cell;
