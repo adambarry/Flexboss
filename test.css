@@ -19,6 +19,7 @@ body {
 
 .test__constrain-width {
     max-width: 799px;
+    max-width: 800px;
 }
 
 .test code {

@@ -66,47 +66,47 @@ Flexbox Grid Styles
 /* Grid Spacing (gutters): X-Axis Grid
 *******************************************************************************/
 /*
-.grid_gutters .grid_cell {
+.grid__gutters .grid_cell {
     background: rgba(147, 128, 108, .3);
 }
 */
 
-.grid_gutters:not(.grid__y) > .grid,
-.grid_gutters:not(.grid__y) > .grid_cell,
-.grid_gutters :not(.grid__y) > .grid,
-.grid_gutters :not(.grid__y) > .grid_cell {
+.grid__gutters:not(.grid__y) > .grid,
+.grid__gutters:not(.grid__y) > .grid_cell,
+.grid__gutters :not(.grid__y) > .grid,
+.grid__gutters :not(.grid__y) > .grid_cell {
     margin: 8px 4px;
 }
 
-.grid_gutters:not(.grid__y) > .grid:first-child,
-.grid_gutters:not(.grid__y) > .grid_cell:first-child,
-.grid_gutters .grid:not(.grid__y) > .grid:first-child,
-.grid_gutters .grid:not(.grid__y) > .grid_cell:first-child {
+.grid__gutters:not(.grid__y) > .grid:first-child,
+.grid__gutters:not(.grid__y) > .grid_cell:first-child,
+.grid__gutters .grid:not(.grid__y) > .grid:first-child,
+.grid__gutters .grid:not(.grid__y) > .grid_cell:first-child {
     margin-left: 8px;
 }
 
-.grid_gutters:not(.grid__y) > .grid:last-child,
-.grid_gutters:not(.grid__y) > .grid_cell:last-child,
-.grid_gutters .grid:not(.grid__y) > .grid:last-child,
-.grid_gutters .grid:not(.grid__y) > .grid_cell:last-child {
+.grid__gutters:not(.grid__y) > .grid:last-child,
+.grid__gutters:not(.grid__y) > .grid_cell:last-child,
+.grid__gutters .grid:not(.grid__y) > .grid:last-child,
+.grid__gutters .grid:not(.grid__y) > .grid_cell:last-child {
     margin-right: 8px;
 }
 
 
 /* Grid Spacing (gutters): X-Axis Grid (right-to-left text direction)
 *******************************************************************************/
-[dir="rtl"] .grid_gutters:not(.grid__y) > .grid:first-child,
-[dir="rtl"] .grid_gutters:not(.grid__y) > .grid_cell:first-child,
-[dir="rtl"] .grid_gutters .grid:not(.grid__y) > .grid:first-child,
-[dir="rtl"] .grid_gutters .grid:not(.grid__y) > .grid_cell:first-child {
+[dir="rtl"] .grid__gutters:not(.grid__y) > .grid:first-child,
+[dir="rtl"] .grid__gutters:not(.grid__y) > .grid_cell:first-child,
+[dir="rtl"] .grid__gutters .grid:not(.grid__y) > .grid:first-child,
+[dir="rtl"] .grid__gutters .grid:not(.grid__y) > .grid_cell:first-child {
     margin-right: 8px;
     margin-left: 4px;
 }
 
-[dir="rtl"] .grid_gutters:not(.grid__y) > .grid:last-child,
-[dir="rtl"] .grid_gutters:not(.grid__y) > .grid_cell:last-child,
-[dir="rtl"] .grid_gutters .grid:not(.grid__y) > .grid:last-child,
-[dir="rtl"] .grid_gutters .grid:not(.grid__y) > .grid_cell:last-child {
+[dir="rtl"] .grid__gutters:not(.grid__y) > .grid:last-child,
+[dir="rtl"] .grid__gutters:not(.grid__y) > .grid_cell:last-child,
+[dir="rtl"] .grid__gutters .grid:not(.grid__y) > .grid:last-child,
+[dir="rtl"] .grid__gutters .grid:not(.grid__y) > .grid_cell:last-child {
     margin-right: 4px;
     margin-left: 8px;
 }
@@ -114,32 +114,32 @@ Flexbox Grid Styles
 
 /* Grid Spacing (gutters): Y-Axis Grid
 *******************************************************************************/
-.grid_gutters[class*="grid__y"] > .grid,
-.grid_gutters[class*="grid__y"] > .grid_cell,
-.grid_gutters [class*="grid__y"] > .grid,
-.grid_gutters [class*="grid__y"] > .grid_cell {
+.grid__gutters[class*="grid__y"] > .grid,
+.grid__gutters[class*="grid__y"] > .grid_cell,
+.grid__gutters [class*="grid__y"] > .grid,
+.grid__gutters [class*="grid__y"] > .grid_cell {
     margin: 4px 8px;
 }
 
-.grid_gutters[class*="grid__y"] > .grid:first-child,
-.grid_gutters[class*="grid__y"] > .grid_cell:first-child,
-.grid_gutters .grid__y > .grid:first-child,
-.grid_gutters .grid__y > .grid_cell:first-child {
+.grid__gutters[class*="grid__y"] > .grid:first-child,
+.grid__gutters[class*="grid__y"] > .grid_cell:first-child,
+.grid__gutters .grid__y > .grid:first-child,
+.grid__gutters .grid__y > .grid_cell:first-child {
     margin-top: 8px;
 }
 
-.grid_gutters[class*="grid__y"] > .grid:last-child,
-.grid_gutters[class*="grid__y"] > .grid_cell:last-child,
-.grid_gutters .grid__y > .grid:last-child,
-.grid_gutters .grid__y > .grid_cell:last-child {
+.grid__gutters[class*="grid__y"] > .grid:last-child,
+.grid__gutters[class*="grid__y"] > .grid_cell:last-child,
+.grid__gutters .grid__y > .grid:last-child,
+.grid__gutters .grid__y > .grid_cell:last-child {
     margin-bottom: 8px;
 }
 
 
 /* Gutters Main: General
 *******************************************************************************/
-/* .grid_gutters__main .grid, */
-.grid_gutters__main .grid_cell {
+/* .grid__gutters__main .grid, */
+.grid__gutters__main .grid_cell {
     background: rgba(147, 128, 108, .3);
 }
 
@@ -148,18 +148,18 @@ Flexbox Grid Styles
 /*
     Gutters Main: X-Axis - Basic
 ______________________________________________________________________________*/
-.grid_gutters__main:not(.grid__y) > .grid_cell,
-.grid_gutters__main :not(.grid__y) > .grid_cell {
+.grid__gutters__main:not(.grid__y) > .grid_cell,
+.grid__gutters__main :not(.grid__y) > .grid_cell {
     margin: 0 4px;
 }
 
-.grid_gutters__main:not(.grid__y) > .grid_cell:first-child,
-.grid_gutters__main :not(.grid__y) > .grid_cell:first-child {
+.grid__gutters__main:not(.grid__y) > .grid_cell:first-child,
+.grid__gutters__main :not(.grid__y) > .grid_cell:first-child {
     margin-left: 0;
 }
 
-.grid_gutters__main:not(.grid__y) > .grid_cell:last-child,
-.grid_gutters__main :not(.grid__y) > .grid_cell:last-child {
+.grid__gutters__main:not(.grid__y) > .grid_cell:last-child,
+.grid__gutters__main :not(.grid__y) > .grid_cell:last-child {
     margin-right: 0;
 }
 
@@ -169,29 +169,29 @@ ______________________________________________________________________________*/
 /*
     When the child is an x-axis grid
 */
-.grid_gutters__main:not(.grid__y) > .grid:not(.grid__y) > .grid_cell:first-child,
-.grid_gutters__main :not(.grid__y) > .grid:not(.grid__y) > .grid_cell:first-child {
+.grid__gutters__main:not(.grid__y) > .grid:not(.grid__y) > .grid_cell:first-child,
+.grid__gutters__main :not(.grid__y) > .grid:not(.grid__y) > .grid_cell:first-child {
     margin-left: 4px;
 }
 
-.grid_gutters__main:not(.grid__y) > .grid:not(.grid__y) > .grid_cell:last-child,
-.grid_gutters__main :not(.grid__y) > .grid:not(.grid__y) > .grid_cell:last-child {
+.grid__gutters__main:not(.grid__y) > .grid:not(.grid__y) > .grid_cell:last-child,
+.grid__gutters__main :not(.grid__y) > .grid:not(.grid__y) > .grid_cell:last-child {
     margin-right: 4px;
 }
 
 /*
     When the first child is an x-axis grid
 */
-.grid_gutters__main:not(.grid__y) > .grid:not(.grid__y):first-child > .grid_cell:first-child,
-.grid_gutters__main :not(.grid__y) > .grid:not(.grid__y):first-child > .grid_cell:first-child {
+.grid__gutters__main:not(.grid__y) > .grid:not(.grid__y):first-child > .grid_cell:first-child,
+.grid__gutters__main :not(.grid__y) > .grid:not(.grid__y):first-child > .grid_cell:first-child {
     margin-left: 0;
 }
 
 /*
     When the last child is an x-axis grid
 */
-.grid_gutters__main:not(.grid__y) > .grid:not(.grid__y):last-child > .grid_cell:last-child,
-.grid_gutters__main :not(.grid__y) > .grid:not(.grid__y):last-child > .grid_cell:last-child {
+.grid__gutters__main:not(.grid__y) > .grid:not(.grid__y):last-child > .grid_cell:last-child,
+.grid__gutters__main :not(.grid__y) > .grid:not(.grid__y):last-child > .grid_cell:last-child {
     margin-right: 0;
 }
 
@@ -201,8 +201,8 @@ ______________________________________________________________________________*/
 /*
     When the child is a y-axis grid
 */
-.grid_gutters__main:not(.grid__y) > .grid[class*="grid__y"] > .grid_cell,
-.grid_gutters__main :not(.grid__y) > .grid[class*="grid__y"] > .grid_cell {
+.grid__gutters__main:not(.grid__y) > .grid[class*="grid__y"] > .grid_cell,
+.grid__gutters__main :not(.grid__y) > .grid[class*="grid__y"] > .grid_cell {
     margin-right: 4px;
     margin-left: 4px;
 }
@@ -210,36 +210,35 @@ ______________________________________________________________________________*/
 /*
     When the first child is a y-axis grid
 */
-.grid_gutters__main:not(.grid__y) > .grid[class*="grid__y"]:first-child > .grid_cell,
-.grid_gutters__main :not(.grid__y) > .grid[class*="grid__y"]:first-child > .grid_cell {
+.grid__gutters__main:not(.grid__y) > .grid[class*="grid__y"]:first-child > .grid_cell,
+.grid__gutters__main :not(.grid__y) > .grid[class*="grid__y"]:first-child > .grid_cell {
     margin-left: 0;
 }
 
 /*
     When the last child is a y-axis grid
 */
-.grid_gutters__main:not(.grid__y) > .grid[class*="grid__y"]:last-child > .grid_cell,
-.grid_gutters__main :not(.grid__y) > .grid[class*="grid__y"]:last-child > .grid_cell {
+.grid__gutters__main:not(.grid__y) > .grid[class*="grid__y"]:last-child > .grid_cell,
+.grid__gutters__main :not(.grid__y) > .grid[class*="grid__y"]:last-child > .grid_cell {
     margin-right: 0;
 }
-
 
 
 /*______________________________________________________________________________
     Gutters Main: Y-Axis - Basic
 ______________________________________________________________________________*/
-.grid_gutters__main[class*="grid__y"] > .grid_cell,
-.grid_gutters__main [class*="grid__y"] > .grid_cell {
+.grid__gutters__main[class*="grid__y"] > .grid_cell,
+.grid__gutters__main [class*="grid__y"] > .grid_cell {
     margin: 4px 0;
 }
 
-.grid_gutters__main[class*="grid__y"] > .grid_cell:first-child,
-.grid_gutters__main [class*="grid__y"] > .grid_cell:first-child {
+.grid__gutters__main[class*="grid__y"] > .grid_cell:first-child,
+.grid__gutters__main [class*="grid__y"] > .grid_cell:first-child {
     margin-top: 0;
 }
 
-.grid_gutters__main[class*="grid__y"] > .grid_cell:last-child,
-.grid_gutters__main [class*="grid__y"] > .grid_cell:last-child {
+.grid__gutters__main[class*="grid__y"] > .grid_cell:last-child,
+.grid__gutters__main [class*="grid__y"] > .grid_cell:last-child {
     margin-bottom: 0;
 }
 
@@ -249,29 +248,29 @@ ______________________________________________________________________________*/
 /*
     When the child is a y-axis grid
 */
-.grid_gutters__main[class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:first-child,
-.grid_gutters__main [class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:first-child {
+.grid__gutters__main[class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:first-child,
+.grid__gutters__main [class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:first-child {
     margin-top: 4px;
 }
 
-.grid_gutters__main[class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:last-child,
-.grid_gutters__main [class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:last-child {
+.grid__gutters__main[class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:last-child,
+.grid__gutters__main [class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:last-child {
     margin-bottom: 4px;
 }
 
 /*
     When the first child is a y-axis grid
 */
-.grid_gutters__main[class*="grid__y"] > .grid[class*="grid__y"]:first-child > .grid_cell:first-child,
-.grid_gutters__main [class*="grid__y"] > .grid[class*="grid__y"]:first-child > .grid_cell:first-child {
+.grid__gutters__main[class*="grid__y"] > .grid[class*="grid__y"]:first-child > .grid_cell:first-child,
+.grid__gutters__main [class*="grid__y"] > .grid[class*="grid__y"]:first-child > .grid_cell:first-child {
         margin-top: 0;
 }
 
 /*
     When the last child is an x-axis grid
 */
-.grid_gutters__main[class*="grid__y"] > .grid[class*="grid__y"]:last-child > .grid_cell:last-child,
-.grid_gutters__main [class*="grid__y"] > .grid[class*="grid__y"]:last-child > .grid_cell:last-child {
+.grid__gutters__main[class*="grid__y"] > .grid[class*="grid__y"]:last-child > .grid_cell:last-child,
+.grid__gutters__main [class*="grid__y"] > .grid[class*="grid__y"]:last-child > .grid_cell:last-child {
     margin-bottom: 0;
 }
 
@@ -281,8 +280,8 @@ ______________________________________________________________________________*/
 /*
     When the child is an x-axis grid
 */
-.grid_gutters__main[class*="grid__y"] > .grid:not(.grid__y) > .grid_cell,
-.grid_gutters__main [class*="grid__y"] > .grid:not(.grid__y) > .grid_cell {
+.grid__gutters__main[class*="grid__y"] > .grid:not(.grid__y) > .grid_cell,
+.grid__gutters__main [class*="grid__y"] > .grid:not(.grid__y) > .grid_cell {
     margin-top: 4px;
     margin-bottom: 4px;
 }
@@ -290,20 +289,18 @@ ______________________________________________________________________________*/
 /*
     When the first child is a x-axis grid
 */
-.grid_gutters__main[class*="grid__y"] > .grid:not(.grid__y):first-child > .grid_cell,
-.grid_gutters__main [class*="grid__y"] > .grid:not(.grid__y):first-child > .grid_cell {
+.grid__gutters__main[class*="grid__y"] > .grid:not(.grid__y):first-child > .grid_cell,
+.grid__gutters__main [class*="grid__y"] > .grid:not(.grid__y):first-child > .grid_cell {
     margin-top: 0;
 }
 
 /*
     When the last child is a x-axis grid
 */
-.grid_gutters__main[class*="grid__y"] > .grid:not(.grid__y):last-child > .grid_cell,
-.grid_gutters__main [class*="grid__y"] > .grid:not(.grid__y):last-child > .grid_cell {
+.grid__gutters__main[class*="grid__y"] > .grid:not(.grid__y):last-child > .grid_cell,
+.grid__gutters__main [class*="grid__y"] > .grid:not(.grid__y):last-child > .grid_cell {
     margin-bottom: 0;
 }
-
-
 
 
 /*
@@ -311,155 +308,55 @@ ______________________________________________________________________________*/
     Target nested x-grids (when preceeding elements exist) with nested y-grids,
     to add bottom margin to the y-grid's .grid_cell:last-child
 */
-.grid_gutters__main[class*="grid__y"] > .grid:not(.grid__y):not(:last-child) > .grid[class*="grid__y"] > :first-child {
+.grid__gutters__main[class*="grid__y"] > .grid:not(.grid__y):not(:last-child) > .grid[class*="grid__y"] > :first-child {
     background-color: yellow;
 }
 
-
-.grid_gutters__main[class*="grid__y"] > .grid:not(.grid__y):not(:last-child) > .grid[class*="grid__y"] > :last-child > .grid_cell {
+.grid__gutters__main[class*="grid__y"] > .grid:not(.grid__y):not(:last-child) > .grid[class*="grid__y"] > :last-child > .grid_cell {
     margin-bottom: 4px;
      background-color: yellow;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Gutters Nest: General
 *******************************************************************************/
-.grid_gutters__nest,
-.grid_gutters__nest .grid {
-/*     background: rgba(147, 187, 108, .2); */
-}
-
-.grid_gutters__nest .grid_cell {
+.grid__color .grid_cell {
     background: rgba(147, 99, 108, .3);
 }
 
-.grid_gutters__nest .grid_cell {
-    margin: 4px;
+.grid__cell_count .grid_cell {
+    counter-increment: grid_cells;
 }
 
-.grid_gutters__nest:not(.grid__y) > .grid_cell,
-.grid_gutters__nest :not(.grid__y) > .grid_cell {
-    background-color: lightblue;
+.grid__cell_count .grid_cell/* :empty */:before {
+    content: counter(grid_cells);
 }
 
-.grid_gutters__nest:not(.grid__y) > .grid_cell:first-child,
-.grid_gutters__nest :not(.grid__y) > .grid_cell:first-child {
-    /* margin-left: 0; */
-    background-color: navy;
+.grid__cell_count .grid > :not(.grid_cell) {
+    background-color: red;
 }
-
-.grid_gutters__nest:not(.grid__y) > .grid_cell:last-child,
-.grid_gutters__nest :not(.grid__y) > .grid_cell:last-child {
-    /* margin-right: 0; */
-    background-color: #7676a9;
-}
-
-
-
-
-
-.grid_gutters__nest[class*="grid__y"] > .grid_cell,
-.grid_gutters__nest [class*="grid__y"] > .grid_cell {
-    background-color: lime;
-}
-
-.grid_gutters__nest[class*="grid__y"] > .grid_cell:first-child,
-.grid_gutters__nest [class*="grid__y"] > .grid_cell:first-child {
-    background-color: #04a104;
-}
-
-.grid_gutters__nest[class*="grid__y"] > .grid_cell:last-child,
-.grid_gutters__nest [class*="grid__y"] > .grid_cell:last-child {
-    background-color: #005400;
-}
-
-.grid_gutters__nest .grid:not(.grid__y) > [class*="grid__y"] > .grid_cell {
-/*
-    margin-left: 4px;
-    margin-right: 4px;
-*/
-
-    background-color: cyan;
-}
-
-.grid_gutters__nest .grid:not(.grid__y) > [class*="grid__y"]:last-child {
-    /* margin-right: 0; */
-/*     background-color: red; */
-}
-
-.grid_gutters__nest .grid:not(.grid__y) > [class*="grid__y"]:last-child > .grid_cell {
-    /* margin-right: 0; */
-    background-color: pink;
-}
-
-
-
-
-
-
-
-
-
-
-/* Gutters New: General
-*******************************************************************************/
-.grid_gutters__all .grid_cell:before {
-    content: "c" counter(grid_cell);
-}
-
-.grid_gutters__all .grid {
-    counter-reset: grid_cell;
-    counter-increment: grid;
-}
-
-.grid_gutters__all .grid_cell {
-    margin: 4px;
-    background: rgba(147, 99, 108, .3);
-    counter-increment: grid_cell;
-}
-
-
-/* Gutters New: Horisontal spacing
-______________________________________________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Grid Cell Spacing (gutters)
 *******************************************************************************/
 .g__gutter {
     margin: 8px;
+}
+
+.g__gutter__top {
+    margin-top: 8px;
+}
+
+.g__gutter__right {
+    margin-right: 8px;
+}
+
+.g__gutter__bottom {
+    margin-bottom: 8px;
+}
+
+.g__gutter__left {
+    margin-left: 8px;
 }
 
 
