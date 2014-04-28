@@ -125,6 +125,17 @@ body {
     color: gray;
 }
 
+.test__show_classes .test_example *:after {
+    content: attr(class);
+    border-radius: 4px;
+    padding: 2px 4px;
+    position: absolute;
+    right: 2px;
+    background-color: rgba(249, 242, 244, .9);
+    font-size: 9px;
+    color: #c7254e;
+}
+
 
 /* Callouts
 *******************************************************************************/

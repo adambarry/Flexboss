@@ -1,0 +1,23 @@
+/* Test grid styles
+*******************************************************************************/
+.test__grids .grid {
+    border: 1px solid magenta;
+}
+
+.test__grids .grid_cell {
+    border: 1px solid cyan;
+}
+
+.test_example .grid__cell_count .grid_cell {
+    counter-increment: grid_cells;
+}
+
+.test_example .grid__cell_count .grid_cell:before {
+    content: counter(grid_cells);
+    border-radius: 4px;
+    padding: 2px 4px;
+    position: relative;
+    background-color: rgba(208,223,255,0.9);
+    font-size: 9px;
+    color: gray;
+}
