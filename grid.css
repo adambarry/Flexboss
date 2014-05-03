@@ -3,24 +3,27 @@ Flexbox Grid Styles
 *******************************************************************************/
 
 /*
-    1:  width: 100%; was initially added to make sure that g__fit'ed .grid
-        elements would span the entire width of its parent.
-
-    2:  width: 100%; was removed because it makes y-axis grid_cells exceed their
-        grids. SO NO WIDTH: 100% FOR .GRID ELEMENTS!
-
-    3:  Make y-axis grid_cell elements span the available width. Disabled again
-        as grid_cell elements shouldn't try to act as grid-elements, and because
-        it makes the grid elements overflow parent grids in some test-cases.
-        If it needs to be part of the code, it should be hard-linked to
-        grid_cell elements, i.e.:
-
-        .grid_cell.grid__y {
-            width: 100%;
-        }
+////////////////////////////////////////////////////////////////////////////////
+//    1:  width: 100%; was initially added to make sure that g--fit'ed .grid
+//        elements would span the entire width of its parent.
+//
+//    2:  width: 100%; was removed because it makes y-axis grid-cells exceed their
+//        grids. SO NO WIDTH: 100% FOR .GRID ELEMENTS!
+//
+//    3:  Make y-axis grid-cell elements span the available width. Disabled again
+//        as grid-cell elements shouldn't try to act as grid-elements, and because
+//        it makes the grid elements overflow parent grids in some test-cases.
+//        If it needs to be part of the code, it should be hard-linked to
+//        grid-cell elements, i.e.:
+//
+//        .grid-cell.grid--y {
+//            width: 100%;
+//        }
+////////////////////////////////////////////////////////////////////////////////
 */
+
 .grid {
-    /*width: 100%; /* 1, 2 */
+    /* width: 100%; */ /* 1, 2 */
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -35,55 +38,62 @@ Flexbox Grid Styles
     list-style: none;
 }
 
-.grid__y {
-    /* width: 100%; */ /* 3 */
+.grid--y {
+    /* // width: 100%; */ /* 3 */
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
 }
 
 /*
-    1:  Prevent overflowing content from destroying the layout
+//
+//    1:  Prevent overflowing content from destroying the layout
+//    2:  Stretch to fill the parent container
+//
 */
-.grid_cell,
+
+.grid-cell,
 .grid > .grid {
-    overflow: hidden; /* 1 */
+    /* width: auto; */ /* http://oli.jp/2011/css3-flexbox/ - if display: box */
+    max-width: 100%;
+    overflow: hidden;
     position: relative;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
-    -moz-box-flex: 1 ;
+    -moz-box-flex: 1;
     -ms-flex: 1;
-    flex: 1;
+    flex: 1; /* 2 */
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    //display: block;
 }
 
 
 /* Grid Cell Spacing (gutters) for individual grid cells
 *******************************************************************************/
-.g__gutter {
+.g--gutter {
     margin: 8px;
 }
 
 
 /*: Directional
 -------------------------------------------------------------------------------*/
-.g__gutter_top {
+.g--gutter-top {
     margin-top: 8px;
 }
 
-.g__gutter_right {
+.g--gutter-right {
     margin-right: 8px;
 }
 
-.g__gutter_bottom {
+.g--gutter-bottom {
     margin-bottom: 8px;
 }
 
-.g__gutter_left {
+.g--gutter-left {
     margin-left: 8px;
 }
 
@@ -93,32 +103,32 @@ Flexbox Grid Styles
 
 /*: X-Axis Grid
 -------------------------------------------------------------------------------*/
-.grid__gutters:not(.grid__y) > .grid,
-.grid__gutters:not(.grid__y) > .grid_cell {
+.grid--gutters:not(.grid--y) > .grid,
+.grid--gutters:not(.grid--y) > .grid-cell {
     margin: 8px 4px;
 }
 
-.grid__gutters:not(.grid__y) > .grid:first-child,
-.grid__gutters:not(.grid__y) > .grid_cell:first-child {
+.grid--gutters:not(.grid--y) > .grid:first-child,
+.grid--gutters:not(.grid--y) > .grid-cell:first-child {
     margin-left: 8px;
 }
 
-.grid__gutters:not(.grid__y) > .grid:last-child,
-.grid__gutters:not(.grid__y) > .grid_cell:last-child {
+.grid--gutters:not(.grid--y) > .grid:last-child,
+.grid--gutters:not(.grid--y) > .grid-cell:last-child {
     margin-right: 8px;
 }
 
 
 /*: X-Axis Grid (right-to-left text direction)
 -------------------------------------------------------------------------------*/
-[dir="rtl"] .grid__gutters:not(.grid__y) > .grid:first-child,
-[dir="rtl"] .grid__gutters:not(.grid__y) > .grid_cell:first-child {
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid:first-child,
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid-cell:first-child {
     margin-right: 8px;
     margin-left: 4px;
 }
 
-[dir="rtl"] .grid__gutters:not(.grid__y) > .grid:last-child,
-[dir="rtl"] .grid__gutters:not(.grid__y) > .grid_cell:last-child {
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid:last-child,
+[dir="rtl"] .grid--gutters:not(.grid--y) > .grid-cell:last-child {
     margin-right: 4px;
     margin-left: 8px;
 }
@@ -126,18 +136,18 @@ Flexbox Grid Styles
 
 /*: Y-Axis Grid
 -------------------------------------------------------------------------------*/
-.grid__gutters[class*="grid__y"] > .grid,
-.grid__gutters[class*="grid__y"] > .grid_cell {
+.grid--gutters[class*="grid--y"] > .grid,
+.grid--gutters[class*="grid--y"] > .grid-cell {
     margin: 4px 8px;
 }
 
-.grid__gutters[class*="grid__y"] > .grid:first-child,
-.grid__gutters[class*="grid__y"] > .grid_cell:first-child {
+.grid--gutters[class*="grid--y"] > .grid:first-child,
+.grid--gutters[class*="grid--y"] > .grid-cell:first-child {
     margin-top: 8px;
 }
 
-.grid__gutters[class*="grid__y"] > .grid:last-child,
-.grid__gutters[class*="grid__y"] > .grid_cell:last-child {
+.grid--gutters[class*="grid--y"] > .grid:last-child,
+.grid--gutters[class*="grid--y"] > .grid-cell:last-child {
     margin-bottom: 8px;
 }
 
@@ -147,47 +157,47 @@ Flexbox Grid Styles
 
 /*: X-Axis Grid
 -------------------------------------------------------------------------------*/
-.grid__gutters_main:not(.grid__y) > .grid_cell {
+.grid--gutters-main:not(.grid--y) > .grid-cell {
     margin: 0 4px;
 }
 
-.grid__gutters_main:not(.grid__y) > .grid_cell:first-child {
+.grid--gutters-main:not(.grid--y) > .grid-cell:first-child {
     margin-left: 0;
 }
 
-.grid__gutters_main:not(.grid__y) > .grid_cell:last-child {
+.grid--gutters-main:not(.grid--y) > .grid-cell:last-child {
     margin-right: 0;
 }
 
 
 /*: X-Axis Grid: Nested horizontal grids
 -------------------------------------------------------------------------------*/
-.grid__gutters_main:not(.grid__y) > .grid:not(.grid__y) > .grid_cell:first-child {
+.grid--gutters-main:not(.grid--y) > .grid:not(.grid--y) > .grid-cell:first-child {
     margin-left: 4px;
 }
 
-.grid__gutters_main:not(.grid__y) > .grid:not(.grid__y) > .grid_cell:last-child {
+.grid--gutters-main:not(.grid--y) > .grid:not(.grid--y) > .grid-cell:last-child {
     margin-right: 4px;
 }
 
 /*
     When the first child is an x-axis grid
 */
-.grid__gutters_main:not(.grid__y) > .grid:not(.grid__y):first-child > .grid_cell:first-child {
+.grid--gutters-main:not(.grid--y) > .grid:not(.grid--y):first-child > .grid-cell:first-child {
     margin-left: 0;
 }
 
 /*
     When the last child is an x-axis grid
 */
-.grid__gutters_main:not(.grid__y) > .grid:not(.grid__y):last-child > .grid_cell:last-child {
+.grid--gutters-main:not(.grid--y) > .grid:not(.grid--y):last-child > .grid-cell:last-child {
     margin-right: 0;
 }
 
 
 /*: X-Axis Grid: Nested vertical grids
 -------------------------------------------------------------------------------*/
-.grid__gutters_main:not(.grid__y) > .grid[class*="grid__y"] > .grid_cell {
+.grid--gutters-main:not(.grid--y) > .grid[class*="grid--y"] > .grid-cell {
     margin-right: 4px;
     margin-left: 4px;
 }
@@ -195,61 +205,61 @@ Flexbox Grid Styles
 /*
     When the first child is a y-axis grid
 */
-.grid__gutters_main:not(.grid__y) > .grid[class*="grid__y"]:first-child > .grid_cell {
+.grid--gutters-main:not(.grid--y) > .grid[class*="grid--y"]:first-child > .grid-cell {
     margin-left: 0;
 }
 
 /*
     When the last child is a y-axis grid
 */
-.grid__gutters_main:not(.grid__y) > .grid[class*="grid__y"]:last-child > .grid_cell {
+.grid--gutters-main:not(.grid--y) > .grid[class*="grid--y"]:last-child > .grid-cell {
     margin-right: 0;
 }
 
 
 /*: Y-Axis Grid
 -------------------------------------------------------------------------------*/
-.grid__gutters_main[class*="grid__y"] > .grid_cell {
+.grid--gutters-main[class*="grid--y"] > .grid-cell {
     margin: 4px 0;
 }
 
-.grid__gutters_main[class*="grid__y"] > .grid_cell:first-child {
+.grid--gutters-main[class*="grid--y"] > .grid-cell:first-child {
     margin-top: 0;
 }
 
-.grid__gutters_main[class*="grid__y"] > .grid_cell:last-child {
+.grid--gutters-main[class*="grid--y"] > .grid-cell:last-child {
     margin-bottom: 0;
 }
 
 
 /*: Y-Axis Grid: Nested vertical grids
 -------------------------------------------------------------------------------*/
-.grid__gutters_main[class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:first-child {
+.grid--gutters-main[class*="grid--y"] > .grid[class*="grid--y"] > .grid-cell:first-child {
     margin-top: 4px;
 }
 
-.grid__gutters_main[class*="grid__y"] > .grid[class*="grid__y"] > .grid_cell:last-child {
+.grid--gutters-main[class*="grid--y"] > .grid[class*="grid--y"] > .grid-cell:last-child {
     margin-bottom: 4px;
 }
 
 /*
     When the first child is a y-axis grid
 */
-.grid__gutters_main[class*="grid__y"] > .grid[class*="grid__y"]:first-child > .grid_cell:first-child {
+.grid--gutters-main[class*="grid--y"] > .grid[class*="grid--y"]:first-child > .grid-cell:first-child {
         margin-top: 0;
 }
 
 /*
     When the last child is an y-axis grid
 */
-.grid__gutters_main[class*="grid__y"] > .grid[class*="grid__y"]:last-child > .grid_cell:last-child {
+.grid--gutters-main[class*="grid--y"] > .grid[class*="grid--y"]:last-child > .grid-cell:last-child {
     margin-bottom: 0;
 }
 
 
 /*: X-Axis Grid: Nested horizontal grids
 -------------------------------------------------------------------------------*/
-.grid__gutters_main[class*="grid__y"] > .grid:not(.grid__y) > .grid_cell {
+.grid--gutters-main[class*="grid--y"] > .grid:not(.grid--y) > .grid-cell {
     margin-top: 4px;
     margin-bottom: 4px;
 }
@@ -257,21 +267,21 @@ Flexbox Grid Styles
 /*
     When the first child is a x-axis grid
 */
-.grid__gutters_main[class*="grid__y"] > .grid:not(.grid__y):first-child > .grid_cell {
+.grid--gutters-main[class*="grid--y"] > .grid:not(.grid--y):first-child > .grid-cell {
     margin-top: 0;
 }
 
 /*
     When the last child is a x-axis grid
 */
-.grid__gutters_main[class*="grid__y"] > .grid:not(.grid__y):last-child > .grid_cell {
+.grid--gutters-main[class*="grid--y"] > .grid:not(.grid--y):last-child > .grid-cell {
     margin-bottom: 0;
 }
 
 
 /* Wrapping
 *******************************************************************************/
-.g__fit {
+.g--fit {
     -webkit-box-flex: 0 !important;
     -moz-box-flex: 0 !important;
     -webkit-flex: 0 0 auto !important;
@@ -279,7 +289,7 @@ Flexbox Grid Styles
     flex: 0 0 auto !important;
 }
 
-.g__wrap {
+.g--wrap {
     -webkit-box-flex: 0 !important;
     -moz-box-flex: 0 !important;
     -webkit-flex: 0 0 auto !important;
@@ -290,11 +300,11 @@ Flexbox Grid Styles
         1:  Make sure that the flex container/item wraps its content on the
             cross-axis
 
-        2:  Safari
+        2:  Required for Safari
     */
 
-    -webkit-align-self: flex-start; /* 1, 2 */
-    -ms-flex-item-align: start; /* 1 */
+    -webkit-align-self: flex-start; /* 2 */
+    -ms-flex-item-align: start;
     align-self: flex-start; /* 1 */
 }
 
@@ -307,7 +317,7 @@ Flexbox Grid Styles
     //declarative - so let's keep it (at least for now).
 */
 
-.grid__main_start {
+.grid--main-start {
     -webkit-box-pack: start;
     -moz-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -315,7 +325,7 @@ Flexbox Grid Styles
     justify-content: flex-start;
 }
 
-.grid__main_center {
+.grid--main-center {
     -webkit-box-pack: center;
     -moz-box-pack: center;
     -webkit-justify-content: center;
@@ -323,7 +333,7 @@ Flexbox Grid Styles
     justify-content: center;
 }
 
-.grid__main_end {
+.grid--main-end {
     -webkit-box-pack: end;
     -moz-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -334,31 +344,31 @@ Flexbox Grid Styles
 
 /* General Cross-Axis Alignment
 *******************************************************************************/
-.grid.g__cross_start {
+.grid.g--cross-start {
  -webkit-align-items: flex-start;
  -ms-flex-align: flex-start;
    align-items: flex-start;
 }
 
-.grid.g__cross_center {
+.grid.g--cross-center {
  -webkit-align-items: center;
  -ms-flex-align: center;
    align-items: center;
 }
 
-.grid.g__cross_stretch {
+.grid.g--cross-stretch {
  -webkit-align-items: stretch;
  -ms-flex-align: stretch;
    align-items: stretch;
 }
 
-.grid.g__cross_baseline {
+.grid.g--cross-baseline {
  -webkit-align-items: baseline;
  -ms-flex-align: baseline;
    align-items: baseline;
 }
 
-.grid.g__cross_end {
+.grid.g--cross-end {
  -webkit-align-items: flex-end;
  -ms-flex-align: flex-end;
    align-items: flex-end;
@@ -367,31 +377,31 @@ Flexbox Grid Styles
 
 /* Individual Cross-Axis Grid Cell Alignment
 *******************************************************************************/
-.g__cross_start {
+.g--cross-start {
     -webkit-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
 }
 
-.g__cross_center {
+.g--cross-center {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
 }
 
-.g__cross_stretch {
+.g--cross-stretch {
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
 }
 
-.g__cross_baseline {
+.g--cross-baseline {
     -webkit-align-self: baseline;
     -ms-flex-item-align: baseline;
     align-self: baseline;
 }
 
-.g__cross_end {
+.g--cross-end {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
@@ -400,30 +410,71 @@ Flexbox Grid Styles
 
 /* Individual Grid Cell Sizes
 *******************************************************************************/
-.g__1of2,
-.g__2of4 {
-    width: 50% !important;
+.g--by2 {
+    flex-grow: 2 !important;
+}
+
+.g--by3 {
+    flex-grow: 3 !important;
+}
+
+
+.g--1of5 {
+    width: 20%;
     -webkit-flex: none !important;
     -ms-flex: none !important;
     flex: none !important;
 }
 
-.g__1of3 {
-    width: 33.333% !important;
+.g--1of4 {
+    width: 25%;
     -webkit-flex: none !important;
     -ms-flex: none !important;
     flex: none !important;
 }
 
-.g__1of4 {
-    width: 25% !important;
+/*
+//
+//  1: Fixes Todo 3
+//
+*/
+
+/* //.grid:not(.grid--y) > .g--1of3, */ /* 1 */
+.g--1of3 {
+    width: 33.333%;
+    width: calc(100% / 3);
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
+    /* min-width: 120px; */ /* Adding this somehow shrinks the flexcontainer to fit the contents */
+}
+
+.g--1of2,
+.g--2of4 {
+    width: 50%;
     -webkit-flex: none !important;
     -ms-flex: none !important;
     flex: none !important;
 }
 
-.g__1of5 {
-    width: 20% !important;
+.g--1of2,
+.g--2of4 {
+    width: 50%;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+}
+
+.g--2of3 {
+    width: 66.666%;
+    width: calc(100% / 3);
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
+}
+
+.g--3of4 {
+    width: 75%;
     -webkit-flex: none !important;
     -ms-flex: none !important;
     flex: none !important;
@@ -432,7 +483,7 @@ Flexbox Grid Styles
 
 /* Ordering
 *******************************************************************************/
-.g__order1 {
+.g--order1 {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     -webkit-order: 1;

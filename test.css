@@ -17,7 +17,7 @@ body {
     background-color: white;
 }
 
-.test__constrain-width {
+.test--constrain-width {
     max-width: 799px;
     max-width: 800px;
 }
@@ -37,6 +37,11 @@ body {
     padding: 2px 4px;
     margin-bottom: 14px;
     background-color: #f7f7f9;
+}
+
+.test .highlight--danger {
+    border-color: #d9534f;
+    background-color: #ffdada;
 }
 
 .test > img {
@@ -65,26 +70,26 @@ body {
 
 /* Test Section
 *******************************************************************************/
-.test_section {
+.test-section {
     border: 1px solid #5bc0de;
     padding: 12px;
     margin: 24px 0;
     position: relative;
 }
 
-.test_section:last-child {
+.test-section:last-child {
     margin-bottom: 0;
 }
 
-.test_section > :first-child {
+.test-section > :first-child {
     margin-top: 0;
 }
 
-.test_section > :last-child {
+.test-section > :last-child {
     margin-bottom: 0;
 }
 
-.test_section > h2 {
+.test-section > h2 {
     width: calc(100% + 24px);
     padding: 4px 12px;
     position: relative;
@@ -94,7 +99,7 @@ body {
     color: white;
 }
 
-[dir="rtl"] .test_section > h2 {
+[dir="rtl"] .test-section > h2 {
     left: auto;
     right: -12px;
 }
@@ -102,7 +107,7 @@ body {
 
 /* Test Example
 *******************************************************************************/
-.test_example {
+.test-example {
     border: 1px solid #e1e1e8;
     border-radius: 4px;
     padding: 24px 12px 12px 12px;
@@ -110,7 +115,7 @@ body {
     position: relative;
 }
 
-.test_example:before {
+.test-example:before {
     content: "Example";
     border-right: 1px solid #e1e1e8;
     border-bottom: 1px solid #e1e1e8;
@@ -125,7 +130,7 @@ body {
     color: gray;
 }
 
-.test__show_classes .test_example *:after {
+.test--show-classes .test-example *:after {
     content: attr(class);
     border-radius: 4px;
     padding: 2px 4px;
@@ -139,7 +144,7 @@ body {
 
 /* Callouts
 *******************************************************************************/
-.test_callout {
+.test-callout {
     border-color: #eee;
     border-left-width: 3px;
     border-left-style: solid;
@@ -147,28 +152,28 @@ body {
     margin: 1.5em 0;
 }
 
-[dir="rtl"] .test_callout {
+[dir="rtl"] .test-callout {
     border-left: none;
     border-right-width: 3px;
     border-right-style: solid;
 }
 
-.test_callout__info {
+.test-callout--info {
     border-color: #5bc0de;
     background-color: #f4f8fa;
 }
 
-.test_callout__interface {
+.test-callout--interface {
     border-color: #8ee66c;
     background-color: #dff0d8;
 }
 
-.test_callout__warning {
+.test-callout--warning {
     border-color: #f0ad4e;
     background-color: #fcf8f2;
 }
 
-.test_callout__danger {
+.test-callout--danger {
     border-color: #d9534f;
     background-color: #ffdada;
 }
