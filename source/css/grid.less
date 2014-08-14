@@ -620,25 +620,40 @@ html {
     //  FLEX-ITEM SIZING: GROW
     //////////////////////////////////////////////////////////////////////////////////
 
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // FLEX-ITEM SIZING: LESS MIXINS
+    ////////////////////////////////////////////////////////////////////////////////
+    .grow-by(@value) {
+        -webkit-flex-grow: @value !important;
+        flex-grow: @value !important;
+
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // FLEX-ITEM SIZING: STYLES
+    ////////////////////////////////////////////////////////////////////////////////
+
     &by {
         &1 {
-            flex-grow: 1 !important;
+            .grow-by(1);
         }
 
         &2 {
-            flex-grow: 2 !important;
+            .grow-by(2);
         }
 
         &3 {
-            flex-grow: 3 !important;
+            .grow-by(3);
         }
 
         &4 {
-            flex-grow: 4 !important;
+            .grow-by(4);
         }
 
         &5 {
-            flex-grow: 5 !important;
+            .grow-by(5);
         }
     }
 
