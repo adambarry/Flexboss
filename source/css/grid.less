@@ -1,0 +1,700 @@
+/*******************************************************************************
+FLEXBOX GRID
+*******************************************************************************/
+
+
+/* GENERAL STYLES
+*******************************************************************************/
+
+html {
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  1:  Required to make the flex-container fill the viewport.
+    ////////////////////////////////////////////////////////////////////////////////
+
+    height: 100%; //1
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//  Grid variables (LESS)
+//
+//  1:  Full distance between grid-cell elements (if applied).
+////////////////////////////////////////////////////////////////////////////////
+
+@grid-gutter-size: 8px;
+@grid-cell-spacing: (@grid-gutter-size); //1
+
+
+/* GRID STYLES
+*******************************************************************************/
+
+////////////////////////////////////////////////////////////////////////////////
+//    1:  width: 100%; was initially added to make sure that g--fit'ed .grid
+//        elements would span the entire width of its parent.
+//
+//    2:  width: 100%; was removed because it makes y-axis grid-cells exceed their
+//        grids. SO NO WIDTH: 100% FOR .grid ELEMENTS!
+////////////////////////////////////////////////////////////////////////////////
+
+.grid {
+    //width: 100%; // 1, 2
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex !important;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    list-style: none;
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  GRID ELEMENTS
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  1:  Prevent overflowing content from destroying the layout
+    //
+    //  2:  Stretch to fill the parent container
+    ////////////////////////////////////////////////////////////////////////////////
+
+    & > &,
+    &-cell {
+        /* width: auto; */ /* http://oli.jp/2011/css3-flexbox/ - if display: box */
+        max-width: 100%;
+        //overflow: hidden; // 1
+        position: relative;
+        -webkit-box-flex: 1 1 auto; // 2
+        -webkit-flex: 1 1 auto; // 2
+        -moz-box-flex: 1 1 auto; // 2
+        -ms-flex: 1 1 auto; // 2
+        flex: 1 1 auto; // 2
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  GRID MODIFIERS
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  Y-AXIS GRID
+    //
+    //  Y-axis grids are layed out vertically instead of horizontally
+    //
+    //  1:  Make y-axis grid-cell elements span the available width. Disabled again
+    //      as grid-cell elements shouldn't try to act as grid-elements, and because
+    //      it makes the grid elements overflow parent grids in some test-cases.
+    //      If it needs to be part of the code, it should be hard-linked to
+    //      grid-cell elements, i.e.:
+    //
+    //      .grid-cell.grid--y {
+    //          width: 100%;
+    //      }
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &--y {
+        // width: 100%; // 1
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  FLEX-ITEM WRAPPING WITHIN A FLEX-CONTAINER, I.E. CHILD ELEMENTS
+    //
+    //  By default flex-items aren't wrapped when the space of the flex-container
+    //  becomes too narrow, so you can apply a modifier class to the flex-container
+    //  to enable wrapping of flex-items.
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &--wrap {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  ALIGNMENT
+    //
+    //  General alignment of flex-items specified on the flex-container.
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  ALIGNMENT: MAIN AXIS
+    //
+    //  justify-content: flex-start is the default, so there's no need to have
+    //  a specific definition for that, besides being able to make the HTML more
+    //  declarative - so let's keep it (at least for now).
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &--main-start {
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    &--main-center {
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    &--main-end {
+        -webkit-box-pack: end;
+        -moz-box-pack: end;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+    &--main-space-between {
+        -webkit-box-pack: space-between;
+        -moz-box-pack: space-between;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: space-between;
+        justify-content: space-between;
+    }
+
+    &--main-space-around {
+        -webkit-box-pack: space-around;
+        -moz-box-pack: space-around;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: space-around;
+        justify-content: space-around;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  ALIGNMENT: CROSS AXIS - LESS MIXINS
+    ////////////////////////////////////////////////////////////////////////////////
+
+    .grid-cross-alignment(@alignment) {
+        -webkit-align-items: @alignment;
+        -ms-flex-align: @alignment;
+        align-items: @alignment;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // ALIGNMENT: CROSS AXIS - STYLES
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &--cross-start {
+        .grid-cross-alignment(flex-start)
+    }
+
+    &--cross-center {
+        .grid-cross-alignment(center);
+    }
+
+    &--cross-stretch {
+        .grid-cross-alignment(stretch);
+    }
+
+    &--cross-baseline {
+        .grid-cross-alignment(baseline);
+    }
+
+    &--cross-end {
+        .grid-cross-alignment(flex-end);
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  GRID APPLICATION TYPE MODIFIERS
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  SINGLE PAGE APPLICATION (SPA)
+    //
+    //  Apply the grid--SPA class to the <body> element when creating an SPA with
+    //  the grid framework
+    ////////////////////////////////////////////////////////////////////////////////
+
+    body&--SPA {
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  1:  Required to make the flex-container fill the viewport.
+        //
+        //  2:  Disable Elastic Scrolling in Safari/Chrome on OSX.
+        //
+        //      By default Safari/Chrome has a bounce of the entire viewport when
+        //      scrolling past the content area. This effect is nice for web pages, but
+        //      doesn't make sense for single-page apps (SPAs) as scrolling takes place
+        //      in designated scrollview panels. Hence, the elastic/bounce should be
+        //      disabled for SPAs, and a simple "overflow: hidden;" on the BODY seems
+        //      to do the trick.
+        //
+        //      Source: http://www.smilingsouls.net/Blog/20110804114957.html
+        //
+        //  3:  To avoid the elastic scrolling, the property needs to be the full
+        //      "overflow: hidden;", i.e. "overflow-y: hidden;" won't suffice.
+        ////////////////////////////////////////////////////////////////////////////////
+
+        height: 100%; //1
+        margin: 0 auto;
+        overflow: hidden; //2, 3
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  GUTTERS
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &--gutters {
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  GUTTERS: X-AXIS GRID
+        ////////////////////////////////////////////////////////////////////////////////
+
+        &:not(.grid--y) {
+            > .grid,
+            > .grid-cell {
+                margin: @grid-cell-spacing (@grid-cell-spacing / 2);
+
+                &:first-child {
+                    margin-left: @grid-cell-spacing;
+                }
+
+                &:last-child {
+                    margin-right: @grid-cell-spacing;
+                }
+            }
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  GUTTERS: Y-AXIS GRID
+        ////////////////////////////////////////////////////////////////////////////////
+
+        &[class*="grid--y"] {
+            > .grid,
+            > .grid-cell {
+                margin: (@grid-cell-spacing / 2) @grid-cell-spacing;
+
+                &:first-child {
+                    margin-top: @grid-cell-spacing;
+                }
+
+                &:last-child {
+                    margin-bottom: @grid-cell-spacing;
+                }
+            }
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  GUTTERS-MAIN
+        //
+        //  Main axis gutters
+        ////////////////////////////////////////////////////////////////////////////////
+
+        &-main {
+
+
+            ////////////////////////////////////////////////////////////////////////////////
+            //  GUTTERS-MAIN: X-AXIS GRID
+            ////////////////////////////////////////////////////////////////////////////////
+
+            &:not(.grid--y) {
+                > .grid,
+                > .grid-cell {
+                    margin-right: (@grid-cell-spacing / 2);
+                    margin-left: (@grid-cell-spacing / 2);
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+
+            ////////////////////////////////////////////////////////////////////////////////
+            //  GUTTERS-MAIN: Y-AXIS GRID
+            ////////////////////////////////////////////////////////////////////////////////
+
+            &[class*="grid--y"] {
+                > .grid,
+                > .grid-cell {
+                    margin-top: (@grid-cell-spacing / 2);
+                    margin-bottom: (@grid-cell-spacing / 2);
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//  G - UTILITY CLASS FOR FLEX-CONTAINERS AND FLEX-ITEMS
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Apply CSS properties to all individual sizing classes, e.g. ".g--1of3"
+////////////////////////////////////////////////////////////////////////////////
+
+[class*="g--1of"],
+[class*="g--2of"],
+[class*="g--3of"] {
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
+}
+
+.g-- {
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  GUTTERS/SPACING FOR INDIVIDUAL GRID-CELLS
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &gutter {
+        margin: @grid-cell-spacing;
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  AXIS WIDE GUTTERS/SPACING
+        ////////////////////////////////////////////////////////////////////////////////
+
+        &-x {
+            margin-right: @grid-cell-spacing !important;
+            margin-left: @grid-cell-spacing !important;
+        }
+
+        &-y {
+            margin-top: @grid-cell-spacing !important;
+            margin-bottom: @grid-cell-spacing !important;
+        }
+
+        &-main {
+            :not(.grid--y) > & {
+                margin-right: @grid-cell-spacing !important;
+                margin-left: @grid-cell-spacing !important;
+            }
+
+            [class*="grid--y"] > & {
+                margin-top: @grid-cell-spacing !important;
+                margin-bottom: @grid-cell-spacing !important;
+            }
+        }
+
+        &-cross {
+            :not(.grid--y) > & {
+                margin-top: @grid-cell-spacing !important;
+                margin-bottom: @grid-cell-spacing !important;
+            }
+
+            [class*="grid--y"] > & {
+                margin-right: @grid-cell-spacing !important;
+                margin-left: @grid-cell-spacing !important;
+            }
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  DIRECTIONAL
+        ////////////////////////////////////////////////////////////////////////////////
+
+        &-top {
+            margin-top: @grid-cell-spacing !important;
+        }
+
+        &-right {
+            margin-right: @grid-cell-spacing !important;
+        }
+
+        &-bottom {
+            margin-bottom: @grid-cell-spacing !important;
+        }
+
+        &-left {
+            margin-left: @grid-cell-spacing !important;
+        }
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  CONTENT WRAPPING
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // CONTENT WRAPPING: LESS MIXINS
+    ////////////////////////////////////////////////////////////////////////////////
+
+    .fit() {
+        -webkit-box-flex: 0 !important;
+        -moz-box-flex: 0 !important;
+        -webkit-flex: 0 0 auto !important;
+        -ms-flex: 0 0 auto !important;
+        flex: 0 0 auto !important;
+    }
+
+    .shrink() {
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  1:  Make sure that the flex container/item wraps its content on the
+        //      cross-axis
+        //
+        //  2:  For Safari
+        ////////////////////////////////////////////////////////////////////////////////
+
+        -webkit-align-self: flex-start; /* 1, 2 */
+        -ms-flex-item-align: start; /* 1 */
+        align-self: flex-start; /* 1 */
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // CONTENT WRAPPING: STYLES
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &fit {
+        .fit();
+    }
+
+    &shrink {
+        .shrink();
+    }
+
+    &wrap {
+        .fit();
+        .shrink();
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  ALIGNMENT: CROSS AXIS
+    //
+    //  Cross axis alignment for individual flex-items. Overrides the general
+    //  alignment specified on the flex-container.
+    //
+    //  Note that there is no individual flex-item alignment on the main axis!
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &cross-start {
+        -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+
+    &cross-center {
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+
+    &cross-stretch {
+        -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+        align-self: stretch;
+    }
+
+    &cross-baseline {
+        -webkit-align-self: baseline;
+        -ms-flex-item-align: baseline;
+        align-self: baseline;
+    }
+
+    &cross-end {
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  FLEX-ITEM SIZING
+    //
+    //  Individual flex-item proportional sizing
+    //////////////////////////////////////////////////////////////////////////////////
+
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //  FLEX-ITEM SIZING: PROPORTIONAL - X-AXIS GRID
+    //////////////////////////////////////////////////////////////////////////////////
+
+    :not(.grid--y) > & {
+        &1of5 {
+            width: 20%;
+        }
+
+        &1of4 {
+            width: 25%;
+        }
+
+        &1of3 {
+            width: 33.333%;
+            width: calc(100% / 3);
+        }
+
+        &1of2,
+        &2of4 {
+            width: 50%;
+        }
+
+        &2of3 {
+            width: 66.666%;
+        }
+
+        &3of4 {
+            width: 75%;
+        }
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //  FLEX-ITEM SIZING: PROPORTIONAL - Y-AXIS GRID
+    //
+    //  These styles an absolute height, e.g. 500px, to be specified on the parent
+    //  grid in order to work at all
+    //////////////////////////////////////////////////////////////////////////////////
+
+    [class*="grid--y"] > & {
+        &1of5 {
+            height: 20%;
+        }
+
+        &1of4 {
+            height: 25%;
+        }
+
+        &1of3 {
+            height: 33.333%;
+            height: calc(100% / 3);
+        }
+
+        &1of2,
+        &2of4 {
+            height: 50%;
+        }
+
+        &2of3 {
+            height: 66.666%;
+        }
+
+        &3of4 {
+            height: 75%;
+        }
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //  FLEX-ITEM SIZING: GROW
+    //////////////////////////////////////////////////////////////////////////////////
+
+    &by {
+        &1 {
+            flex-grow: 1 !important;
+        }
+
+        &2 {
+            flex-grow: 2 !important;
+        }
+
+        &3 {
+            flex-grow: 3 !important;
+        }
+
+        &4 {
+            flex-grow: 4 !important;
+        }
+
+        &5 {
+            flex-grow: 5 !important;
+        }
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  ORDERING
+    //
+    //  Individual flex-item ordering within the parent flex-container
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  ORDERING: LESS MIXINS
+    ////////////////////////////////////////////////////////////////////////////////
+
+    .grid-cell-order(@position) {
+        -webkit-box-ordinal-group: (@position + 1);
+        -moz-box-ordinal-group: (@position + 1);
+        -webkit-order: @position;
+        -ms-flex-order: @position;
+        order: @position;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  ORDERING: STYLES
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &order1 {
+        .grid-cell-order(1);
+    }
+
+    &order2 {
+        .grid-cell-order(2)
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  GRID SCROLLING/OVERFLOW
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  1:  Inspiration for overflow scrolling with Flexbox:
+    //      http://stackoverflow.com/questions/14962468/flexbox-and-vertical-scroll-in-a-full-height-app-using-newer-flexbox-api
+    //
+    //      Note that using "min-height: 0" only works in Firefox, i.e. Chrome and
+    //      Safari loses the ability to scroll, whereas "height: 0" works for all.
+    //
+    //      IE seems to need this property.
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &scroll {
+        height: 0; //1
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
