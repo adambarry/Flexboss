@@ -289,18 +289,20 @@ body.grid--SPA {
   width: 25%;
 }
 :not(.grid--y) > .g--1of3 {
-  width: 33.333%;
-  width: calc(33.33333333%);
+  width: 33%;
 }
 :not(.grid--y) > .g--1of2,
 :not(.grid--y) > .g--2of4 {
   width: 50%;
 }
 :not(.grid--y) > .g--2of3 {
-  width: 66.666%;
+  width: 66%;
 }
 :not(.grid--y) > .g--3of4 {
   width: 75%;
+}
+:not(.grid--y) > .g--1of1 {
+  width: 100%;
 }
 [class*="grid--y"] > .g--1of5 {
   height: 20%;
