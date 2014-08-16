@@ -43,8 +43,6 @@ html {
 }
 .grid > .grid,
 .grid-cell {
-  /* width: auto; */
-  /* http://oli.jp/2011/css3-flexbox/ - if display: box */
   max-width: 100%;
   position: relative;
   -webkit-box-flex: 1 1 auto;
@@ -283,26 +281,32 @@ body.grid--SPA {
   align-self: flex-end;
 }
 :not(.grid--y) > .g--1of5 {
-  width: 20%;
+  max-width: 20%;
 }
 :not(.grid--y) > .g--1of4 {
-  width: 25%;
+  max-width: 25%;
 }
 :not(.grid--y) > .g--1of3 {
-  width: 33%;
+  width: 33.333%;
+  width: calc(33.33333333%);
 }
 :not(.grid--y) > .g--1of2,
-:not(.grid--y) > .g--2of4 {
-  width: 50%;
+:not(.grid--y) > .g--2of4,
+:not(.grid--y) > .g--3of6,
+:not(.grid--y) > .g--4of8,
+:not(.grid--y) > .g--5of10,
+:not(.grid--y) > .g--6of12 {
+  max-width: 50%;
 }
 :not(.grid--y) > .g--2of3 {
-  width: 66%;
+  width: 66.6667%;
+  width: calc(66.66666667%);
 }
 :not(.grid--y) > .g--3of4 {
-  width: 75%;
+  max-width: 75%;
 }
 :not(.grid--y) > .g--1of1 {
-  width: 100%;
+  max-width: 100%;
 }
 [class*="grid--y"] > .g--1of5 {
   height: 20%;
@@ -315,11 +319,16 @@ body.grid--SPA {
   height: calc(33.33333333%);
 }
 [class*="grid--y"] > .g--1of2,
-[class*="grid--y"] > .g--2of4 {
+[class*="grid--y"] > .g--2of4,
+[class*="grid--y"] > .g--3of6,
+[class*="grid--y"] > .g--4of8,
+[class*="grid--y"] > .g--5of10,
+[class*="grid--y"] > .g--6of12 {
   height: 50%;
 }
 [class*="grid--y"] > .g--2of3 {
-  height: 66.666%;
+  height: 66.6667%;
+  height: calc(66.66666667%);
 }
 [class*="grid--y"] > .g--3of4 {
   height: 75%;

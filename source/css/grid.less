@@ -60,22 +60,25 @@ html {
 
 
     ////////////////////////////////////////////////////////////////////////////////
-    //  1:  Prevent overflowing content from destroying the layout
+    //  1:  Source: http://oli.jp/2011/css3-flexbox/ - if display: box.
+    //      "width: auto" should be disabled however
     //
-    //  2:  Stretch to fill the parent container
+    //  2:  Prevent overflowing content from destroying the layout
+    //
+    //  3:  Stretch to fill the parent container
     ////////////////////////////////////////////////////////////////////////////////
 
     & > &,
     &-cell {
-        /* width: auto; */ /* http://oli.jp/2011/css3-flexbox/ - if display: box */
+        //width: auto; // 1
         max-width: 100%;
-        //overflow: hidden; // 1
+        //overflow: hidden; // 2
         position: relative;
-        -webkit-box-flex: 1 1 auto; // 2
-        -webkit-flex: 1 1 auto; // 2
-        -moz-box-flex: 1 1 auto; // 2
-        -ms-flex: 1 1 auto; // 2
-        flex: 1 1 auto; // 2
+        -webkit-box-flex: 1 1 auto; // 3
+        -webkit-flex: 1 1 auto; // 3
+        -moz-box-flex: 1 1 auto; // 3
+        -ms-flex: 1 1 auto; // 3
+        flex: 1 1 auto; // 3
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
@@ -143,44 +146,46 @@ html {
     //  declarative - so let's keep it (at least for now).
     ////////////////////////////////////////////////////////////////////////////////
 
-    &--main-start {
-        -webkit-box-pack: start;
-        -moz-box-pack: start;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
+    &--main- {
+        &start {
+            -webkit-box-pack: start;
+            -moz-box-pack: start;
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
 
-    &--main-center {
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
+        &center {
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
 
-    &--main-end {
-        -webkit-box-pack: end;
-        -moz-box-pack: end;
-        -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-    }
+        &end {
+            -webkit-box-pack: end;
+            -moz-box-pack: end;
+            -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
 
-    &--main-space-between {
-        -webkit-box-pack: space-between;
-        -moz-box-pack: space-between;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: space-between;
-        justify-content: space-between;
-    }
+        &space-between {
+            -webkit-box-pack: space-between;
+            -moz-box-pack: space-between;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: space-between;
+            justify-content: space-between;
+        }
 
-    &--main-space-around {
-        -webkit-box-pack: space-around;
-        -moz-box-pack: space-around;
-        -webkit-justify-content: space-around;
-        -ms-flex-pack: space-around;
-        justify-content: space-around;
+        &space-around {
+            -webkit-box-pack: space-around;
+            -moz-box-pack: space-around;
+            -webkit-justify-content: space-around;
+            -ms-flex-pack: space-around;
+            justify-content: space-around;
+        }
     }
 
 
@@ -199,24 +204,26 @@ html {
     // ALIGNMENT: CROSS AXIS - STYLES
     ////////////////////////////////////////////////////////////////////////////////
 
-    &--cross-start {
-        .grid-cross-alignment(flex-start)
-    }
+    &--cross- {
+        &start {
+            .grid-cross-alignment(flex-start)
+        }
 
-    &--cross-center {
-        .grid-cross-alignment(center);
-    }
+        &center {
+            .grid-cross-alignment(center);
+        }
 
-    &--cross-stretch {
-        .grid-cross-alignment(stretch);
-    }
+        &stretch {
+            .grid-cross-alignment(stretch);
+        }
 
-    &--cross-baseline {
-        .grid-cross-alignment(baseline);
-    }
+        &baseline {
+            .grid-cross-alignment(baseline);
+        }
 
-    &--cross-end {
-        .grid-cross-alignment(flex-end);
+        &end {
+            .grid-cross-alignment(flex-end);
+        }
     }
 
 
@@ -509,34 +516,36 @@ html {
     //  Note that there is no individual flex-item alignment on the main axis!
     ////////////////////////////////////////////////////////////////////////////////
 
-    &cross-start {
-        -webkit-align-self: flex-start;
-        -ms-flex-item-align: start;
-        align-self: flex-start;
-    }
+    &cross- {
+        &start {
+            -webkit-align-self: flex-start;
+            -ms-flex-item-align: start;
+            align-self: flex-start;
+        }
 
-    &cross-center {
-        -webkit-align-self: center;
-        -ms-flex-item-align: center;
-        align-self: center;
-    }
+        &center {
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+        }
 
-    &cross-stretch {
-        -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-        align-self: stretch;
-    }
+        &stretch {
+            -webkit-align-self: stretch;
+            -ms-flex-item-align: stretch;
+            align-self: stretch;
+        }
 
-    &cross-baseline {
-        -webkit-align-self: baseline;
-        -ms-flex-item-align: baseline;
-        align-self: baseline;
-    }
+        &baseline {
+            -webkit-align-self: baseline;
+            -ms-flex-item-align: baseline;
+            align-self: baseline;
+        }
 
-    &cross-end {
-        -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-        align-self: flex-end;
+        &end {
+            -webkit-align-self: flex-end;
+            -ms-flex-item-align: end;
+            align-self: flex-end;
+        }
     }
 
 
@@ -553,36 +562,38 @@ html {
 
     :not(.grid--y) > & {
         &1of5 {
-            width: 20%;
+            max-width: 20%;
         }
 
         &1of4 {
-            width: 25%;
+            max-width: 25%;
         }
 
         &1of3 {
-            //width: 33.333%;
-            //width: calc(100% / 3);
-            width: 33%;
+            width: 33.333%;
+            width: calc(100% / 3);
         }
 
         &1of2,
-        &2of4 {
-            width: 50%;
+        &2of4,
+        &3of6,
+        &4of8,
+        &5of10,
+        &6of12 {
+            max-width: 50%;
         }
 
         &2of3 {
-            //width: 66.666%;
-            //width: calc((100% / 3) * 2);
-            width: 66%;
+            width: 66.6667%;
+            width: calc((100% / 3) * 2);
         }
 
         &3of4 {
-            width: 75%;
+            max-width: 75%;
         }
 
         &1of1 {
-            width: 100%;
+            max-width: 100%;
         }
     }
 
@@ -609,12 +620,17 @@ html {
         }
 
         &1of2,
-        &2of4 {
+        &2of4,
+        &3of6,
+        &4of8,
+        &5of10,
+        &6of12 {
             height: 50%;
         }
 
         &2of3 {
-            height: 66.666%;
+            height: 66.6667%;
+            height: calc((100% / 3) * 2);
         }
 
         &3of4 {
