@@ -324,13 +324,6 @@ body.grid--SPA {
   -ms-flex: none !important;
   flex: none !important;
 }
-:not(.grid--y) > .g--1of1 {
-  width: 100%;
-  max-width: 100%;
-  -webkit-flex: none !important;
-  -ms-flex: none !important;
-  flex: none !important;
-}
 [class*="grid--y"] > .g--1of5 {
   height: 20%;
   -webkit-flex: none !important;
