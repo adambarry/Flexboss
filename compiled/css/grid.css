@@ -409,7 +409,6 @@ body.grid--SPA {
   order: 2;
 }
 .g--scroll {
-  height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }

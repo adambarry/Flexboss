@@ -743,10 +743,11 @@ html {
     //      Safari loses the ability to scroll, whereas "height: 0" works for all.
     //
     //      IE seems to need this property.
+    //      2014-08-17: IE doesn't need this property after all
     ////////////////////////////////////////////////////////////////////////////////
 
     &scroll {
-        height: 0; //1
+        //height: 0; //1
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
