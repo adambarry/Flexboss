@@ -379,9 +379,9 @@ html {
 [class*="g--1of"],
 [class*="g--2of"],
 [class*="g--3of"] {
-    -webkit-flex: none !important;
-    -ms-flex: none !important;
-    flex: none !important;
+    //-webkit-flex: none !important;
+    //-ms-flex: none !important;
+    //flex: none !important;
 }
 
 .g-- {
@@ -560,18 +560,27 @@ html {
     //  FLEX-ITEM SIZING: PROPORTIONAL - X-AXIS GRID
     //////////////////////////////////////////////////////////////////////////////////
 
+    .flex-item-width(@width) {
+        width: @width;
+        max-width: @width;
+        -webkit-flex: none !important;
+        -ms-flex: none !important;
+        flex: none !important;
+    }
+
+
     :not(.grid--y) > & {
         &1of5 {
-            max-width: 20%;
+            .flex-item-width(20%);
         }
 
         &1of4 {
-            max-width: 25%;
+            .flex-item-width(25%);
         }
 
         &1of3 {
-            width: 33.333%;
-            width: calc(100% / 3);
+            .flex-item-width(33.333%);
+            .flex-item-width(calc(100%/3));
         }
 
         &1of2,
@@ -580,20 +589,20 @@ html {
         &4of8,
         &5of10,
         &6of12 {
-            max-width: 50%;
+            .flex-item-width(50%);
         }
 
         &2of3 {
-            width: 66.6667%;
-            width: calc((100% / 3) * 2);
+            .flex-item-width(66.666%);
+            .flex-item-width(calc((100% / 3) * 2));
         }
 
         &3of4 {
-            max-width: 75%;
+            .flex-item-width(75%);
         }
 
         &1of1 {
-            max-width: 100%;
+            .flex-item-width(100%);
         }
     }
 
@@ -604,19 +613,26 @@ html {
     //  These styles an absolute height, e.g. 500px, to be specified on the parent
     //  grid in order to work at all
     //////////////////////////////////////////////////////////////////////////////////
+    .flex-item-height(@height) {
+        height: @height;
+
+        -webkit-flex: none !important;
+        -ms-flex: none !important;
+        flex: none !important;
+    }
 
     [class*="grid--y"] > & {
         &1of5 {
-            height: 20%;
+            .flex-item-height(20%);
         }
 
         &1of4 {
-            height: 25%;
+            .flex-item-height(25%);
         }
 
         &1of3 {
-            height: 33.333%;
-            height: calc(100% / 3);
+            .flex-item-height(33.333%);
+            .flex-item-height(calc(100% / 3));
         }
 
         &1of2,
@@ -625,16 +641,16 @@ html {
         &4of8,
         &5of10,
         &6of12 {
-            height: 50%;
+            .flex-item-height(50%);
         }
 
         &2of3 {
-            height: 66.6667%;
-            height: calc((100% / 3) * 2);
+            .flex-item-height(66.667%);
+            .flex-item-height(calc((100% / 3) * 2));
         }
 
         &3of4 {
-            height: 75%;
+            .flex-item-height(75%);
         }
     }
 
