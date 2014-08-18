@@ -168,12 +168,12 @@
                 <h4>Fit (Y-Axis Grid)</h4>
 
                 <div class="test-callout test-callout--warning">
-                    <h4>Hardcoded height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the height is not equally divided by the <code>grid-cell</code> elements.</p>
+                    <h4>Absolute height</h4>
+                    <p>In the following example a <code>style="height"</code> property has been specified on the test container element.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--y grid--cell-count" style="height: 100px;">
+                <div class="test-example" style="height: 100px;">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell"></div>
                         <div class="grid-cell g--fit"><code>g--fit</code></div>
                     </div>
@@ -199,12 +199,12 @@
                 <h4>Shrink (Y-Axis Grid)</h4>
 
                 <div class="test-callout test-callout--warning">
-                    <h4>Hardcoded height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that <code>grid-cell</code> elements distribute the height between them, but collapse on the cross axis.</p>
+                    <h4>Absolute height</h4>
+                    <p>In the following example a <code>style="height"</code> property has been specified on the test container element.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--y grid--cell-count" style="height: 100px;">
+                <div class="test-example" style="height: 100px;">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell"></div>
                         <div class="grid-cell g--shrink">Line 1<br/>Line 2<br/></div>
                     </div>
@@ -230,12 +230,12 @@
                 <h4>Wrap (Y-Axis Grid)</h4>
 
                 <div class="test-callout test-callout--warning">
-                    <h4>Hardcoded height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the <code>grid</code> element in order to demonstrate that the <code>grid-cell</code> elements neither fit the width nor the height of the <code>grid</code>, but rather wrap around their contents.</p>
+                    <h4>Absolute height</h4>
+                    <p>In the following example a <code>style="height"</code> property has been specified on the test container element.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--y" style="height: 100px;">
+                <div class="test-example" style="height: 100px;">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell"></div>
                         <div class="grid-cell g--wrap"><code>g--wrap</code></div>
                     </div>
@@ -788,35 +788,35 @@
                 <div class="test-callout test-callout--warning">
                     <h4>Absolute height on <code>grid</code> elements</h4>
 
-                    <p>The height of the container <code>grid</code> has been defined as otherwise the grids would collapse.</p>
+                    <p>The height of the example container has been absolutely defined, and the container <code>grid</code> elements has had the <code>grid--stretch-height</code> modifier class applied as otherwise the grids would collapse.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--y grid--cell-count" style="height: 100px;">
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell g--1of2"><code>g--1of2</code></div>
 
                         <div class="grid-cell"></div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--y grid--cell-count" style="height: 100px;">
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell g--1of3"><code>g--1of3</code></div>
 
                         <div class="grid-cell"></div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--y grid--cell-count" style="height: 100px;">
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell g--1of4"><code>g--1of4</code></div>
 
                         <div class="grid-cell"></div>
                     </div>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--y grid--cell-count" style="height: 100px;">
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell g--1of5"><code>g--1of5</code></div>
 
                         <div class="grid-cell"></div>
@@ -903,8 +903,8 @@
                     <p>Contrary to the <code>g--XofX</code> definitions, the <code>g--byX</code> definitions don't need an absolute height specified on the parent y-axis <code>grid</code> element in order to work.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid grid--cell-count" style="height: 100px;">
+                <div class="test-example test-example--height100">
+                    <div class="grid grid grid--stretch-height grid--cell-count">
                         <div class="grid grid--y">
                             <div class="grid-cell g--by1"><code>g--by1</code></div>
 
@@ -1221,11 +1221,11 @@
                 <div class="test-callout test-callout--warning">
                     <h4>Hardcoded height</h4>
 
-                    <p>The <code>height</code> of the containing <code>grid</code> element has been absolutely defined in order for the example to have a certain height - otherwise the scrolling section would collapse.</p>
+                    <p>The the containing <code>grid</code> element has had the <code>grid--stretch-height</code> modifier class applied in order to fill out the text container.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--y" style="height: 100px;">
+                <div class="test-example" style="height: 100px;">
+                    <div class="grid grid--y grid--stretch-height">
                         <div class="grid-cell g--fit">I don't scroll</div>
 
                         <div class="grid-cell g--scroll">
@@ -1244,7 +1244,7 @@
                 <h2>Ordering</h2>
 
                 <p>With flexbox you can change the order of appearance for flex-items without having to change the order of the HTML.</p>
-                <p>By default, each flex-item has an <code>order: 0</code> (<code>box-ordinal-group: 1</code> in older browsers) - and the higher the <code>order</code> value, the farther back the element will be rendered. This means that if you only specify an <code>order</code> value higher than 0 on a single <code>grid-cell</code> in a collection (leaving the rest unspecified), the element with the <code>order</code> value higher than 0 will be rendered at the end of the collection, as the rest of the elements will have <code>order: 0</code> by default.</p>
+                <p>By default, each flex-item has an <code>order: 0</code> (the equivalent of <code>box-ordinal-group: 1</code> in older browsers/versions of Flexbox) - and the higher the <code>order</code> value, the farther back the element will be rendered. This means that if you only specify an <code>order</code> value higher than 0 on a single <code>grid-cell</code> in a collection (leaving the rest unspecified), the element with the <code>order</code> value higher than 0 will be rendered at the end of the collection, as the rest of the elements will have <code>order: 0</code> by default.</p>
 
                 <div class="test-callout test-callout--danger">
                     <h4>CSS Pseudo Classes Not Respected</h4>

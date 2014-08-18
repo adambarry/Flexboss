@@ -131,6 +131,10 @@ body {
     color: gray;
 }
 
+.test-example--height100 {
+    height: 100px;
+}
+
 .test--show-classes .test-example *:after {
     content: attr(class);
     border-radius: 4px;

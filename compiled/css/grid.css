@@ -126,6 +126,9 @@ html {
   -ms-flex-align: flex-end;
   align-items: flex-end;
 }
+.grid--stretch-height {
+  height: 100%;
+}
 body.grid--SPA {
   height: 100%;
   margin: 0 auto;
