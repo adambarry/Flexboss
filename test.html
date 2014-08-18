@@ -68,7 +68,11 @@
             </div>
 
             <div class="test-section">
-                <h2>Basic Grids: Horizontal (X-Axis)</h2>
+                <h2>Basic Grids</h2>
+
+                <p>With Flexbox the <code>grid-cell</code> (and child <code>grid</code>) elements divide the available space equally among themselves, and can be laid out either horizontally or vertically.</p>
+
+                <h3>X-Axis (Horizontal) Grids (default)</h3>
 
                 <div class="test-example">
                     <div class="grid grid--cell-count">
@@ -106,13 +110,11 @@
                         <div class="grid-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="test-section">
-                <h2>Vertical (Y-Axis) Grids</h2>
+                <h3>Y-Axis (Vertical) Grids</h3>
 
-                <p>When you want to lay out the <code>grid-cell</code> elements vertically, you can simply add a modifier class to a <code>grid</code> element and its child <code>grid-cell</code> elements will subsequently be ordered along the y-axis.</p>
+                <p>When you want to lay out the <code>grid-cell</code> elements vertically, you can simply add a <code>grid--y</code> modifier class to a <code>grid</code> element and its child (<code>grid</code> and) <code>grid-cell</code> elements will subsequently be ordered along the y-axis.</p>
 
                 <div class="test-callout test-callout--interface">
                     <p><code>grid--y</code> modifier class added to <code>grid</code> class elements</p>
@@ -147,45 +149,22 @@
             <div class="test-section">
                 <h2>Fit, Shrink & Wrap Grid Cells</h2>
 
-                <p>By default <code>grid-cell</code> elements stretch and divide the available space within a <code>grid</code> element equally, but you can change this by adding modifier classes to the individual <code>grid-cell</code> elements.</p>
+                <p>By default <code>grid-cell</code> (and child <code>grid</code>) elements stretch and divide the available space within a <code>grid</code> element equally, but you can change this by adding the modifier classes <code>g--fit</code>; <code>g--shrink</code>; and <code>g--wrap</code> to the individual <code>grid-cell</code> (and <code>grid</code>) elements. The modifier classes applies the following behavior of the element to which they are applied:</p>
 
-                <h3>Fit</h3>
+                <ul>
+                    <li><code>g--fit</code>: Makes the element collapse (occupy the minimum amount of space) along the main axis, but retain its size on the cross axis.</li>
+                    <li><code>g--shrink</code>: Makes the element collapse on the cross axis, but retain its size on the main axis.</li>
+                    <li><code>g--wrap</code>: Makes the element collapse on both the main and cross axis, i.e. shrink-wrap the element to fit its contents.</li>
+                </ul>
 
-                <p>When you want to limit the width of a <code>grid-cell</code> element to fit its content, but still want it to expand along the cross axis of the <code>grid</code>, you can apply the <code>g--fit</code> modifier class to the element itself.</p>
 
-                <div class="test-callout test-callout--interface">
-                    <p><code>g--fit</code> modifier class added to fitted elements.</p>
-                </div>
+                <h4>X-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--cell-count">
                         <div class="grid-cell">Line 1<br/>Line 2<br/></div>
                         <div class="grid-cell g--fit"><code>g--fit</code></div>
                     </div>
-                </div>
-
-
-                <h4>Fit (Y-Axis Grid)</h4>
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Absolute height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the test container element.</p>
-                </div>
-
-                <div class="test-example" style="height: 100px;">
-                    <div class="grid grid--y grid--stretch-height grid--cell-count">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell g--fit"><code>g--fit</code></div>
-                    </div>
-                </div>
-
-
-                <h3>Shrink</h3>
-
-                <p>When you want the <code>grid-cell</code> to only take up the minimum space on the cross axis, but still want it to expand along the main axis.</p>
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>g--shrink</code> modifier class added to fitted elements.</p>
                 </div>
 
                 <div class="test-example">
@@ -193,30 +172,6 @@
                         <div class="grid-cell">Line 1<br/>Line 2<br/></div>
                         <div class="grid-cell g--shrink"><code>g--shrink</code></div>
                     </div>
-                </div>
-
-
-                <h4>Shrink (Y-Axis Grid)</h4>
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Absolute height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the test container element.</p>
-                </div>
-
-                <div class="test-example" style="height: 100px;">
-                    <div class="grid grid--y grid--stretch-height grid--cell-count">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell g--shrink">Line 1<br/>Line 2<br/></div>
-                    </div>
-                </div>
-
-
-                <h3>Wrap</h3>
-
-                <p>When you want a <code>grid-cell</code> element to only fill up the space for its contents (i.e. shrink-wrap on both the main and the cross axis), you can apply <code>g--wrap</code> modifier class to the element itself.</p>
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>g--wrap</code> modifier class added to wrapped elements.</p>
                 </div>
 
                 <div class="test-example">
@@ -227,11 +182,25 @@
                 </div>
 
 
-                <h4>Wrap (Y-Axis Grid)</h4>
+                <h4>Y-Axis Grid</h4>
 
                 <div class="test-callout test-callout--warning">
                     <h4>Absolute height</h4>
-                    <p>In the following example a <code>style="height"</code> property has been specified on the test container element.</p>
+                    <p>In the following examples a <code>style="height"</code> property has been specified on the test container element.</p>
+                </div>
+
+                <div class="test-example" style="height: 100px;">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell g--fit"><code>g--fit</code></div>
+                    </div>
+                </div>
+
+                <div class="test-example" style="height: 100px;">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell g--shrink"><code>g--shrink</code></div>
+                    </div>
                 </div>
 
                 <div class="test-example" style="height: 100px;">
