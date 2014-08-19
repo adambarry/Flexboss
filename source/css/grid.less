@@ -377,19 +377,6 @@ html {
 //  G - UTILITY CLASS FOR FLEX-CONTAINERS AND FLEX-ITEMS
 ////////////////////////////////////////////////////////////////////////////////
 
-
-////////////////////////////////////////////////////////////////////////////////
-// Apply CSS properties to all individual sizing classes, e.g. ".g--1of3"
-////////////////////////////////////////////////////////////////////////////////
-
-[class*="g--1of"],
-[class*="g--2of"],
-[class*="g--3of"] {
-    //-webkit-flex: none !important;
-    //-ms-flex: none !important;
-    //flex: none !important;
-}
-
 .g-- {
 
 
@@ -576,6 +563,11 @@ html {
 
 
     :not(.grid--y) > & {
+        &1of6 {
+            .flex-item-width(16.667);
+            .flex-item-width(calc(100/6));
+        }
+
         &1of5 {
             .flex-item-width(20%);
         }
@@ -624,6 +616,11 @@ html {
     }
 
     [class*="grid--y"] > & {
+        &1of6 {
+            .flex-item-height(16.667%);
+            .flex-item-height(calc(100% / 6));
+        }
+
         &1of5 {
             .flex-item-height(20%);
         }

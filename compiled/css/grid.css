@@ -276,6 +276,15 @@ body.grid--SPA {
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
+:not(.grid--y) > .g--1of6 {
+  width: 16.667;
+  max-width: 16.667;
+  width: calc(16.66666667);
+  max-width: calc(16.66666667);
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important;
+}
 :not(.grid--y) > .g--1of5 {
   width: 20%;
   max-width: 20%;
@@ -323,6 +332,13 @@ body.grid--SPA {
 :not(.grid--y) > .g--3of4 {
   width: 75%;
   max-width: 75%;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important;
+}
+[class*="grid--y"] > .g--1of6 {
+  height: 16.667%;
+  height: calc(16.66666667%);
   -webkit-flex: none !important;
   -ms-flex: none !important;
   flex: none !important;
