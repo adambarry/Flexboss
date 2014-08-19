@@ -988,13 +988,16 @@
                     <p>In order for the baseline alignment to work, there has to be multiple baseline aligned items within a <code>grid</code>. Hence, the elements containing the text <strong>baseline 2</strong> have been added to the examples.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid">
+
+                <h5>X-Axis Grid</h5>
+
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--stretch-height">
                         <div class="grid-cell g--cross-start">Start</div>
 
                         <div class="grid-cell g--cross-center">Center</div>
 
-                        <div class="grid-cell g--cross-stretch">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
+                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
 
                         <div class="grid-cell g--cross-baseline">Baseline</div>
 
@@ -1005,7 +1008,7 @@
                 </div>
 
 
-                <h5>Cross-Axis Alignment (Y-Axis Grid)</h5>
+                <h5>Y-Axis Grid</h5>
 
                 <div class="test-example">
                     <div class="grid grid--y">
@@ -1013,7 +1016,7 @@
 
                         <div class="grid-cell g--cross-center">Center</div>
 
-                        <div class="grid-cell">Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh. Ut interdum ligula id metus hendrerit cursus. Integer eu leo felis. Aenean commodo ultrices nunc, sit amet blandit elit gravida in. Sed est ligula, ornare ac nisi adipiscing, iaculis facilisis tellus.</div>
+                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
 
                         <div class="grid-cell g--cross-baseline">Baseline</div>
 
@@ -1030,8 +1033,8 @@
                     <p><code>g--cross-end</code> modifier class added to parent <code>grid</code> element to align <code>grid-cell</code> elements along the bottom, but the modifier classes of the individual <code>grid-cell</code> elements overrides this setting.</p>
                 </div>
 
-                <div class="test-example">
-                    <div class="grid grid--cross-end" style="height: 100px;">
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--cross-end grid--stretch-height">
                         <div class="grid-cell">Auto</div>
 
                         <div class="grid-cell g--cross-center">Center</div>
