@@ -35,13 +35,13 @@
                 <dd><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="-blank">Using CSS flexible boxes</a></dd>
             </dl>
 
-            <p>The flexbox grid is based on the following HTML structure:</p>
+            <p>The grid is based on the following HTML structure:</p>
 
             <script type="syntaxhighlighter" class="brush: html"><![CDATA[
 
                 <!-- Single level grid: -->
-                <div class="grid">
-                    <div class="grid-cell"></div>
+                <div class="grid grid--modifier">
+                    <div class="grid-cell g--modifier"></div>
 
                     <div class="grid-cell"></div>
 
@@ -49,10 +49,10 @@
                 </div>
 
                 <!-- Nested grid: -->
-                <div class="grid">
+                <div class="grid grid--modifier">
                     <div class="grid-cell"></div>
 
-                    <div class="grid">
+                    <div class="grid g--modifier">
                         <div class="grid-cell"></div>
 
                         <div class="grid-cell"></div>
@@ -61,7 +61,14 @@
 
             ]]></script>
 
-            <p>The <code>grid</code> class elements represent <em>flex containers</em> and <code>grid-cell</code> class elements represent <em>flex items</em>.</p>
+            <p>... using the following CSS block/element/modifiers:</p>
+
+            <ul>
+                <li><code>grid</code>: A grid element, i.e. a <em>flex container</em>. The grid element is only intended to be used as a wrapper for <code>grid-cell</code> elements (see below) and should not contain any actual content. In nested grids <code>grid</code> elements behave as <code>grid-cell</code> elements.</li>
+                <li><code>grid-cell</code>: A grid cell element, i.e. a <em>flex item</em>. The cells are the elements that contain actual content.</li>
+                <li><code>grid--</code>: A modifier class exclusively for <code>grid</code> elements.</li>
+                <li><code>g--</code>: A modifier class for both <code>grid</code> and <code>grid-cell</code> elements.</li>
+            </ul>
 
             <div class="test-callout test-callout--info">
                 <p>In many of the following examples the <code>grid--cell-count</code> modifier class has been added to the wrapper <code>grid</code> elements. The modifier class causes underlying <code>grid-cell</code> elements to display their individual position among the total number of <code>grid-cell</code> elements in the given <code>grid</code>.</p>
@@ -268,104 +275,6 @@
                     </div>
                 </div>
 
-                <!--
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--gutters-main">
-                        <div class="grid grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--gutters-main">
-                        <div class="grid grid--y grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--y grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--y grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-                    </div>
-                </div>
--->
-
 
                 <h5>Main-Axis Gutters: Y-Axis Grid</h5>
 
@@ -379,105 +288,9 @@
                     </div>
                 </div>
 
-                <!--
-<div class="test-example">
-                    <div class="grid grid--cell-count grid--y grid--gutters-main">
-                        <div class="grid grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--y grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--y grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--y grid--gutters-main">
-                        <div class="grid grid--y grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--y grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--y grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count grid--y grid--gutters-main">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid grid--y grid--gutters-main">
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-
-                            <div class="grid-cell"></div>
-                        </div>
-                    </div>
-                </div>
--->
 
                 <h3>Individual Grid Cell Gutters</h3>
+
                 <p>The individual grid cell gutters are used to apply spacing to specific <code>grid-cell</code> elements, via modifier classes applied to the elements themselves.</p>
 
                 <h4>General Gutters (Omnidirectional)</h4>
@@ -647,7 +460,9 @@
                         </div>
 
                         <div class="grid grid--y grid--gutters">
-                            <div class="grid-cell">this cell creates the overflow when parent <code>grid</code> has <code>style="width: 100%;"</code></div>
+                            <div class="grid-cell">
+                                <!-- this cell overflows its parent when parent <code>grid</code> has <code>style="width: 100%;"</code> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1183,24 +998,27 @@
 
                 <p>Especially for when developing single-page applications (SPAs) you want to be able to have scroll-views which scrolls overflowing content.</p>
 
-                <div class="test-callout test-callout--interface">
-                    <p><code>g--scroll</code> class added to scrolling <code>grid-cell</code>.</p>
-                </div>
-
                 <div class="test-callout test-callout--warning">
                     <h4>Hardcoded height</h4>
 
                     <p>The the containing <code>grid</code> element has had the <code>grid--stretch-height</code> modifier class applied in order to fill out the text container.</p>
                 </div>
 
+                <div class="test-callout test-callout--interface">
+                    <p>The modifier class <code>g--scroll</code> has been added to scrolling <code>grid-cell</code>.</p>
+                    <p>An additional unspecified wrapper element (identified as <code>data-role="wrapper"</code> in the below example) is required in order for regular HTML content to display correctly - try removing the element and you will notice that the <code>p</code> elements line up beside each other instead of below.</p>
+                </div>
+
                 <div class="test-example" style="height: 100px;">
-                    <div class="grid grid--y grid--stretch-height">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell g--fit">I don't scroll</div>
 
                         <div class="grid-cell g--scroll">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae felis in leo sollicitudin dapibus. Cras eget porta sem. Vivamus venenatis quam eget orci aliquet consequat. Donec feugiat pretium diam, non consectetur purus dignissim eget. Quisque ac nisl laoreet, auctor nisl ac, commodo sapien. Integer at dui sed ligula sollicitudin auctor et at diam. Integer dolor nulla, rhoncus tristique nunc ac, consectetur vulputate mi. Nam consectetur, enim et faucibus pulvinar, lorem elit mattis nibh, in porttitor magna augue vitae elit. Nunc ornare luctus magna, et suscipit dui molestie ac. Sed sodales nulla quam, eu faucibus massa fringilla in. Integer sed tortor luctus, hendrerit ante at, commodo nulla.</p>
+                            <div data-role="wrapper">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae felis in leo sollicitudin dapibus. Cras eget porta sem. Vivamus venenatis quam eget orci aliquet consequat. Donec feugiat pretium diam, non consectetur purus dignissim eget. Quisque ac nisl laoreet, auctor nisl ac, commodo sapien. Integer at dui sed ligula sollicitudin auctor et at diam. Integer dolor nulla, rhoncus tristique nunc ac, consectetur vulputate mi. Nam consectetur, enim et faucibus pulvinar, lorem elit mattis nibh, in porttitor magna augue vitae elit. Nunc ornare luctus magna, et suscipit dui molestie ac. Sed sodales nulla quam, eu faucibus massa fringilla in. Integer sed tortor luctus, hendrerit ante at, commodo nulla.</p>
 
-                            <p>Nulla facilisi. Proin blandit molestie dui, ac porttitor magna elementum id. Praesent consectetur sagittis lectus, at tempor justo vulputate vitae. Cras turpis nulla, aliquet sed sapien eu, accumsan lobortis ipsum. Sed at nisi sodales, varius felis id, vulputate purus. Ut accumsan metus tortor, non accumsan lectus viverra at. Donec ullamcorper ipsum rutrum, cursus justo eu, dignissim leo. Fusce pellentesque adipiscing dui nec viverra.</p>
+                                <p>Nulla facilisi. Proin blandit molestie dui, ac porttitor magna elementum id. Praesent consectetur sagittis lectus, at tempor justo vulputate vitae. Cras turpis nulla, aliquet sed sapien eu, accumsan lobortis ipsum. Sed at nisi sodales, varius felis id, vulputate purus. Ut accumsan metus tortor, non accumsan lectus viverra at. Donec ullamcorper ipsum rutrum, cursus justo eu, dignissim leo. Fusce pellentesque adipiscing dui nec viverra.</p>
+                            </div>
                         </div>
 
                         <div class="grid-cell g--fit">I don't scroll either</div>
