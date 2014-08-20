@@ -193,6 +193,7 @@ body {
 
 .test .syntaxhighlighter {
     background-color: #f7f7f9 !important;
+    overflow: auto;
     direction: ltr; /* 1 */
 }
 
