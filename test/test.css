@@ -45,7 +45,9 @@ body {
     background-color: #ffdada;
 }
 
-.test > img {
+.test > img,
+.test > figure,
+.test > figure > img {
     max-width: 100%;
 }
 
