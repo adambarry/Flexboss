@@ -5,8 +5,7 @@
         <title>Flexbox Grid SPA Prototype</title>
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-        <meta name="description" content="Flexbox Grid">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="description" content="Flexbox Grid SPA Prototype">
 
         <!-- iOS home screen app settings -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -16,10 +15,41 @@
         <meta name="format-detection" content="telephone = no" />
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
-        <link rel="stylesheet" href="test/test-grid.css" />
+        <!-- <link rel="stylesheet" href="test/test-grid.css" /> -->
         <link rel="stylesheet" href="compiled/css/grid.css" />
+
+        <style type="text/css">
+            .border--top {
+                border-top: 1px solid #c0c0c0;
+            }
+
+            .border--right {
+                border-right: 1px solid #c0c0c0;
+            }
+
+            .border--bottom {
+                border-bottom: 1px solid #c0c0c0;
+            }
+
+            .border--left {
+                border-left: 1px solid #c0c0c0;
+            }
+
+            .pane--padding-right {
+                padding-right: 8px;
+            }
+
+            .pane--padding-left {
+                padding-left: 8px;
+            }
+
+            .btn-label {
+                font-weight: normal;
+            }
+
+        </style>
     </head>
-    <body class="grid grid--SPA grid--y grid--gutters test--grids" dir="ltr">
+    <body class="grid grid--SPA grid--y" dir="ltr">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using a browser that doesn't support some of the technologies used by this application. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -29,15 +59,19 @@
                 <div class="grid-cell g--fit"><img src="http://placehold.it/200x50" alt="" /></div>
 
                 <div class="grid grid--main-end grid--gutters-main grid--wrap">
-                    <button type="button" class="grid-cell g--wrap">Settings</button>
+                    <button type="button" class="grid-cell g--wrap btn">
+                        <b class="btn-label">Settings</b>
+                    </button>
 
-                    <button type="button" class="grid-cell g--wrap">Sign out</button>
+                    <button type="button" class="grid-cell g--wrap btn">
+                        <b class="btn-label">Sign out</b>
+                    </button>
                 </div>
             </div>
 
-            <article class="grid grid--y grid--gutters">
-                <div class="grid g--by3 grid--gutters-main grid--main-space-between">
-                    <div class="grid g--1of3">
+            <article class="grid grid--y">
+                <div class="grid g--by3">
+                    <div class="grid g--1of3 g--gutter-right border--top border--right border--bottom">
                         <div class="grid-cell g--scroll">
                             <div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
@@ -53,7 +87,7 @@
                         </div>
                     </div>
 
-                    <div class="grid">
+                    <div class="grid border--top border--bottom border--left pane--padding-left">
                         <div class="grid-cell g--scroll">
                             <div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
@@ -70,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="grid">
+                <div class="grid border--top border--bottom">
                     <div class="grid-cell g--scroll">
                         <div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
@@ -87,9 +121,7 @@
                 </div>
             </article>
 
-            <div class="grid g--fit">
-                <p>Footer</p>
-            </div>
+            <div class="grid g--fit">Footer</div>
         </div>
 
         <script type="text/javascript">
