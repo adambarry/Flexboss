@@ -1,22 +1,10 @@
 /*******************************************************************************
-GRID EXTENSIONS
-*******************************************************************************/
-.lt-ie10 .grid {
-  max-width: 100%;
-  display: table !important;
-}
-.lt-ie10 .grid--y > .grid-cell,
-.lt-ie10 .grid--y > .grid {
-  display: table-row !important;
-}
-.lt-ie10 .grid-cell {
-  display: table-cell !important;
-}
-.lt-ie10 .grid--main-end {
-  text-align: right;
-  text-align: end;
-}
+CSS3 FLEXBOX GRID SYSTEM MANIFEST
 
+This file is a manifest that @imports all the relevant
+stylesheets in order to render grid system
+
+*******************************************************************************/
 /*******************************************************************************
 FLEXBOX GRID
 *******************************************************************************/
@@ -423,4 +411,22 @@ body.grid--SPA {
 .g--scroll {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+/*******************************************************************************
+GRID EXTENSIONS
+*******************************************************************************/
+.lt-ie10 .grid {
+  max-width: 100%;
+  display: table !important;
+}
+.lt-ie10 .grid--y > .grid-cell,
+.lt-ie10 .grid--y > .grid {
+  display: table-row !important;
+}
+.lt-ie10 .grid-cell {
+  display: table-cell !important;
+}
+.lt-ie10 .grid--main-end {
+  text-align: right;
+  text-align: end;
 }
