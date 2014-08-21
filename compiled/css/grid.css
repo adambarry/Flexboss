@@ -153,30 +153,30 @@ body.grid--SPA {
 .grid--gutters[class*="grid--y"] > .grid-cell:last-child {
   margin-bottom: 8px;
 }
-.grid--gutters-around:not(.grid--y) > .grid,
-.grid--gutters-around:not(.grid--y) > .grid-cell {
+.grid--gutters-edge:not(.grid--y) > .grid,
+.grid--gutters-edge:not(.grid--y) > .grid-cell {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.grid--gutters-around:not(.grid--y) > .grid:first-child,
-.grid--gutters-around:not(.grid--y) > .grid-cell:first-child {
+.grid--gutters-edge:not(.grid--y) > .grid:first-child,
+.grid--gutters-edge:not(.grid--y) > .grid-cell:first-child {
   margin-left: 8px !important;
 }
-.grid--gutters-around:not(.grid--y) > .grid:last-child,
-.grid--gutters-around:not(.grid--y) > .grid-cell:last-child {
+.grid--gutters-edge:not(.grid--y) > .grid:last-child,
+.grid--gutters-edge:not(.grid--y) > .grid-cell:last-child {
   margin-right: 8px !important;
 }
-.grid--gutters-around[class*="grid--y"] > .grid,
-.grid--gutters-around[class*="grid--y"] > .grid-cell {
+.grid--gutters-edge[class*="grid--y"] > .grid,
+.grid--gutters-edge[class*="grid--y"] > .grid-cell {
   margin-right: 8px;
   margin-left: 8px;
 }
-.grid--gutters-around[class*="grid--y"] > .grid:first-child,
-.grid--gutters-around[class*="grid--y"] > .grid-cell:first-child {
+.grid--gutters-edge[class*="grid--y"] > .grid:first-child,
+.grid--gutters-edge[class*="grid--y"] > .grid-cell:first-child {
   margin-top: 8px !important;
 }
-.grid--gutters-around[class*="grid--y"] > .grid:last-child,
-.grid--gutters-around[class*="grid--y"] > .grid-cell:last-child {
+.grid--gutters-edge[class*="grid--y"] > .grid:last-child,
+.grid--gutters-edge[class*="grid--y"] > .grid-cell:last-child {
   margin-bottom: 8px !important;
 }
 .grid--gutters-main:not(.grid--y) > .grid,
