@@ -228,12 +228,11 @@
 
 
             <div class="test-section">
-                <h2 id="test-grid-spacing">Grid Spacing (Gutters)</h2>
+                <h2 id="test-grid-spacing">Grid-Wide Grid Cell Gutters (<code>grid--gutters</code>)</h2>
 
-                <h3>Grid-Wide Grid Cell Gutters</h3>
-                <p>Sometimes you want to apply the same behaviour to all child <code>grid-cell</code> elements of a <code>grid</code> by applying a modifier class to the <code>grid</code> element itself.</p>
+                <p>Sometimes you want to apply the same behavior to all child <code>grid-cell</code> elements of a <code>grid</code> by applying a modifier class to the <code>grid</code> element itself.</p>
 
-                <h4>General Gutters (Omnidirectional)</h4>
+                <h3>General Gutters (Omnidirectional)</h3>
 
                 <p>Omnidirectional gutters applied to all child <code>grid-cell</code> elements of modified <code>grid</code> element.</p>
 
@@ -242,7 +241,7 @@
                 </div>
 
 
-                <h5>X-Axis Grid</h5>
+                <h4>X-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--cell-count grid--gutters">
@@ -255,7 +254,7 @@
                 </div>
 
 
-                <h5>Y-Axis Grid</h5>
+                <h4>Y-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--y grid--cell-count grid--gutters">
@@ -268,7 +267,40 @@
                 </div>
 
 
-                <h4>Main-Axis Gutters</h4>
+                <h3>Around</h3>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--gutters-around</code> modifier class added to <code>grid</code> elements.</p>
+                </div>
+
+
+                <h4>X-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count grid--gutters-around">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <h4>Y-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--cell-count grid--gutters-around">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <h3>Main-Axis Gutters</h3>
 
                 <p>Main-axis gutters (horizontal or vertical depending on grid-orientation) applied to all child <code>grid-cell</code> elements of modified <code>grid</code> element.</p>
 
@@ -277,7 +309,7 @@
                 </div>
 
 
-                <h5>X-Axis Grid</h5>
+                <h4>X-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--cell-count grid--gutters-main">
@@ -290,7 +322,7 @@
                 </div>
 
 
-                <h5>Main-Axis Gutters: Y-Axis Grid</h5>
+                <h4>Y-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--cell-count grid--y grid--gutters-main">
@@ -303,7 +335,44 @@
                 </div>
 
 
-                <h3>Individual Grid Cell Gutters</h3>
+                <h3>Cross-Axis Gutters</h3>
+
+                <p>Cross-axis gutters (horizontal or vertical depending on grid-orientation) applied to all child <code>grid-cell</code> elements of modified <code>grid</code> element.</p>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--gutters-cross</code> modifier class added to parent <code>grid</code> element.</p>
+                </div>
+
+
+                <h4>X-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count grid--gutters-cross">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <h4>Y-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count grid--y grid--gutters-cross">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="test-section">
+                <h2>Individual Grid Cell Gutters (<code>g--gutter</code>)</h2>
 
                 <p>The individual grid cell gutters are used to apply spacing to specific <code>grid-cell</code> elements, via modifier classes applied to the elements themselves.</p>
 

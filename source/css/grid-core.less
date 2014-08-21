@@ -310,6 +310,62 @@ html {
 
 
         ////////////////////////////////////////////////////////////////////////////////
+        //  GUTTERS-AROUND
+        ////////////////////////////////////////////////////////////////////////////////
+
+/*
+        &-around {
+            padding: @grid-cell-spacing;
+        }
+*/
+
+        &-around {
+
+
+            ////////////////////////////////////////////////////////////////////////////////
+            //  GUTTERS-AROUND: X-AXIS GRID
+            ////////////////////////////////////////////////////////////////////////////////
+
+            &:not(.grid--y) {
+                > .grid,
+                > .grid-cell {
+                    margin-top: @grid-cell-spacing !important;
+                    margin-bottom: @grid-cell-spacing !important;
+
+                    &:first-child {
+                        margin-left: @grid-cell-spacing !important;
+                    }
+
+                    &:last-child {
+                        margin-right: @grid-cell-spacing !important;
+                    }
+                }
+            }
+
+
+            ////////////////////////////////////////////////////////////////////////////////
+            //  GUTTERS-AROUND: Y-AXIS GRID
+            ////////////////////////////////////////////////////////////////////////////////
+
+            &[class*="grid--y"] {
+                > .grid,
+                > .grid-cell {
+                    margin-right: @grid-cell-spacing !important;
+                    margin-left: @grid-cell-spacing !important;
+
+                    &:first-child {
+                        margin-top: @grid-cell-spacing !important;
+                    }
+
+                    &:last-child {
+                        margin-bottom: @grid-cell-spacing !important;
+                    }
+                }
+            }
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////////////
         //  GUTTERS-MAIN
         //
         //  Main axis gutters
@@ -356,6 +412,42 @@ html {
                     &:last-child {
                         margin-bottom: 0;
                     }
+                }
+            }
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  GUTTERS-CROSS
+        //
+        //  Cross axis gutters
+        ////////////////////////////////////////////////////////////////////////////////
+
+        &-cross {
+
+
+            ////////////////////////////////////////////////////////////////////////////////
+            //  GUTTERS-CROSS: X-AXIS GRID
+            ////////////////////////////////////////////////////////////////////////////////
+
+            &:not(.grid--y) {
+                > .grid,
+                > .grid-cell {
+                    margin-top: (@grid-cell-spacing / 2);
+                    margin-bottom: (@grid-cell-spacing / 2);
+                }
+            }
+
+
+            ////////////////////////////////////////////////////////////////////////////////
+            //  GUTTERS-CROSS: Y-AXIS GRID
+            ////////////////////////////////////////////////////////////////////////////////
+
+            &[class*="grid--y"] {
+                > .grid,
+                > .grid-cell {
+                    margin-right: (@grid-cell-spacing / 2);
+                    margin-left: (@grid-cell-spacing / 2);
                 }
             }
         }
