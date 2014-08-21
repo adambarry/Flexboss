@@ -155,8 +155,8 @@ body.grid--SPA {
 }
 .grid--gutters-around:not(.grid--y) > .grid,
 .grid--gutters-around:not(.grid--y) > .grid-cell {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .grid--gutters-around:not(.grid--y) > .grid:first-child,
 .grid--gutters-around:not(.grid--y) > .grid-cell:first-child {
@@ -168,8 +168,8 @@ body.grid--SPA {
 }
 .grid--gutters-around[class*="grid--y"] > .grid,
 .grid--gutters-around[class*="grid--y"] > .grid-cell {
-  margin-right: 8px !important;
-  margin-left: 8px !important;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 .grid--gutters-around[class*="grid--y"] > .grid:first-child,
 .grid--gutters-around[class*="grid--y"] > .grid-cell:first-child {
@@ -207,13 +207,13 @@ body.grid--SPA {
 }
 .grid--gutters-cross:not(.grid--y) > .grid,
 .grid--gutters-cross:not(.grid--y) > .grid-cell {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .grid--gutters-cross[class*="grid--y"] > .grid,
 .grid--gutters-cross[class*="grid--y"] > .grid-cell {
-  margin-right: 4px;
-  margin-left: 4px;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 .g--gutter {
   margin: 8px;

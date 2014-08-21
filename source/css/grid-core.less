@@ -329,8 +329,8 @@ html {
             &:not(.grid--y) {
                 > .grid,
                 > .grid-cell {
-                    margin-top: @grid-cell-spacing !important;
-                    margin-bottom: @grid-cell-spacing !important;
+                    margin-top: @grid-cell-spacing;
+                    margin-bottom: @grid-cell-spacing;
 
                     &:first-child {
                         margin-left: @grid-cell-spacing !important;
@@ -350,8 +350,8 @@ html {
             &[class*="grid--y"] {
                 > .grid,
                 > .grid-cell {
-                    margin-right: @grid-cell-spacing !important;
-                    margin-left: @grid-cell-spacing !important;
+                    margin-right: @grid-cell-spacing;
+                    margin-left: @grid-cell-spacing;
 
                     &:first-child {
                         margin-top: @grid-cell-spacing !important;
@@ -433,8 +433,8 @@ html {
             &:not(.grid--y) {
                 > .grid,
                 > .grid-cell {
-                    margin-top: (@grid-cell-spacing / 2);
-                    margin-bottom: (@grid-cell-spacing / 2);
+                    margin-top: @grid-cell-spacing;
+                    margin-bottom: @grid-cell-spacing;
                 }
             }
 
@@ -446,8 +446,8 @@ html {
             &[class*="grid--y"] {
                 > .grid,
                 > .grid-cell {
-                    margin-right: (@grid-cell-spacing / 2);
-                    margin-left: (@grid-cell-spacing / 2);
+                    margin-right: @grid-cell-spacing;
+                    margin-left: @grid-cell-spacing;
                 }
             }
         }
