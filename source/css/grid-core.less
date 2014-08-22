@@ -134,6 +134,8 @@ html {
     //  justify-content: flex-start is the default, so there's no need to have
     //  a specific definition for that, besides being able to make the HTML more
     //  declarative - so let's keep it (at least for now).
+    //
+    //  1:  For IE10
     ////////////////////////////////////////////////////////////////////////////////
 
     &--main- {
@@ -165,7 +167,7 @@ html {
             -webkit-box-pack: space-between;
             -moz-box-pack: space-between;
             -webkit-justify-content: space-between;
-            -ms-flex-pack: space-between;
+            -ms-flex-pack: justify; // 1
             justify-content: space-between;
         }
 
@@ -173,7 +175,7 @@ html {
             -webkit-box-pack: space-around;
             -moz-box-pack: space-around;
             -webkit-justify-content: space-around;
-            -ms-flex-pack: space-around;
+            -ms-flex-pack: distribute; // 1
             justify-content: space-around;
         }
     }
@@ -191,11 +193,14 @@ html {
 
 
     ////////////////////////////////////////////////////////////////////////////////
-    // ALIGNMENT: CROSS AXIS - STYLES
+    //  ALIGNMENT: CROSS AXIS - STYLES
+    //
+    //  1: For IE10
     ////////////////////////////////////////////////////////////////////////////////
 
     &--cross- {
         &start {
+            .grid-cross-alignment(start); // 1
             .grid-cross-alignment(flex-start)
         }
 
@@ -212,6 +217,7 @@ html {
         }
 
         &end {
+            .grid-cross-alignment(end); // 1
             .grid-cross-alignment(flex-end);
         }
     }
@@ -781,10 +787,14 @@ html {
 
 
     ////////////////////////////////////////////////////////////////////////////////
-    // FLEX-ITEM SIZING: LESS MIXINS
+    //  FLEX-ITEM SIZING: LESS MIXINS
+    //
+    //  1:  For IE10: Flex-grow doesn't exist as a separate property.
     ////////////////////////////////////////////////////////////////////////////////
+
     .grow-by(@value) {
         -webkit-flex-grow: @value !important;
+        -ms-flex: @value 1 auto !important; // 1
         flex-grow: @value !important;
 
     }

@@ -118,11 +118,20 @@
                     <p>Size modifier <code>g--1of2</code> added to first <code>grid-cell</code> element in order to force a 50% split between <code>grid-cell</code> elements. Refer to <a href="#test-section-sizing">sizing</a> for more information.</p>
                 </div>
 
+                <div class="test-callout test-callout--warning">
+                    <h4>Additional Wrapper Elements for IE 10</h4>
+                    <p>IE 10 requires additional wrapper elements within the <code>grid-cell</code> elements in order to behave correctly. Just for clarity, the said elements have been given a <code>data-role="IE10"</code> attribute in the below example.</p>
+                </div>
+
                 <div class="test-example">
                     <div class="grid grid--cell-count">
-                        <div class="grid-cell g--1of2">Full-height, even when my content doesn't fill the space.</div>
+                        <div class="grid-cell g--1of2">
+                            <div style="width: 100%;" data-role="IE10">Full-height, even when my content doesn't fill the space.</div>
+                        </div>
 
-                        <div class="grid-cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        </div>
                     </div>
                 </div>
 
