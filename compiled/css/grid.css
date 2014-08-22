@@ -124,13 +124,6 @@ body.grid--SPA {
   margin: 0 auto;
   overflow: hidden;
 }
-.grid--gutters {
-  /*
-        &-around {
-            padding: @grid-cell-spacing;
-        }
-*/
-}
 .grid--gutters:not(.grid--y) > .grid,
 .grid--gutters:not(.grid--y) > .grid-cell {
   margin: 8px 4px;
@@ -181,31 +174,21 @@ body.grid--SPA {
 .grid--gutters-edge[class*="grid--y"] > .grid-cell:last-child {
   margin-bottom: 8px !important;
 }
-.grid--gutters-main:not(.grid--y) > .grid,
-.grid--gutters-main:not(.grid--y) > .grid-cell {
-  margin-right: 4px;
-  margin-left: 4px;
-}
 .grid--gutters-main:not(.grid--y) > .grid:first-child,
 .grid--gutters-main:not(.grid--y) > .grid-cell:first-child {
-  margin-left: 0;
+  margin-left: 8px !important;
 }
 .grid--gutters-main:not(.grid--y) > .grid:last-child,
 .grid--gutters-main:not(.grid--y) > .grid-cell:last-child {
-  margin-right: 0;
-}
-.grid--gutters-main[class*="grid--y"] > .grid,
-.grid--gutters-main[class*="grid--y"] > .grid-cell {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-right: 8px !important;
 }
 .grid--gutters-main[class*="grid--y"] > .grid:first-child,
 .grid--gutters-main[class*="grid--y"] > .grid-cell:first-child {
-  margin-top: 0;
+  margin-top: 8px !important;
 }
 .grid--gutters-main[class*="grid--y"] > .grid:last-child,
 .grid--gutters-main[class*="grid--y"] > .grid-cell:last-child {
-  margin-bottom: 0;
+  margin-bottom: 8px !important;
 }
 .grid--gutters-cross:not(.grid--y) > .grid,
 .grid--gutters-cross:not(.grid--y) > .grid-cell {
@@ -216,6 +199,32 @@ body.grid--SPA {
 .grid--gutters-cross[class*="grid--y"] > .grid-cell {
   margin-right: 8px;
   margin-left: 8px;
+}
+.grid--gutters-between:not(.grid--y) > .grid,
+.grid--gutters-between:not(.grid--y) > .grid-cell {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.grid--gutters-between:not(.grid--y) > .grid:first-child,
+.grid--gutters-between:not(.grid--y) > .grid-cell:first-child {
+  margin-left: 0;
+}
+.grid--gutters-between:not(.grid--y) > .grid:last-child,
+.grid--gutters-between:not(.grid--y) > .grid-cell:last-child {
+  margin-right: 0;
+}
+.grid--gutters-between[class*="grid--y"] > .grid,
+.grid--gutters-between[class*="grid--y"] > .grid-cell {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.grid--gutters-between[class*="grid--y"] > .grid:first-child,
+.grid--gutters-between[class*="grid--y"] > .grid-cell:first-child {
+  margin-top: 0;
+}
+.grid--gutters-between[class*="grid--y"] > .grid:last-child,
+.grid--gutters-between[class*="grid--y"] > .grid-cell:last-child {
+  margin-bottom: 0;
 }
 .g--gutter {
   margin: 8px;

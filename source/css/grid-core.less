@@ -313,17 +313,11 @@ html {
         //  GUTTERS-AROUND
         ////////////////////////////////////////////////////////////////////////////////
 
-/*
-        &-around {
-            padding: @grid-cell-spacing;
-        }
-*/
-
         &-edge {
 
 
             ////////////////////////////////////////////////////////////////////////////////
-            //  GUTTERS-AROUND: X-AXIS GRID
+            //  GUTTERS-EDGE: X-AXIS GRID
             ////////////////////////////////////////////////////////////////////////////////
 
             &:not(.grid--y) {
@@ -344,7 +338,7 @@ html {
 
 
             ////////////////////////////////////////////////////////////////////////////////
-            //  GUTTERS-AROUND: Y-AXIS GRID
+            //  GUTTERS-EDGE: Y-AXIS GRID
             ////////////////////////////////////////////////////////////////////////////////
 
             &[class*="grid--y"] {
@@ -381,15 +375,17 @@ html {
             &:not(.grid--y) {
                 > .grid,
                 > .grid-cell {
-                    margin-right: (@grid-cell-spacing / 2);
-                    margin-left: (@grid-cell-spacing / 2);
+                    //margin-right: (@grid-cell-spacing / 2);
+                    //margin-left: (@grid-cell-spacing / 2);
 
                     &:first-child {
-                        margin-left: 0;
+                        //margin-left: 0;
+                        margin-left: @grid-cell-spacing !important;
                     }
 
                     &:last-child {
-                        margin-right: 0;
+                        //margin-right: 0;
+                        margin-right: @grid-cell-spacing !important;
                     }
                 }
             }
@@ -402,15 +398,17 @@ html {
             &[class*="grid--y"] {
                 > .grid,
                 > .grid-cell {
-                    margin-top: (@grid-cell-spacing / 2);
-                    margin-bottom: (@grid-cell-spacing / 2);
+                    //margin-top: (@grid-cell-spacing / 2);
+                    //margin-bottom: (@grid-cell-spacing / 2);
 
                     &:first-child {
-                        margin-top: 0;
+                        //margin-top: 0;
+                        margin-top: @grid-cell-spacing !important;
                     }
 
                     &:last-child {
-                        margin-bottom: 0;
+                        //margin-bottom: 0;
+                        margin-bottom: @grid-cell-spacing !important;
                     }
                 }
             }
@@ -448,6 +446,47 @@ html {
                 > .grid-cell {
                     margin-right: @grid-cell-spacing;
                     margin-left: @grid-cell-spacing;
+                }
+            }
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        //  GUTTERS-BETWEEN
+        //
+        //  Gutters between grid-cell elements on the main axis
+        ////////////////////////////////////////////////////////////////////////////////
+
+        &-between {
+            &:not(.grid--y) {
+                > .grid,
+                > .grid-cell {
+                    margin-right: (@grid-cell-spacing / 2);
+                    margin-left: (@grid-cell-spacing / 2);
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &[class*="grid--y"] {
+                > .grid,
+                > .grid-cell {
+                    margin-top: (@grid-cell-spacing / 2);
+                    margin-bottom: (@grid-cell-spacing / 2);
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
