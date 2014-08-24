@@ -1,6 +1,6 @@
-/*******************************************************************************
-FLEXBOX GRID
-*******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//  FLEXBOX GRID: Core styles
+////////////////////////////////////////////////////////////////////////////////
 
 
 /* GENERAL STYLES
@@ -98,6 +98,7 @@ html {
     //      }
     ////////////////////////////////////////////////////////////////////////////////
 
+
     &--y {
         // width: 100%; // 1
         -webkit-flex-direction: column;
@@ -137,6 +138,7 @@ html {
     //
     //  1:  For IE10
     ////////////////////////////////////////////////////////////////////////////////
+
 
     &--main- {
         &start {
@@ -381,16 +383,11 @@ html {
             &:not(.grid--y) {
                 > .grid,
                 > .grid-cell {
-                    //margin-right: (@grid-cell-spacing / 2);
-                    //margin-left: (@grid-cell-spacing / 2);
-
                     &:first-child {
-                        //margin-left: 0;
                         margin-left: @grid-cell-spacing !important;
                     }
 
                     &:last-child {
-                        //margin-right: 0;
                         margin-right: @grid-cell-spacing !important;
                     }
                 }
@@ -404,16 +401,11 @@ html {
             &[class*="grid--y"] {
                 > .grid,
                 > .grid-cell {
-                    //margin-top: (@grid-cell-spacing / 2);
-                    //margin-bottom: (@grid-cell-spacing / 2);
-
                     &:first-child {
-                        //margin-top: 0;
                         margin-top: @grid-cell-spacing !important;
                     }
 
                     &:last-child {
-                        //margin-bottom: 0;
                         margin-bottom: @grid-cell-spacing !important;
                     }
                 }
@@ -498,6 +490,10 @@ html {
         }
     }
 }
+
+
+/* GRID AND GRID-CELL UTILITY CLASSES
+*******************************************************************************/
 
 
 ////////////////////////////////////////////////////////////////////////////////

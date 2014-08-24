@@ -1,14 +1,11 @@
 /*******************************************************************************
-CSS3 FLEXBOX GRID SYSTEM MANIFEST
+CSS3 FLEXBOX GRID SYSTEM
 
 Source: https://github.com/adambarry/Flexbox-Grid
 
 This file is a manifest that @imports all the relevant
 stylesheets in order to render grid system
 
-*******************************************************************************/
-/*******************************************************************************
-FLEXBOX GRID
 *******************************************************************************/
 /* GENERAL STYLES
 *******************************************************************************/
@@ -232,6 +229,8 @@ body.grid--SPA {
 .grid--gutters-between[class*="grid--y"] > .grid-cell:last-child {
   margin-bottom: 0;
 }
+/* GRID AND GRID-CELL UTILITY CLASSES
+*******************************************************************************/
 .g--gutter {
   margin: 8px;
 }
