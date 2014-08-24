@@ -9,7 +9,7 @@ Source: https://github.com/adambarry/Flexbox-Grid
 html {
   height: 100%;
 }
-/* GRID STYLES
+/* CORE STYLES AND UTILITY CLASSES FOR GRID ELEMENTS
 *******************************************************************************/
 .grid {
   max-width: 100%;
@@ -226,7 +226,7 @@ body.grid--SPA {
 .grid--gutters-between[class*="grid--y"] > .grid-cell:last-child {
   margin-bottom: 0;
 }
-/* GRID AND GRID-CELL UTILITY CLASSES
+/* UTILITY CLASSES FOR GRID AND GRID-CELL ELEMENTS
 *******************************************************************************/
 .g--gutter {
   margin: 8px;
@@ -276,11 +276,8 @@ body.grid--SPA {
 }
 .g--shrink {
   -webkit-align-self: flex-start;
-  /* 1, 2 */
   -ms-flex-item-align: start;
-  /* 1 */
   align-self: flex-start;
-  /* 1 */
 }
 .g--wrap {
   -webkit-box-flex: 0 !important;
@@ -289,11 +286,8 @@ body.grid--SPA {
   -ms-flex: 0 0 auto !important;
   flex: 0 0 auto !important;
   -webkit-align-self: flex-start;
-  /* 1, 2 */
   -ms-flex-item-align: start;
-  /* 1 */
   align-self: flex-start;
-  /* 1 */
 }
 .g--cross-start {
   -webkit-align-self: flex-start;
