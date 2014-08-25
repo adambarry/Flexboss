@@ -87,6 +87,11 @@
 
                 <p>With Flexbox the <code>grid-cell</code> (and child <code>grid</code>) elements divide the available space equally among themselves, and can be laid out either horizontally or vertically.</p>
 
+                <div class="test-callout test-callout--info">
+                    <h4>Automatically Calculated Sizes</h4>
+                    <p>In the below example, the <code>grid-cell</code> elements should have equal widths (and heights) without the need for additional size modifiers (refer to <a href="#test-section-sizing">sizing</a> for more information).</p>
+                </div>
+
                 <h3>X-Axis (Horizontal) Grids (default)</h3>
 
                 <div class="test-example">
@@ -114,19 +119,36 @@
                 </div>
 
 
-                <div class="test-callout test-callout--info">
-                    <p>Size modifier <code>g--1of2</code> added to first <code>grid-cell</code> element in order to force a 50% split between <code>grid-cell</code> elements. Refer to <a href="#test-section-sizing">sizing</a> for more information.</p>
-                </div>
+                <h4>With-Content Examples</h4>
+                <p>The below <code>grid-cell</code> elements should be equal in size, even though no size-modifiers have been added.</p>
+
 
                 <div class="test-callout test-callout--warning">
-                    <h4>Additional Wrapper Elements for IE 10</h4>
+                    <h4>Additional Wrapper Elements Required for IE 10</h4>
                     <p>IE 10 requires additional wrapper elements within the <code>grid-cell</code> elements in order to behave correctly. Just for clarity, the said elements have been given a <code>data-role="IE10"</code> attribute in the below example.</p>
                 </div>
 
                 <div class="test-example">
                     <div class="grid grid--cell-count">
-                        <div class="grid-cell g--1of2">
+                        <div class="grid-cell">
                             <div style="width: 100%;" data-role="IE10">Full-height, even when my content doesn't fill the space.</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Equal sizes</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Even though content length differs a lot</div>
                         </div>
 
                         <div class="grid-cell">

@@ -55,8 +55,15 @@ html {
     //
     //  2:  Prevent overflowing content from destroying the layout
     //
-    //  3:  Stretch to fill the parent container
+    //  3:  Stretch to fill the parent container. Flex-basis set to 0 to force equal
+    //      sizes by default.
+    //
+    //  4:  Required by Firefox. If not present the y-axis grid-cells collapse
+    //      unless the container has an absolute height. Flex-basis: auto
     ////////////////////////////////////////////////////////////////////////////////
+
+    @grid-cell-flex-x: 1 1 0; // 3
+    @grid-cell-flex-y: 1 1 auto; // 4
 
     & > &,
     &-cell {
@@ -64,17 +71,29 @@ html {
         max-width: 100%;
         //overflow: hidden; // 2
         position: relative;
-        -webkit-box-flex: 1 1 auto; // 3
-        -webkit-flex: 1 1 auto; // 3
-        -moz-box-flex: 1 1 auto; // 3
-        -ms-flex: 1 1 auto; // 3
-        flex: 1 1 auto; // 3
+        -webkit-box-flex: @grid-cell-flex-x;
+        -webkit-flex: @grid-cell-flex-x;
+        -moz-box-flex: @grid-cell-flex-x;
+        -ms-flex: 1;
+        flex: @grid-cell-flex-x;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
         display: -ms-flexbox;
         display: flex;
     }
+
+    &[class*="grid--y"] {
+        > .grid,
+        > .grid-cell {
+            -webkit-box-flex: @grid-cell-flex-y;
+            -webkit-flex: @grid-cell-flex-y;
+            -moz-box-flex: @grid-cell-flex-y;
+            -ms-flex: @grid-cell-flex-y;
+            flex: @grid-cell-flex-y;
+        }
+    }
+
 
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -241,6 +260,10 @@ html {
         &-height {
             height: 100%;
         }
+    }
+
+    body&--SITE {
+        min-height: 100%;
     }
 
     body&--SPA {
@@ -677,18 +700,23 @@ html {
     //////////////////////////////////////////////////////////////////////////////////
 
     .flex-item-width(@width) {
-        width: @width;
+        //min-width: 0;
         max-width: @width;
-        -webkit-flex: none !important;
-        -ms-flex: none !important;
-        flex: none !important;
+/*
+        -webkit-flex: 1 !important;
+        -ms-flex: 1 !important;
+        flex: 1 !important;
+*/
+        -webkit-flex-basis: @width;
+        -ms-flex: 1 1 @width;
+        flex-basis: @width;
     }
 
 
     :not(.grid--y) > & {
         &1of6 {
-            .flex-item-width(16.667);
-            .flex-item-width(calc(100/6));
+            .flex-item-width(16.667%);
+            .flex-item-width(calc(100%/6));
         }
 
         &1of5 {
@@ -731,11 +759,14 @@ html {
     //  grid in order to work at all
     //////////////////////////////////////////////////////////////////////////////////
     .flex-item-height(@height) {
-        height: @height;
+        max-height: @height;
 
-        -webkit-flex: none !important;
+        /*
+-webkit-flex: none !important;
         -ms-flex: none !important;
         flex: none !important;
+*/
+        flex-basis: @height;
     }
 
     [class*="grid--y"] > & {
