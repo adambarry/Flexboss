@@ -29,11 +29,11 @@ html {
 .grid-cell {
   max-width: 100%;
   position: relative;
-  -webkit-box-flex: 1 1 0;
-  -webkit-flex: 1 1 0;
-  -moz-box-flex: 1 1 0;
+  -webkit-box-flex: 1 1 0px;
+  -webkit-flex: 1 1 0px;
+  -moz-box-flex: 1 1 0px;
   -ms-flex: 1;
-  flex: 1 1 0;
+  flex: 1 1 0px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -333,7 +333,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: 16.667%;
-  -ms-flex: 1 1 16.667%;
+  -ms-flex: 1 0 16.667%;
   flex-basis: 16.667%;
   max-width: calc(16.66666667%);
   /*
@@ -342,7 +342,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: calc(16.66666667%);
-  -ms-flex: 1 1 calc(16.66666667%);
+  -ms-flex: 1 0 calc(16.66666667%);
   flex-basis: calc(16.66666667%);
 }
 :not(.grid--y) > .g--1of5 {
@@ -353,7 +353,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: 20%;
-  -ms-flex: 1 1 20%;
+  -ms-flex: 1 0 20%;
   flex-basis: 20%;
 }
 :not(.grid--y) > .g--1of4 {
@@ -364,7 +364,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: 25%;
-  -ms-flex: 1 1 25%;
+  -ms-flex: 1 0 25%;
   flex-basis: 25%;
 }
 :not(.grid--y) > .g--1of3 {
@@ -375,7 +375,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: 33.333%;
-  -ms-flex: 1 1 33.333%;
+  -ms-flex: 1 0 33.333%;
   flex-basis: 33.333%;
   max-width: calc(33.33333333%);
   /*
@@ -384,7 +384,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: calc(33.33333333%);
-  -ms-flex: 1 1 calc(33.33333333%);
+  -ms-flex: 1 0 calc(33.33333333%);
   flex-basis: calc(33.33333333%);
 }
 :not(.grid--y) > .g--1of2,
@@ -400,7 +400,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: 50%;
-  -ms-flex: 1 1 50%;
+  -ms-flex: 1 0 50%;
   flex-basis: 50%;
 }
 :not(.grid--y) > .g--2of3 {
@@ -411,7 +411,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: 66.666%;
-  -ms-flex: 1 1 66.666%;
+  -ms-flex: 1 0 66.666%;
   flex-basis: 66.666%;
   max-width: calc(66.66666667%);
   /*
@@ -420,7 +420,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: calc(66.66666667%);
-  -ms-flex: 1 1 calc(66.66666667%);
+  -ms-flex: 1 0 calc(66.66666667%);
   flex-basis: calc(66.66666667%);
 }
 :not(.grid--y) > .g--3of4 {
@@ -431,7 +431,7 @@ body.grid--SPA {
         flex: 1 !important;
 */
   -webkit-flex-basis: 75%;
-  -ms-flex: 1 1 75%;
+  -ms-flex: 1 0 75%;
   flex-basis: 75%;
 }
 [class*="grid--y"] > .g--1of6 {

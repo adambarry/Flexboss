@@ -1295,6 +1295,154 @@
                         <div class="grid-cell">Third in HTML</div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="test-section">
+                <h2>Buttons</h2>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Styles Inlined in Test-Section</h4>
+                    <p>This test section contains very specific use cases for grids used for buttons. For this reason the styles related to the <code>.btn</code> block (includeing icon-font) have been inlined, as they are not part of the <code>grid</code> framework.</p>
+                </div>
+
+                <style type="text/css">
+                    /*IcoMoon Fonts, source: icomoon.io */
+                    @font-face {
+                    	font-family: 'icon-font';
+                    	src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMggi/MYAAAC8AAAAYGNtYXAaRcx3AAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5ZmzhaVkAAAFwAAAA2GhlYWQBZX1NAAACSAAAADZoaGVhA+IB5gAAAoAAAAAkaG10eAMAAAAAAAKkAAAAFGxvY2EAKACAAAACuAAAAAxtYXhwAAoAMgAAAsQAAAAgbmFtZYdb3eEAAALkAAABV3Bvc3QAAwAAAAAEPAAAACAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmEAHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIOYQ//3//wAAAAAAIOYQ//3//wAB/+MZ9AADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAABAAA/+ACAAHgABwAJAApAC8AAAUhIiYnLgE1ETQ2Nz4BMyEHIxEhNTcRFAYHDgEjJTUBMxcVASM/AScHFw8BFTM3JwHg/kAHCwUEBQUEBQsHAUBA4AGAQAUEBQsH/qABICBA/uBgkLAgsCBQICAgICAFBAULBwHABwsFBAVA/oDgQP7ABwsFBAWAYAEgQCD+4HCwILAgECAgICAAAQAAAAEAAP/w/H5fDzz1AAsCAAAAAADQIx5IAAAAANAjHkgAAP/gAgAB4AAAAAgAAgAAAAAAAAABAAAB4P/gAAACAAAAAAACAAABAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAKABQAHgBsAAEAAAAFADAABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQASAAAAAQAAAAAAAgAOAFUAAQAAAAAAAwASACgAAQAAAAAABAASAGMAAQAAAAAABQAWABIAAQAAAAAABgAJADoAAQAAAAAACgA0AHUAAwABBAkAAQASAAAAAwABBAkAAgAOAFUAAwABBAkAAwASACgAAwABBAkABAASAGMAAwABBAkABQAWABIAAwABBAkABgASAEMAAwABBAkACgA0AHUAaQBjAG8AbgAtAGYAbwBuAHQAVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG4ALQBmAG8AbgB0aWNvbi1mb250AGkAYwBvAG4ALQBmAG8AbgB0AFIAZQBnAHUAbABhAHIAaQBjAG8AbgAtAGYAbwBuAHQARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('truetype'),
+                    		 url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAASoAAoAAAAABGAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAARAAAAEQ2Aneuk9TLzIAAAIEAAAAYAAAAGAIIvzGY21hcAAAAmQAAABMAAAATBpFzHdnYXNwAAACsAAAAAgAAAAIAAAAEGhlYWQAAAK4AAAANgAAADYBZX1NaGhlYQAAAvAAAAAkAAAAJAPiAeZobXR4AAADFAAAABQAAAAUAwAAAG1heHAAAAMoAAAABgAAAAYABVAAbmFtZQAAAzAAAAFXAAABV4db3eFwb3N0AAAEiAAAACAAAAAgAAMAAAEABAQAAQEBCmljb24tZm9udAABAgABADr4HAL4GwP4GAQeCgAZU/+Lix4KABlT/4uLDAeLa/iU+HQFHQAAAHwPHQAAAIERHQAAAAkdAAABBxIABgEBChMVFxofaWNvbi1mb250aWNvbi1mb250dTB1MXUyMHVFNjEwAAACAYkAAwAFAQEEBwoNfvyUDvyUDvyUDvuUDvh0axX8VIsFeYt9mYudCIv4VAWLnZmZnYsI99SLS0v7dIuL/BT4FIuL93TLy4v71AWLeX19eYsI+/T3FBWL6/e097Sri8tLi2v7tPu0K4sF9yT3BBX3RPdEa6v7RPtEq2sFO3sVa2uLa6uLq6trqwUO+JQU+JQViwwKAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA5hAB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDmEP/9//8AAAAAACDmEP/9//8AAf/jGfQAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAABAABrPLVWXw889QALAgAAAAAA0CMeSAAAAADQIx5IAAD/4AIAAeAAAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAAgAAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAABAAAAAgAAAAAAUAAABQAAAAAADgCuAAEAAAAAAAEAEgAAAAEAAAAAAAIADgBVAAEAAAAAAAMAEgAoAAEAAAAAAAQAEgBjAAEAAAAAAAUAFgASAAEAAAAAAAYACQA6AAEAAAAAAAoANAB1AAMAAQQJAAEAEgAAAAMAAQQJAAIADgBVAAMAAQQJAAMAEgAoAAMAAQQJAAQAEgBjAAMAAQQJAAUAFgASAAMAAQQJAAYAEgBDAAMAAQQJAAoANAB1AGkAYwBvAG4ALQBmAG8AbgB0AFYAZQByAHMAaQBvAG4AIAAxAC4AMABpAGMAbwBuAC0AZgBvAG4AdGljb24tZm9udABpAGMAbwBuAC0AZgBvAG4AdABSAGUAZwB1AGwAYQByAGkAYwBvAG4ALQBmAG8AbgB0AEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('woff');
+                    	font-weight: normal;
+                    	font-style: normal;
+                    }
+
+                    [class^="icon-"], [class*=" icon-"] {
+                    	font-family: 'icon-font';
+                    	speak: none;
+                    	font-style: normal;
+                    	font-weight: normal;
+                    	font-variant: normal;
+                    	text-transform: none;
+                    	line-height: 1;
+
+                    	/* Better Font Rendering =========== */
+                    	-webkit-font-smoothing: antialiased;
+                    	-moz-osx-font-smoothing: grayscale;
+                    }
+
+                    .icon-compose:before {
+                    	content: "\e610";
+                    }
+
+                    .btn {
+                        padding: 4px;
+                    }
+
+                    .btn-label {
+                        font-weight: normal;
+                        display: block !important;
+                    }
+                </style>
+
+                <div class="test-callout test-callout--info">
+                    <p>The <code>button</code> element seems to have a browser-bug which prevents the flexbox properties <code>align-items</code> (<code>.grid--cross-</code>) and <code>justify-content</code> (<code>.grid--main-</code>) from affecting child flex-items. To circumvent this, a wrapper <code>grid</code> element has been added as the first/only child of the <code>button</code> element, with the aforementioned properties/classes applied to it.</p>
+                </div>
+
+                <div class="test-example">
+                    <button type="button" class="grid btn">
+                        <span class="grid grid--cross-center grid--gutters-between g--fit">
+                            <b class="grid-cell g--fit btn-label">Label</b>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="test-example">
+                    <button type="button" class="grid btn">
+                        <span class="grid grid--cross-center grid--gutters-between g--fit">
+                            <i class="grid-cell g--fit icon-compose"></i>
+                            <b class="grid-cell g--fit btn-label">Label</b>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="test-example">
+                    <button type="button" class="grid btn">
+                        <span class="grid grid--cross-center grid--gutters-between g--fit">
+                            <b class="grid-cell g--fit btn-label">Label</b>
+                            <i class="grid-cell g--fit icon-compose"></i>
+                        </span>
+                    </button>
+                </div>
+
+
+                <h3>Buttons in a Grid Context</h3>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <button type="button" class="grid btn">
+                            <span class="grid grid--cross-center grid--gutters-between g--fit">
+                                <b class="grid-cell g--fit btn-label">Label</b>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <button type="button" class="grid btn">
+                            <span class="grid grid--cross-start grid--gutters-between g--fit">
+                                <i class="grid-cell g--fit icon-compose"></i>
+                                <b class="grid-cell g--fit btn-label">Label</b>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <button type="button" class="grid btn">
+                            <span class="grid grid--cross-center grid--gutters-between g--fit">
+                                <b class="grid-cell g--fit btn-label">Label</b>
+                                <i class="grid-cell g--fit icon-compose"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <h3>Fitted Buttons in a Grid Context</h3>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <button type="button" class="grid g--fit btn">
+                            <span class="grid grid--cross-center grid--gutters-between g--fit">
+                                <b class="grid-cell g--fit btn-label">Label</b>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <button type="button" class="grid g--fit btn">
+                            <span class="grid grid--cross-center grid--gutters-between g--fit">
+                                <i class="grid-cell g--fit icon-compose"></i>
+                                <b class="grid-cell g--fit btn-label">Label</b>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid">
+                        <button type="button" class="grid g--fit btn">
+                            <span class="grid grid--cross-center grid--gutters-between g--fit">
+                                <b class="grid-cell g--fit btn-label">Label</b>
+                                <i class="grid-cell g--fit icon-compose"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
 
             </div>
         </article>
