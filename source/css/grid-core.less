@@ -610,6 +610,7 @@ html {
         -moz-box-flex: 0 !important;
         -webkit-flex: 0 0 auto !important;
         -ms-flex: 0 0 auto !important;
+        -ms-preferred-size: auto !important;
         flex: 0 0 auto !important;
     }
 
@@ -631,6 +632,8 @@ html {
 
     ////////////////////////////////////////////////////////////////////////////////
     // CONTENT WRAPPING: STYLES
+    //
+    //  1:  Required for IE10
     ////////////////////////////////////////////////////////////////////////////////
 
     &fit {
@@ -641,7 +644,8 @@ html {
         .shrink();
     }
 
-    &wrap {
+    &wrap,
+    &wrap[class*="grid"] { // 1
         .fit();
         .shrink();
     }
