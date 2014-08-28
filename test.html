@@ -85,7 +85,7 @@
             <div class="test-section">
                 <h2>Basic Grids</h2>
 
-                <p>With Flexbox the <code>grid-cell</code> (and child <code>grid</code>) elements divide the available space equally among themselves, and can be laid out either horizontally or vertically.</p>
+                <p>With Flexbox the <code>grid-cell</code> (and child <code>grid</code>) elements divide the available space among themselves, and can be laid out either horizontally or vertically.</p>
 
                 <div class="test-callout test-callout--info">
                     <h4>Automatically Calculated Sizes</h4>
@@ -115,45 +115,6 @@
                         <div class="grid-cell"></div>
 
                         <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-
-                <h4>With-Content Examples</h4>
-                <p>The below <code>grid-cell</code> elements should be equal in size, even though no size-modifiers have been added.</p>
-
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Additional Wrapper Elements Required for IE 10</h4>
-                    <p>IE 10 requires additional wrapper elements within the <code>grid-cell</code> elements in order to behave correctly. Just for clarity, the said elements have been given a <code>data-role="IE10"</code> attribute in the below example.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count">
-                        <div class="grid-cell">
-                            <div style="width: 100%;" data-role="IE10">Full-height, even when my content doesn't fill the space.</div>
-                        </div>
-
-                        <div class="grid-cell">
-                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count">
-                        <div class="grid-cell">
-                            <div style="width: 100%;" data-role="IE10">Equal sizes</div>
-                        </div>
-
-                        <div class="grid-cell">
-                            <div style="width: 100%;" data-role="IE10">Even though content length differs a lot</div>
-                        </div>
-
-                        <div class="grid-cell">
-                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
-                        </div>
                     </div>
                 </div>
 
@@ -193,9 +154,95 @@
 
 
             <div class="test-section">
+                <h2>Adaptive and Equal Widths (with-content examples)</h2>
+                <p>By default the grid system assigns the minimum required widths to <code>grid-cell</code> elements.</p>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Additional Wrapper Elements Required for IE 10</h4>
+                    <p>IE 10 requires additional wrapper elements within the <code>grid-cell</code> elements in order to behave correctly. Just for clarity, the said elements have been given a <code>data-role="IE10"</code> attribute in the below example.</p>
+                </div>
+
+                <h3>Adaptive Widths</h3>
+
+                <div class="test-callout test-callout--info">
+                    <p>The <code>grid-cell</code> elements in the below test-example should each have a unique width, as the widths are calculated based on the contents of the individual <code>grid-cell</code> elements.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Full-height, even when my content doesn't fill the space.</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Equal sizes</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Even though content length differs a lot</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Equal Widths</h3>
+
+                <p>The below <code>grid-cell</code> elements should be equal in size, because of the <code>grid--divide</code> modifier class.</p>
+
+
+                <div class="test-callout test-callout--interface">
+                    <h4>Equal widths</h4>
+                    <p>The <code>grid--divide</code> has been added to the parent <code>grid</code> elements in the below test-examples, which forces the <code>grid-cell</code> elements to divide the available space equally between them.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--divide grid--cell-count">
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Full-height, even when my content doesn't fill the space.</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="test-example">
+                    <div class="grid grid--divide grid--cell-count">
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Equal sizes</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Even though content length differs a lot</div>
+                        </div>
+
+                        <div class="grid-cell">
+                            <div style="width: 100%;" data-role="IE10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="test-section">
                 <h2>Fit, Shrink & Wrap Grid Cells</h2>
 
-                <p>By default <code>grid-cell</code> (and child <code>grid</code>) elements stretch and divide the available space within their container element equally, but you can change this behavior by adding the modifier classes <code>g--fit</code>; <code>g--shrink</code>; and <code>g--wrap</code> to the individual <code>grid-cell</code> (and <code>grid</code>) elements. The modifier classes apply the following behavior of the element to which they are applied:</p>
+                <p>By default <code>grid-cell</code> (and child <code>grid</code>) elements stretch and assign the available space within their container element, but you can change this behavior by adding the modifier classes <code>g--fit</code>; <code>g--shrink</code>; and <code>g--wrap</code> to the individual <code>grid-cell</code> (and <code>grid</code>) elements. The modifier classes apply the following behavior of the element to which they are applied:</p>
 
                 <ul>
                     <li><code>g--fit</code>: Makes the element occupy the minimum amount of space along the <em>main axis</em> (i.e. main size).</li>
@@ -1350,26 +1397,26 @@
 
                 <div class="test-example">
                     <button type="button" class="grid btn">
-                        <span class="grid grid--cross-center grid--gutters-between g--wrap">
-                            <b class="grid-cell g--fit btn-label">Label</b>
+                        <span class="grid grid--cross-center grid--gutters-between">
+                            <b class="grid-cell btn-label">Label</b>
                         </span>
                     </button>
                 </div>
 
                 <div class="test-example">
                     <button type="button" class="grid btn">
-                        <span class="grid grid--cross-center grid--gutters-between g--wrap">
-                            <i class="grid-cell g--fit icon-compose"></i>
-                            <b class="grid-cell g--fit btn-label">Label</b>
+                        <span class="grid grid--cross-center grid--gutters-between">
+                            <i class="grid-cell icon-compose"></i>
+                            <b class="grid-cell btn-label">Label</b>
                         </span>
                     </button>
                 </div>
 
                 <div class="test-example">
                     <button type="button" class="grid btn">
-                        <span class="grid grid--cross-center grid--gutters-between g--wrap">
-                            <b class="grid-cell g--fit btn-label">Label</b>
-                            <i class="grid-cell g--fit icon-compose"></i>
+                        <span class="grid grid--cross-center grid--gutters-between">
+                            <b class="grid-cell btn-label">Label</b>
+                            <i class="grid-cell icon-compose"></i>
                         </span>
                     </button>
                 </div>
@@ -1380,8 +1427,8 @@
                 <div class="test-example">
                     <div class="grid">
                         <button type="button" class="grid btn">
-                            <span class="grid grid--cross-center grid--gutters-between g--wrap">
-                                <b class="grid-cell g--fit btn-label">Label</b>
+                            <span class="grid grid--cross-center grid--gutters-between">
+                                <b class="grid-cell btn-label">Label</b>
                             </span>
                         </button>
                     </div>
@@ -1390,9 +1437,9 @@
                 <div class="test-example">
                     <div class="grid">
                         <button type="button" class="grid btn">
-                            <span class="grid grid--cross-start grid--gutters-between g--wrap">
+                            <span class="grid grid--cross-start grid--gutters-between">
                                 <i class="grid-cell g--fit icon-compose"></i>
-                                <b class="grid-cell g--fit btn-label">Label</b>
+                                <b class="grid-cell btn-label">Label</b>
                             </span>
                         </button>
                     </div>
@@ -1401,8 +1448,8 @@
                 <div class="test-example">
                     <div class="grid">
                         <button type="button" class="grid btn">
-                            <span class="grid grid--cross-center grid--gutters-between g--wrap">
-                                <b class="grid-cell g--fit btn-label">Label</b>
+                            <span class="grid grid--cross-center grid--gutters-between">
+                                <b class="grid-cell btn-label">Label</b>
                                 <i class="grid-cell g--fit icon-compose"></i>
                             </span>
                         </button>
@@ -1414,8 +1461,8 @@
 
                 <div class="test-example">
                     <div class="grid">
-                        <button type="button" class="grid g--wrap btn">
-                            <span class="grid grid--cross-center grid--gutters-between g--wrap">
+                        <button type="button" class="grid g--fit btn">
+                            <span class="grid grid--cross-center grid--gutters-between">
                                 <b class="grid-cell g--fit btn-label">Label</b>
                             </span>
                         </button>
@@ -1424,10 +1471,10 @@
 
                 <div class="test-example">
                     <div class="grid">
-                        <button type="button" class="grid g--wrap btn">
-                            <span class="grid grid--cross-center grid--gutters-between g--wrap">
-                                <i class="grid-cell g--fit icon-compose"></i>
-                                <b class="grid-cell g--fit btn-label">Label</b>
+                        <button type="button" class="grid g--fit btn">
+                            <span class="grid grid--cross-center grid--gutters-between">
+                                <i class="grid-cell icon-compose"></i>
+                                <b class="grid-cell btn-label">Label</b>
                             </span>
                         </button>
                     </div>
@@ -1435,10 +1482,10 @@
 
                 <div class="test-example">
                     <div class="grid">
-                        <button type="button" class="grid g--wrap btn">
-                            <span class="grid grid--cross-center grid--gutters-between g--wrap">
-                                <b class="grid-cell g--fit btn-label">Label</b>
-                                <i class="grid-cell g--fit icon-compose"></i>
+                        <button type="button" class="grid g--fit btn">
+                            <span class="grid grid--cross-center grid--gutters-between">
+                                <b class="grid-cell btn-label">Label</b>
+                                <i class="grid-cell icon-compose"></i>
                             </span>
                         </button>
                     </div>

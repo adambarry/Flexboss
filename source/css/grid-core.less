@@ -62,7 +62,7 @@ html {
     //      unless the container has an absolute height. Flex-basis: auto
     ////////////////////////////////////////////////////////////////////////////////
 
-    @grid-cell-flex-x: 1 1 0px; // 3
+    @grid-cell-flex-x: 1 1 auto; // 3
     @grid-cell-flex-y: 1 1 auto; // 4
 
     & > &,
@@ -139,6 +139,25 @@ html {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  DISTRIBUTION
+    //
+    //  General distribution of grid-cell elements within the grid
+    //  1:  Stretch to fill the parent container. Flex-basis set to 0px to force
+    //      equal sizes by default. Note that the px-unit is meant to be present.
+    ////////////////////////////////////////////////////////////////////////////////
+
+    &--divide {
+
+
+        & > .grid,
+        & > .grid-cell {
+            -webkit-flex: 1 1 0px; // 1, Safari Mac OS
+            flex: 1 1 0px; // 1
+        }
     }
 
 
@@ -913,5 +932,4 @@ html {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
-
 }
