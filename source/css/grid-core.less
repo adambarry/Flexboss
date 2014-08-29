@@ -63,7 +63,7 @@ html {
     ////////////////////////////////////////////////////////////////////////////////
 
     @grid-cell-flex-x: 1 1 auto; // 3
-    @grid-cell-flex-y: 1 1 auto; // 4
+    //@grid-cell-flex-y: 1 1 auto; // 4
 
     & > &,
     &-cell {
@@ -84,6 +84,7 @@ html {
         display: flex;
     }
 
+/*
     &[class*="grid--y"] {
         > .grid,
         > .grid-cell {
@@ -94,6 +95,7 @@ html {
             flex: @grid-cell-flex-y;
         }
     }
+*/
 
 
 
@@ -155,8 +157,8 @@ html {
 
         & > .grid,
         & > .grid-cell {
-            -webkit-flex: 1 1 0px; // 1, Safari Mac OS
-            flex: 1 1 0px; // 1
+            -webkit-flex: 1 1 0px !important; // 1, Safari Mac OS
+            flex: 1 1 0px !important; // 1
         }
     }
 
