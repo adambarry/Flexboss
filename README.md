@@ -1,6 +1,6 @@
 #CSS3 Flexbox Grid
 
-An extensive CSS3 Flexible Box (Flexbox) grid system.
+A versatile CSS3 Flexible Box (Flexbox) grid system.
 
 ##Browser support
 - Chrome
