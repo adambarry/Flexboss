@@ -1251,6 +1251,57 @@
 
 
             <div class="test-section">
+                <h2>Grid-Cell Wrapping</h2>
+                <p>By default, <code>grid-cell</code> elements will overflow the parent <code>grid</code> if their combined content is larger than the <code>grid</code> permits. You can change this by adding a modifier class to the parent <code>grid</code>.</p>
+
+                <h3>Default Behavior</h3>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+                    </div>
+                </div>
+
+
+                <h3>Wrap</h3>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--wrap</code> modifier class added to parent <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--wrap grid--cell-count">
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+
+                        <div class="grid-cell"><code>grid-cell</code></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="test-section">
                 <h2>Grid-Cell Scrolling</h2>
 
                 <p>Especially for when developing single-page applications (SPAs) you want to be able to have scroll-views which scrolls overflowing content.</p>
