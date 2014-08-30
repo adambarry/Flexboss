@@ -57,7 +57,7 @@
             <p>... using the following CSS block/element/modifiers:</p>
 
             <ul>
-                <li><code>grid</code>: A grid element, i.e. a <em>flex container</em>. The grid element is only intended to be used as a wrapper for <code>grid-cell</code> elements (see below) and should not contain any actual content. In nested grids <code>grid</code> elements behave as <code>grid-cell</code> elements.</li>
+                <li><code>grid</code>: A grid element, i.e. a <em>flex container</em>. The grid element is only intended to be used as a wrapper for <code>grid-cell</code> elements (see below) and should not contain any actual content. In nested grids <code>grid</code> elements behave as <code>grid-cell</code> and <code>grid</code> elements alike.</li>
                 <li><code>grid-cell</code>: A grid cell element, i.e. a <em>flex item</em>. The cells are the elements that contain actual content.</li>
                 <li><code>grid--</code>: An optional modifier/utility class exclusively for <code>grid</code> elements.</li>
                 <li><code>g--</code>: An optional modifier/utility class for both <code>grid</code> and <code>grid-cell</code> elements.</li>
@@ -197,10 +197,10 @@
                     </div>
                 </div>
 
+
                 <h3>Equal Widths</h3>
 
                 <p>The below <code>grid-cell</code> elements should be equal in size, because of the <code>grid--divide</code> modifier class.</p>
-
 
                 <div class="test-callout test-callout--interface">
                     <h4>Equal widths</h4>
@@ -235,19 +235,17 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
 
             <div class="test-section">
-                <h2>Fit, Shrink & Wrap Grid Cells</h2>
-
-                <p>By default <code>grid-cell</code> (and child <code>grid</code>) elements stretch and assign the available space within their container element, but you can change this behavior by adding the modifier classes <code>g--fit</code>; <code>g--shrink</code>; and <code>g--wrap</code> to the individual <code>grid-cell</code> (and <code>grid</code>) elements. The modifier classes apply the following behavior of the element to which they are applied:</p>
+                <h2>Fitted/Shrinked/Wrapped Grid-Cells</h2>
+                <p>By default <code>grid</code> and <code>grid-cell</code> elements stretch and fill up the available space of their parent <code>grid</code> element, but you can change this behavior by adding the modifier classes to the individual elements. The following options are available:</p>
 
                 <ul>
-                    <li><code>g--fit</code>: Makes the element occupy the minimum amount of space along the <em>main axis</em> (i.e. main size).</li>
-                    <li><code>g--shrink</code>: Makes the element occupy the minimum amount of space on the <em>cross axis</em> (i.e. cross size).</li>
-                    <li><code>g--wrap</code>: Makes the element occupy the minimum amount of space on both the <em>main and cross axis</em>, i.e. shrink-wrap the element to fit its contents.</li>
+                    <li><code>g--fit</code>: Make the element occupy the minimum amount of space along the <em>main axis</em>, i.e. limit the element's <em>main size</em>.</li>
+                    <li><code>g--cross-{type}</code> modifiers: Fitting elements on the <em>cross axis</em> is a little more extensive/complicated as it requires you to make a decision as to how the element should behave more specifically. The below examples will only cover alignment of the elements to the start of <em>cross axis</em> of the parent <code>grid</code> element, i.e. using the <code>g--cross-start</code> modifier class. For all the available options, please refer to the <a href="#cross-axis-alignment-individual-grid-cells">cross-axis alignment of individual grid-cells</a> section.</li>
+                    <li><code>g--fit g--cross-{type}</code>: Make the element occupy the minimum amount of space on both the main and cross axis (depending on which <code>g--cross-{type}</code> modifier is used of course), i.e. shrink-wrap the element to fit its contents.</li>
                 </ul>
 
 
@@ -263,23 +261,21 @@
                 <div class="test-example">
                     <div class="grid grid--cell-count">
                         <div class="grid-cell">Line 1<br/>Line 2<br/></div>
-                        <div class="grid-cell g--shrink"><code>g--shrink</code></div>
+                        <div class="grid-cell g--cross-start"><code>g--cross-start</code></div>
                     </div>
                 </div>
 
                 <div class="test-example">
                     <div class="grid grid--cell-count">
                         <div class="grid-cell">Line 1<br/>Line 2<br/></div>
-                        <div class="grid-cell g--wrap"><code>g--wrap</code></div>
+                        <div class="grid-cell g--fit g--cross-start"><code>g--fit g--cross-start</code></div>
                     </div>
                 </div>
 
 
-                <h4>Y-Axis Grid</h4>
-
                 <div class="test-callout test-callout--warning">
                     <h4>Absolute height</h4>
-                    <p>In the following examples a <code>style="height"</code> property has been specified on the test container element.</p>
+                    <p>The following examples have an absolute height specified on the test container element.</p>
                 </div>
 
                 <div class="test-example test-example--height100">
@@ -292,14 +288,286 @@
                 <div class="test-example test-example--height100">
                     <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell"></div>
-                        <div class="grid-cell g--shrink"><code>g--shrink</code></div>
+                        <div class="grid-cell g--cross-start"><code>g--cross-start</code></div>
                     </div>
                 </div>
 
                 <div class="test-example test-example--height100">
                     <div class="grid grid--y grid--stretch-height grid--cell-count">
                         <div class="grid-cell"></div>
-                        <div class="grid-cell g--wrap"><code>g--wrap</code></div>
+                        <div class="grid-cell g--fit g--cross-start"><code>g--fit g--cross-start</code></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="test-section">
+                <h2>Alignment</h2>
+
+                <h3>Main-Axis Alignment</h3>
+                <p>The alignment of <code>grid-cell</code> and nested <code>grid</code> elements along the main-axis is controlled by applying modifier classes to the parent <code>grid</code> element.</p>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Wrapped elements</h4>
+                    <p>For the main-axis alignment test-cases the <code>g--fit</code> modifier class has been added to the <code>grid-cell</code> elements to prevent them from spanning the width of the <code>grid</code>.</p>
+                </div>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--main-start</code> modifier class added to parent <code>grid</code> element. In theory this is unnecessary as it is the default setting, but now we have a class so that we can apply the setting declaratively.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--main-start">
+                        <div class="grid-cell g--fit">Start</div>
+                        <div class="grid g--fit">Start</div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--main-center</code> modifier class added to parent <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--main-center">
+                        <div class="grid-cell g--fit">Center</div>
+                        <div class="grid g--fit">Center</div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--main-end</code> modifier class added to parent <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--main-end">
+                        <div class="grid-cell g--fit">End</div>
+                        <div class="grid g--fit">End</div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--main-space-between</code> modifier class added to parent <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--main-space-between">
+                        <div class="grid-cell g--fit">Space-between</div>
+                        <div class="grid g--fit">Space-between</div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--main-space-around</code> modifier class added to parent <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--main-space-around">
+                        <div class="grid-cell g--fit">Space-around</div>
+                        <div class="grid g--fit">Space-around</div>
+                    </div>
+                </div>
+
+
+                <h3 id="cross-axis-alignment">Cross-Axis Alignment</h3>
+                <p>Alignment of <code>grid-cell</code> elements along the cross-axis can either be generally controlled by specifying a modifier class on the parent <code>grid</code> element, or individually controlled by specifying a modifier class on the <code>grid-cell</code> element itself.</p>
+
+                <h4>General Alignment of Child grid-cells</h4>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Absolute Heights Added to Examples</h4>
+                    <p>In order to display the alignment options a <code>style="height"</code> attribute has been added to the wrapper <code>grid</code> elements.</p>
+                </div>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid-cross-start</code> modifier class added to <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cross-start grid--cell-count" style="height: 75px;">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--cross-center</code> modifier class added to <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cross-center grid--cell-count" style="height: 75px;">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--cross-stretch</code> modifier class added to <code>grid</code> element. This is the default behavior.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cross-stretch grid--cell-count" style="height: 75px;">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Font-Sizes Hard-Coded</h4>
+                    <p>The baseline alignment ensures the same baseline for elements regardless of their individual font-sizes. Hence, each <code>grid-cell</code> element in the following example has its own font-size, specified by a <code>style="font-size"</code> attribute.</p>
+                </div>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--cross-baseline</code> modifier class added to <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cross-baseline" style="height: 75px;">
+                        <div class="grid-cell" style="font-size: 1em;">One</div>
+
+                        <div class="grid-cell" style="font-size: 1.5em;">Two</div>
+
+                        <div class="grid-cell" style="font-size: 2em;">Three</div>
+
+                        <div class="grid-cell" style="font-size: 2.5em;">Four</div>
+
+                        <div class="grid-cell" style="font-size: 3em;">Five</div>
+                    </div>
+                </div>
+
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>grid--cross-end</code> modifier class added to <code>grid</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cross-end grid--cell-count" style="height: 75px;">
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+                <h4 id="cross-axis-alignment-individual-grid-cells">Cross-Axis Alignment of Individual grid-cells</h4>
+
+                <p>Alignment of <code>grid-cell</code> elements along the cross-axis is controlled by applying modifier classes to the elements themselves.</p>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Baseline Alignment</h4>
+                    <p>In order for the baseline alignment to work, there has to be multiple baseline aligned items within a <code>grid</code>. Hence, the elements containing the text <strong>baseline 2</strong> have been added to the examples.</p>
+                </div>
+
+
+                <h5>X-Axis Grid</h5>
+
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--stretch-height">
+                        <div class="grid-cell g--cross-start">Start</div>
+
+                        <div class="grid-cell g--cross-center">Center</div>
+
+                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
+
+                        <div class="grid-cell g--cross-baseline">Baseline</div>
+
+                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+
+                        <div class="grid-cell g--cross-end">End</div>
+                    </div>
+                </div>
+
+
+                <h5>Y-Axis Grid</h5>
+
+                <div class="test-example">
+                    <div class="grid grid--y">
+                        <div class="grid-cell g--cross-start">Start</div>
+
+                        <div class="grid-cell g--cross-center">Center</div>
+
+                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
+
+                        <div class="grid-cell g--cross-baseline">Baseline</div>
+
+                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+
+                        <div class="grid-cell g--cross-end">End</div>
+                    </div>
+                </div>
+
+
+                <h4>Individual Cross-Axis Alignment in Generally Aligned Grid</h4>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>g--cross-end</code> modifier class added to parent <code>grid</code> element to align <code>grid-cell</code> elements along the bottom, but the modifier classes of the individual <code>grid-cell</code> elements overrides this setting.</p>
+                </div>
+
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--cross-end grid--stretch-height">
+                        <div class="grid-cell">Auto</div>
+
+                        <div class="grid-cell g--cross-center">Center</div>
+
+                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
+
+                        <div class="grid-cell g--cross-baseline">Baseline</div>
+
+                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+
+                        <div class="grid-cell g--cross-start">Start</div>
+                    </div>
+                </div>
+
+
+                <h5>Individual Cross-Axis Alignment in Generally Aligned Grid (Y-Axis Grid)</h5>
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--cross-end">
+                        <div class="grid-cell">Auto</div>
+
+                        <div class="grid-cell g--cross-center">Center</div>
+
+                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
+
+                        <div class="grid-cell g--cross-baseline">Baseline</div>
+
+                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
+
+                        <div class="grid-cell g--cross-start">Start</div>
                     </div>
                 </div>
             </div>
@@ -979,279 +1247,7 @@
 
 
             <div class="test-section">
-                <h2>Alignment</h2>
-
-                <h3>Main-Axis Alignment</h3>
-                <p>The alignment of <code>grid-cell</code> and nested <code>grid</code> elements along the main-axis is controlled by applying modifier classes to the parent <code>grid</code> element.</p>
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Wrapped elements</h4>
-                    <p>For the main-axis alignment test-cases the <code>g--wrap</code> modifier class has been added to the <code>grid-cell</code> elements to prevent them from spanning the width of the <code>grid</code>.</p>
-                </div>
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--main-start</code> modifier class added to parent <code>grid</code> element. In theory this is unnecessary as it is the default setting, but now we have a class so that we can apply the setting declaratively.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--main-start">
-                        <div class="grid-cell g--wrap">Start</div>
-                        <div class="grid g--wrap">Start</div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--main-center</code> modifier class added to parent <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--main-center">
-                        <div class="grid-cell g--wrap">Center</div>
-                        <div class="grid g--wrap">Center</div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--main-end</code> modifier class added to parent <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--main-end">
-                        <div class="grid-cell g--wrap">End</div>
-                        <div class="grid g--wrap">End</div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--main-space-between</code> modifier class added to parent <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--main-space-between">
-                        <div class="grid-cell g--wrap">Space-between</div>
-                        <div class="grid g--wrap">Space-between</div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--main-space-around</code> modifier class added to parent <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--main-space-around">
-                        <div class="grid-cell g--wrap">Space-around</div>
-                        <div class="grid g--wrap">Space-around</div>
-                    </div>
-                </div>
-
-
-                <h3>Cross-Axis Alignment</h3>
-                <p>Alignment of <code>grid-cell</code> elements along the cross-axis can either be generally controlled by specifying a modifier class on the parent <code>grid</code> element, or individually controlled by specifying a modifier class on the <code>grid-cell</code> element itself.</p>
-
-                <h4>General Alignment of Child grid-cells</h4>
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Absolute Heights Added to Examples</h4>
-                    <p>In order to display the alignment options a <code>style="height"</code> attribute has been added to the wrapper <code>grid</code> elements.</p>
-                </div>
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid-cross-start</code> modifier class added to <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cross-start grid--cell-count" style="height: 75px;">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--cross-center</code> modifier class added to <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cross-center grid--cell-count" style="height: 75px;">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--cross-stretch</code> modifier class added to <code>grid</code> element. This is the default behavior.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cross-stretch grid--cell-count" style="height: 75px;">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Font-Sizes Hard-Coded</h4>
-                    <p>The baseline alignment ensures the same baseline for elements regardless of their individual font-sizes. Hence, each <code>grid-cell</code> element in the following example has its own font-size, specified by a <code>style="font-size"</code> attribute.</p>
-                </div>
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--cross-baseline</code> modifier class added to <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cross-baseline" style="height: 75px;">
-                        <div class="grid-cell" style="font-size: 1em;">One</div>
-
-                        <div class="grid-cell" style="font-size: 1.5em;">Two</div>
-
-                        <div class="grid-cell" style="font-size: 2em;">Three</div>
-
-                        <div class="grid-cell" style="font-size: 2.5em;">Four</div>
-
-                        <div class="grid-cell" style="font-size: 3em;">Five</div>
-                    </div>
-                </div>
-
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>grid--cross-end</code> modifier class added to <code>grid</code> element.</p>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cross-end grid--cell-count" style="height: 75px;">
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-
-                <h4>Alignment of Individual grid-cells</h4>
-
-                <p>Alignment of <code>grid-cell</code> elements along the cross-axis is controlled by applying modifier classes to the elements themselves.</p>
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Baseline Alignment</h4>
-                    <p>In order for the baseline alignment to work, there has to be multiple baseline aligned items within a <code>grid</code>. Hence, the elements containing the text <strong>baseline 2</strong> have been added to the examples.</p>
-                </div>
-
-
-                <h5>X-Axis Grid</h5>
-
-                <div class="test-example test-example--height100">
-                    <div class="grid grid--stretch-height">
-                        <div class="grid-cell g--cross-start">Start</div>
-
-                        <div class="grid-cell g--cross-center">Center</div>
-
-                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
-
-                        <div class="grid-cell g--cross-baseline">Baseline</div>
-
-                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
-
-                        <div class="grid-cell g--cross-end">End</div>
-                    </div>
-                </div>
-
-
-                <h5>Y-Axis Grid</h5>
-
-                <div class="test-example">
-                    <div class="grid grid--y">
-                        <div class="grid-cell g--cross-start">Start</div>
-
-                        <div class="grid-cell g--cross-center">Center</div>
-
-                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
-
-                        <div class="grid-cell g--cross-baseline">Baseline</div>
-
-                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
-
-                        <div class="grid-cell g--cross-end">End</div>
-                    </div>
-                </div>
-
-
-                <h4>Individual Cross-Axis Alignment in Generally Aligned Grid</h4>
-
-                <div class="test-callout test-callout--interface">
-                    <p><code>g--cross-end</code> modifier class added to parent <code>grid</code> element to align <code>grid-cell</code> elements along the bottom, but the modifier classes of the individual <code>grid-cell</code> elements overrides this setting.</p>
-                </div>
-
-                <div class="test-example test-example--height100">
-                    <div class="grid grid--cross-end grid--stretch-height">
-                        <div class="grid-cell">Auto</div>
-
-                        <div class="grid-cell g--cross-center">Center</div>
-
-                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
-
-                        <div class="grid-cell g--cross-baseline">Baseline</div>
-
-                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
-
-                        <div class="grid-cell g--cross-start">Start</div>
-                    </div>
-                </div>
-
-
-                <h5>Individual Cross-Axis Alignment in Generally Aligned Grid (Y-Axis Grid)</h5>
-
-                <div class="test-example">
-                    <div class="grid grid--y grid--cross-end">
-                        <div class="grid-cell">Auto</div>
-
-                        <div class="grid-cell g--cross-center">Center</div>
-
-                        <div class="grid-cell g--cross-stretch">Stretch (default)</div>
-
-                        <div class="grid-cell g--cross-baseline">Baseline</div>
-
-                        <div class="grid-cell g--cross-baseline" style="font-size: 1.5em;">Baseline 2</div>
-
-                        <div class="grid-cell g--cross-start">Start</div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="test-section">
-                <h2>Grid-Cell Wrapping</h2>
+                <h2>Grid-Cell Wrapping in a Grid</h2>
                 <p>By default, <code>grid-cell</code> elements will overflow the parent <code>grid</code> if their combined content is larger than the <code>grid</code> permits. You can change this by adding a modifier class to the parent <code>grid</code>.</p>
 
                 <h3>Default Behavior</h3>

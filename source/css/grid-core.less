@@ -152,7 +152,7 @@ html {
     //      equal sizes by default. Note that the px-unit is meant to be present.
     ////////////////////////////////////////////////////////////////////////////////
 
-    &--divide {
+    &--divide:not(.grid--y) {
 
 
         & > .grid,
@@ -623,52 +623,19 @@ html {
 
 
     ////////////////////////////////////////////////////////////////////////////////
-    // CONTENT WRAPPING: LESS MIXINS
-    ////////////////////////////////////////////////////////////////////////////////
-
-    .fit() {
-        -webkit-box-flex: 0 !important;
-        -moz-box-flex: 0 !important;
-        -webkit-flex: 0 0 auto !important;
-        -ms-flex: 0 0 auto !important;
-        -ms-preferred-size: auto !important;
-        flex: 0 0 auto !important;
-    }
-
-    .shrink() {
-
-
-        ////////////////////////////////////////////////////////////////////////////////
-        //  1:  Make sure that the flex container/item wraps its content on the
-        //      cross-axis
-        //
-        //  2:  For Safari
-        ////////////////////////////////////////////////////////////////////////////////
-
-        -webkit-align-self: flex-start; // 1, 2
-        -ms-flex-item-align: start; // 1
-        align-self: flex-start; // 1
-    }
-
-
-    ////////////////////////////////////////////////////////////////////////////////
     // CONTENT WRAPPING: STYLES
     //
     //  1:  Required for IE10
     ////////////////////////////////////////////////////////////////////////////////
 
     &fit {
-        .fit();
-    }
+        -webkit-box-flex: 0 !important;
+        -moz-box-flex: 0 !important;
+        -webkit-flex: 0 0 auto !important;
+        -ms-flex: 0 0 auto !important;
+        -ms-preferred-size: auto !important;
+        flex: 0 0 auto !important;
 
-    &shrink {
-        .shrink();
-    }
-
-    &wrap,
-    &wrap[class*="grid"] { // 1
-        .fit();
-        .shrink();
     }
 
 
