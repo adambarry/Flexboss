@@ -1,6 +1,6 @@
 #CSS3 Flexbox Grid
 
-A powerful, versatile CSS3 Flexible Box (Flexbox) grid system for building flexible web user interface components with.
+A powerful, versatile HTML5/CSS3 Flexible Box (Flexbox) grid system for building flexible web user interface components with.
 
 ##Basic structure
 The grid is based on the following HTML structure:
