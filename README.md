@@ -41,15 +41,15 @@ Each "grid" element is a self-contained entity, which can be modified independen
     <div class="grid-cell">I'm a direct child of the base horizontal grid</div>
     
     <div class="grid">
-        <div class="grid-cell">I'm the 1st child of a nested horizontal grid</div>
+        <div class="grid-cell">I'm the 1st child of a nested horizontal grid (left)</div>
         
-        <div class="grid-cell">I'm the 2nd child of a nested horizontal grid</div>
+        <div class="grid-cell">I'm the 2nd child of a nested horizontal grid (right)</div>
     </div>
     
     <div class="grid grid--y">
-        <div class="grid-cell">I'm the 1st child of a nested vertical grid</div>
+        <div class="grid-cell">I'm the 1st child of a nested vertical grid (top)</div>
         
-        <div class="grid-cell">I'm the 2nd child of a nested vertical grid</div>
+        <div class="grid-cell">I'm the 2nd child of a nested vertical grid (bottom)</div>
     </div>
 </div>
 ```
