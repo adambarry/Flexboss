@@ -3,7 +3,7 @@
 A powerful, versatile CSS3 Flexible Box (Flexbox) grid system for building flexible web user interface components with.
 
 ##Basic structure
-The grid is based on the following structure:
+The grid is based on the following HTML structure:
 ```html
 <div class="grid">
     <div class="grid-cell">Child grid cell</div>
