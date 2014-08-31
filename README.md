@@ -1,9 +1,9 @@
 #CSS3 Flexbox Grid
 
-A powerful, versatile HTML5/CSS3 Flexible Box (Flexbox) grid system for building flexible web user interface components with.
+A powerful, versatile HTML5/CSS3 Flexible Box (Flexbox) grid system for building flexible web user interface components and web applications with.
 
 ##Basic structure
-The grid is based on the following HTML structure:
+The grid system is based on the following HTML structure:
 
 ```html
 <div class="grid">
@@ -17,7 +17,7 @@ The grid is based on the following HTML structure:
 </div>
 ```
 
-The core CSS classes of the grid are:
+The core CSS classes of the grid system are:
 - `grid`: A class name representing flex-container elements, which are only used as containers for `grid-cell` elements, i.e. the `grid` elements don't have any content of their own.
 - `grid-cell`: A class name representing flex-item elements, which are charactarized by sharing the space of the parent `grid` with its `grid-cell` siblings and have content of their own. 
 - `grid--`: An optional block modifier namespace exclusively for `grid` elements, which is used to modify the general behavior of the child `grid-cell` elements of the `grid` element to which the modifier class is applied.
