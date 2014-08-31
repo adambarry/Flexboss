@@ -15,7 +15,7 @@ The grid is based on the following structure:
     </div>
 </div>
 ```
-The core classes of the grid are:
+The core CSS classes of the grid are:
 - "grid": A class name representing flex-container elements.
 - "grid-cell": A class name representing flex-item elements.
 - "grid--": An optional block modifier namespace exclusively for ".grid" elements, which is used to modify the general behavior of the child ".grid-cell" elements of the ".grid" element to which the modifier class is applied.
