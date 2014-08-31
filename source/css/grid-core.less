@@ -884,7 +884,20 @@ html {
 
     &scroll {
         //height: 0; //1
+        overflow-x: auto;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+
+        &-x {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        &-y {
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     }
 }
