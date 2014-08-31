@@ -18,12 +18,12 @@ The grid is based on the following HTML structure:
 ```
 
 The core CSS classes of the grid are:
-- "grid": A class name representing flex-container elements, which are only used as containers for "grid-cell" elements, i.e. the "grid" elements don't have any content of their own.
-- "grid-cell": A class name representing flex-item elements, which are charactarized by sharing the space of the parent "grid" with its "grid-cell" siblings and have content of their own. 
-- "grid--": An optional block modifier namespace exclusively for ".grid" elements, which is used to modify the general behavior of the child ".grid-cell" elements of the ".grid" element to which the modifier class is applied.
-- "g--": An optional block modifier namespace used for both ".grid" and ".grid-cell" elements, which is used to modify the behavior of the element to which the modifier class is applied.
+- **grid**: A class name representing flex-container elements, which are only used as containers for *grid-cell* elements, i.e. the *grid* elements don't have any content of their own.
+- **grid-cell**: A class name representing flex-item elements, which are charactarized by sharing the space of the parent *grid* with its *grid-cell* siblings and have content of their own. 
+- **grid--**: An optional block modifier namespace exclusively for *grid* elements, which is used to modify the general behavior of the child *grid-cell* elements of the *grid* element to which the modifier class is applied.
+- **g--**: An optional block modifier namespace used for both *grid* and *grid-cell* elements, which is used to modify the behavior of the element to which the modifier class is applied.
 
-For a full list of interfaces for the "grid--" and "g--" modifier classes, please refer to the test page: http://adambarry.github.io/Flexbox-Grid/test.html, but among other things, the modifiers enable:
+For a full list of interfaces for the *grid--* and *g--* modifier classes, please refer to the test page: http://adambarry.github.io/Flexbox-Grid/test.html, but among other things, the modifiers enable:
 - Horizontal or vertical layout of grids.
 - Adaptive or equal size grid-cells.
 - Fitted elements which only occupy the minimum required space.
@@ -34,7 +34,7 @@ For a full list of interfaces for the "grid--" and "g--" modifier classes, pleas
 - Grid-cell scrolling.
 - Grid-cell ordering.
 
-Each "grid" element is a self-contained entity, which can be modified independently of its ancestors, which means e.g. that if a base grid is horizontally oriented (which is the default behavior for a grid) a child grid can be laid out vertically (using the grid--y modifier class) i.e.:
+Each *grid* element is a self-contained entity, which can be modified independently of its ancestors, which means e.g. that if a base grid is horizontally oriented (which is the default behavior for a grid) a child grid can be laid out vertically (using the grid--y modifier class) i.e.:
 	
 ```html
 <div class="grid">
