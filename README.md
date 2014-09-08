@@ -68,7 +68,7 @@ To get started you can either grab the compiled CSS-files from the "compiled" fo
 Refer to the [documentation](#documentation) (see below) to get an overview of the full feature set and how to use it.
 
 ##Documentation
-Visit: http://adambarry.github.io/Flexbox-Grid/ to view the test page and single-page application (SPA) prototype.
+Visit: http://adambarry.github.io/Flexboss/ to view the test page and single-page application (SPA) prototype.
 
 ##(Un)licence
 This is free and unencumbered software released into the public domain.
