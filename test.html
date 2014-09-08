@@ -1422,8 +1422,37 @@
                     }
                 </style>
 
-                <div class="test-callout test-callout--info">
-                    <p>The <code>button</code> element seems to have a browser-bug which prevents the flexbox properties <code>align-items</code> (<code>.grid--cross-</code>) and <code>justify-content</code> (<code>.grid--main-</code>) from affecting child flex-items. To circumvent this, a wrapper <code>grid</code> element has been added as the first/only child of the <code>button</code> element, with the aforementioned properties/classes applied to it.</p>
+                <div class="test-callout test-callout--warning">
+                    <h4>Browser bug requiring additional element</h4>
+                    <p>There is (presumably) a bug in the browsers which prevents the use of the Flexbox  <code>justify-content</code> (main-axis, <code>.grid--main-</code>) as well as <code>align-items</code> (<code>.grid--cross-</code>) and <code>align-self</code> (<code>.g--cross-</code>) (cross-axis) alignment properties. Hence, inserting an additional <code>.grid</code> element to contain the button elements is required for <code>.grid</code> buttons.</p>
+                </div>
+
+                <div class="test-example grid">
+                    <button type="button" class="btn grid grid--main-center grid--cross-center">
+                        <!-- <span class="grid grid--main-center grid--cross-center"> -->
+                            <i class="icon-pencil grid-cell g--fit"></i>
+                            <b class="btn-label grid-cell g--fit">Label</b>
+                        <!-- </span> -->
+                    </button>
+                </div>
+
+
+                <h4>Browser bug example</h4>
+
+                <div class="test-example highlight--danger grid test-example--height100">
+                    <button type="button" class="btn grid grid--main-center grid--cross-center">
+                        <i class="grid-cell g--fit icon-compose"></i>
+                        <b class="grid-cell g--fit btn-label" style="height: 50px;">Label</b>
+                    </button>
+                </div>
+
+                <div class="test-example grid test-example--height100">
+                    <button type="button" class="btn grid">
+                        <span class="grid grid--main-center grid--cross-center grid--stretch-height">
+                            <i class="grid-cell g--fit icon-compose"></i>
+                            <b class="grid-cell g--fit btn-label" style="height: 50px;">Label</b>
+                        </span>
+                    </button>
                 </div>
 
                 <div class="test-example">
