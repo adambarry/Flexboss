@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html dir="ltr">
     <head>
@@ -12,24 +11,303 @@
         <link rel="stylesheet" href="compiled/css/grid.css" />
 
         <style>
+            html {
+                font-size: 62.5%;
+            }
 
+            body {
+                background-color: #3b4b54;
+                font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+                font-size: 14px;
+                font-size: 1.4rem;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-weight: 300;
+            }
+
+            .u-padding--y {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+
+            .Nav {
+                position: fixed !important;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                background-color: #26343f;
+                color: white;
+                box-shadow: 0px 0px 5pt 1pt rgba(0, 0, 0, 0.3);
+            }
+
+            .Nav-link {
+                border-left: 1px solid #b3b3b3;
+                padding-left: 8px;
+                color: #b3b3b3;
+                text-decoration: none;
+            }
+
+            .Nav-link:first-child {
+                border-left: none;
+            }
+
+            .Nav-link:hover {
+                color: white;
+            }
+
+            .Header {
+                margin-top: 33px;
+                background-color: #24313c;
+                color: white;
+            }
+
+            dt {
+                font-weight: bold;
+            }
+
+            dd {
+                margin-left: 0;
+            }
+
+            .section {}
+
+            .section--white {
+                background-color: white;
+                color: #3B4B54;
+            }
+
+            .Footer,
+            .Footer-link {
+                color: #b3b3b3;
+            }
+
+            .Footer {
+                background-color: #1b252d;
+            }
+
+            .Footer-link:hover {
+                color: white;
+            }
+
+            .Callout {
+                border-radius: 4px;
+                padding: 8px;
+                background-color: deeppink;
+                color: white;
+            }
+
+
+            .g--constrain-width {
+                max-width: 996px;
+                width: 996px !important;
+            }
+
+            .u-border {
+                border-radius: 4px;
+                border: 1px solid #26343f;
+            }
         </style>
     </head>
-    <body class="grid grid--y grid--gutters test--grids" dir="ltr">
+    <body class="grid grid--SITE grid--y test--grids-" dir="ltr">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using a browser that doesn't support some of the technologies used by this application. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="grid grid--y grid--gutters">
-            <h1>Flexbox Grid</h1>
-            <p>A comprehensive CSS3 flexible box (Flexbox) grid system.</p>
+        <nav class="Nav grid g--fit grid--main-end grid--gutters-main grid--wrap">
+            <div class="grid-cell g--fit g--gutter-main u-padding--y">Flexboss</div>
+        </nav>
 
-            <ul>
-                <li><a href="test.html">Test page</a></li>
-                <li><a href="test-spa.html">Single-page Application Prototype</a></li>
-            </ul>
-        </div>
 
-        <script src="//localhost:35729/livereload.js"></script>
+        <header class="Header grid grid--y grid--cross-center g--fit">
+            <div class="grid g--constrain-width grid--gutters-main">
+                <div class="grid-cell">
+                    <div>
+                        <h1>Flexboss</h1>
+                        <p>A powerful, versatile CSS3 flexible box (Flexbox) grid system for building flexible user interface components and web applications with.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <article class="grid grid--y grid--cross-center section--white">
+            <div class="grid grid--y g--constrain-width grid--gutters-edge grid--gutters-between">
+                <div class="grid-cell g--fit">
+                    <div>
+                        <h2>What can I build with it?</h2>
+                        <p>Anything web - although the flexbox grid <em>is</em> intended to be used for building HTML blocks for/and single-page web applications (SPAs) with, as you can demand a little more from your audience (browser-wise) for SPAs compared to regular websites (in my opinion).</p>
+                        <p>Once you get familiar with the syntax and the interfaces, you'll be able to use it for rapid prototyping which will help you to quickly create flexible layouts and components for your SPAs, some of which you would have had to use JavaScript for in the <em>olden days</em>.</p>
+                        <p>To learn more, check out the resources on this page and head over to <a href="https://github.com/adambarry/Flexboss" target="_blank">github</a> to download the source code.</p>
+
+                        <dl>
+                            <dt>Additional Resources</dt>
+                            <dd><a href="test.html">Test page</a></dd>
+                            <dd><a href="test-spa.html">Single-Page Application Prototype/Boilerplate</a></dd>
+                        </dl>
+
+                    </div>
+                </div>
+
+                <div class="grid grid--y grid--gutters-between">
+                    <h2>So what can it do?</h2>
+
+                    <h3>Horizontal/X-Axis Grids</h3>
+
+                    <div class="grid grid--divide grid--gutters-edge grid--gutters-between g--fit u-border">
+                        <div class="grid-cell Callout">1st</div>
+
+                        <div class="grid-cell Callout">This is the second cell</div>
+
+                        <div class="grid-cell Callout">3rd cell</div>
+                    </div>
+
+
+                    <h3>Vertical/Y-Axis Grids</h3>
+
+                    <div class="grid grid--y grid--divide grid--gutters-edge grid--gutters-between g--fit u-border">
+                        <div class="grid-cell Callout">1st</div>
+
+                        <div class="grid-cell Callout">This is the second cell</div>
+
+                        <div class="grid-cell Callout">3rd cell</div>
+                    </div>
+
+
+                    <h3>Nested Grids</h3>
+
+                    <div class="grid grid--divide grid--gutters-edge grid--gutters-between g--fit u-border">
+                        <div class="grid-cell Callout">1st grid-cell child of the main grid</div>
+
+                        <div class="grid grid--divide grid--gutters-between">
+                            <div class="grid-cell Callout">1st grid-cell child of a nested grid</div>
+
+                            <div class="grid-cell Callout">2nd grid-cell child of a nested grid</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid--divide grid--gutters-edge grid--gutters-between g--fit u-border">
+                        <div class="grid-cell Callout">1st grid-cell child of the main grid</div>
+
+                        <div class="grid grid--y grid--gutters-between">
+                            <div class="grid-cell Callout">1st grid-cell child of a nested y-axis grid</div>
+
+                            <div class="grid-cell Callout">2nd grid-cell child of a nested y-axis grid</div>
+                        </div>
+                    </div>
+
+
+                    <h3>Fitted and width-spanning elements</h3>
+
+                    <div class="grid grid--gutters-edge grid--gutters-between g--fit u-border">
+                        <div class="grid-cell g--fit Callout">Fitted</div>
+
+                        <div class="grid-cell Callout">Auto</div>
+                    </div>
+
+
+                    <h3>Relative Sizing</h3>
+
+                    <div class="grid grid--y grid--gutters-edge grid--gutters-between g--fit u-border">
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of3 Callout">1 of 3</div>
+
+                            <div class="grid-cell Callout">Auto</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of3 Callout">1 of 3</div>
+
+                            <div class="grid-cell Callout">Auto</div>
+
+                            <div class="grid-cell g--1of5 Callout">1 of 5</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell Callout">Auto</div>
+
+                            <div class="grid-cell g--1of5 Callout">1 of 5</div>
+                        </div>
+                    </div>
+
+
+                    <h3>Main-Axis Alignment (X-Axis Grid)</h3>
+
+                    <div class="grid grid--y grid--gutters-edge grid--gutters-between g--fit u-border">
+                        <div class="grid grid--main-start grid--gutters-between">
+                            <div class="grid-cell g--fit Callout">Start (auto)</div>
+                        </div>
+
+                        <div class="grid grid--main-center grid--gutters-between">
+                            <div class="grid-cell g--fit Callout">Center</div>
+                        </div>
+
+                        <div class="grid grid--main-end grid--gutters-between">
+                            <div class="grid-cell g--fit Callout">End</div>
+                        </div>
+                    </div>
+
+
+                    <h3>Cross-Axis Alignment (X-Axis Grid)</h3>
+
+                    <div class="grid grid--gutters-edge grid--gutters-between g--fit u-border" style="height: 130px;">
+                        <div class="grid-cell g--cross-start Callout">Start</div>
+                        <div class="grid-cell g--cross-stretch Callout">Stretch (auto)</div>
+                        <div class="grid-cell g--cross-center Callout">Center</div>
+                        <div class="grid-cell g--cross-baseline Callout">Baseline</div>
+                        <div class="grid-cell g--cross-baseline Callout" style="font-size: 2.5rem;">Baseline 2</div>
+                        <div class="grid-cell g--cross-end Callout">End</div>
+                    </div>
+
+
+                    <h3>Scrollable Cells</h3>
+
+                    <div class="grid grid--divide grid--gutters-edge grid--gutters-between g--fit u-border" style="height: 130px;">
+                        <div class="grid-cell g--1of3 g--scroll Callout">
+                            <div data-role="wrapper">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae felis in leo sollicitudin dapibus. Cras eget porta sem. Vivamus venenatis quam eget orci aliquet consequat. Donec feugiat pretium diam, non consectetur purus dignissim eget. Quisque ac nisl laoreet, auctor nisl ac, commodo sapien. Integer at dui sed ligula sollicitudin auctor et at diam. Integer dolor nulla, rhoncus tristique nunc ac, consectetur vulputate mi. Nam consectetur, enim et faucibus pulvinar, lorem elit mattis nibh, in porttitor magna augue vitae elit. Nunc ornare luctus magna, et suscipit dui molestie ac. Sed sodales nulla quam, eu faucibus massa fringilla in. Integer sed tortor luctus, hendrerit ante at, commodo nulla.</p>
+
+                                <p>Nulla facilisi. Proin blandit molestie dui, ac porttitor magna elementum id. Praesent consectetur sagittis lectus, at tempor justo vulputate vitae. Cras turpis nulla, aliquet sed sapien eu, accumsan lobortis ipsum. Sed at nisi sodales, varius felis id, vulputate purus. Ut accumsan metus tortor, non accumsan lectus viverra at. Donec ullamcorper ipsum rutrum, cursus justo eu, dignissim leo. Fusce pellentesque adipiscing dui nec viverra.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid-cell g--scroll Callout">
+                            <div data-role="wrapper">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae felis in leo sollicitudin dapibus. Cras eget porta sem. Vivamus venenatis quam eget orci aliquet consequat. Donec feugiat pretium diam, non consectetur purus dignissim eget. Quisque ac nisl laoreet, auctor nisl ac, commodo sapien. Integer at dui sed ligula sollicitudin auctor et at diam. Integer dolor nulla, rhoncus tristique nunc ac, consectetur vulputate mi. Nam consectetur, enim et faucibus pulvinar, lorem elit mattis nibh, in porttitor magna augue vitae elit. Nunc ornare luctus magna, et suscipit dui molestie ac. Sed sodales nulla quam, eu faucibus massa fringilla in. Integer sed tortor luctus, hendrerit ante at, commodo nulla.</p>
+
+                                <p>Nulla facilisi. Proin blandit molestie dui, ac porttitor magna elementum id. Praesent consectetur sagittis lectus, at tempor justo vulputate vitae. Cras turpis nulla, aliquet sed sapien eu, accumsan lobortis ipsum. Sed at nisi sodales, varius felis id, vulputate purus. Ut accumsan metus tortor, non accumsan lectus viverra at. Donec ullamcorper ipsum rutrum, cursus justo eu, dignissim leo. Fusce pellentesque adipiscing dui nec viverra.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>For a full overview of the functionality and interfaces available in the grid system, please refer to the <a href="test.html">test page</a>.</p>
+                </div>
+
+            </div>
+        </article>
+
+
+        <footer class="Footer grid grid--y grid--cross-center- g--fit grid--gutters">
+            <div class="grid grid--y">
+                <div class="grid g--fit grid--gutters-between">
+                    <div class="grid-cell">
+                        <div>Created and maintained by <a class="Footer-link" href="http://adambarry.dk" target="_blank">Adam Barry</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-54588104-1', 'auto');
+            ga('send', 'pageview');
+        </script>
     </body>
 </html>
