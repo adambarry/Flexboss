@@ -7,12 +7,12 @@ The grid system is based on the following HTML structure:
 
 ```html
 <div class="grid">
-    <div class="grid-cell">Child grid cell</div>
+    <div class="grid-cell">1st grid-cell child of the main grid</div>
     
     <div class="grid">
-        <div class="grid-cell">1st child of a nested grid cell</div>
+        <div class="grid-cell">1st grid-cell child of a nested grid</div>
         
-        <div class="grid-cell">2nd child of a nested grid cell</div>
+        <div class="grid-cell">2nd grid-cell child of a nested grid</div>
     </div>
 </div>
 ```
