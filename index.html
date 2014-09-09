@@ -40,7 +40,7 @@
                 z-index: 1;
                 background-color: #26343f;
                 color: white;
-                box-shadow: 0px 0px 5pt 1pt rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 0px 5pt 1pt rgba(0, 0, 0, .6);
             }
 
             .Nav-link {
@@ -90,6 +90,15 @@
 
             .Footer-link:hover {
                 color: white;
+            }
+
+            code {
+                border-radius: 4px;
+                padding: 2px 4px;
+                background-color: rgba(249, 242, 244, 1);
+                font-size: 90%;
+                color: #c7254e;
+                white-space: nowrap;
             }
 
             .Callout {
@@ -153,6 +162,7 @@
 
                 <div class="grid grid--y grid--gutters-between">
                     <h2>So what can it do?</h2>
+                    <p><strong>Note</strong>: All of the examples on this page have gutters between the <code>grid-cell</code> elements. Gutters are <em>optional</em> and are applied by adding modifier classes to the <code>grid</code> elements. Hence, you can easily avoid the gutters by omitting the modifier classes. For more information, please refer to the gutters section on the <a href="test.html#gutters-grid-wide">test page</a>.</p>
 
                     <h3>Horizontal/X-Axis Grids</h3>
 
@@ -212,6 +222,41 @@
 
                     <div class="grid grid--y grid--gutters-edge grid--gutters-between g--fit u-border">
                         <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of6 Callout">1 of 6</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of5 Callout">1 of 5</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of4 Callout">1 of 4</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of3 Callout">1 of 3</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of2 Callout">1 of 2</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--2of3 Callout">2 of 3</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--3of4 Callout">3 of 4</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell Callout">Auto</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid--y grid--gutters-edge grid--gutters-between g--fit u-border">
+
+                        <div class="grid grid--gutters-between">
                             <div class="grid-cell g--1of3 Callout">1 of 3</div>
 
                             <div class="grid-cell Callout">Auto</div>
@@ -227,6 +272,12 @@
 
                         <div class="grid grid--gutters-between">
                             <div class="grid-cell Callout">Auto</div>
+
+                            <div class="grid-cell g--1of5 Callout">1 of 5</div>
+                        </div>
+
+                        <div class="grid grid--gutters-between">
+                            <div class="grid-cell g--1of3 Callout">1 of 3</div>
 
                             <div class="grid-cell g--1of5 Callout">1 of 5</div>
                         </div>
