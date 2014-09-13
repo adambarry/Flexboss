@@ -309,12 +309,16 @@
 
                 <div class="test-callout test-callout--warning">
                     <h4>Wrapped elements</h4>
-                    <p>For the main-axis alignment test-cases the <code>g--fit</code> modifier class has been added to the <code>grid-cell</code> elements to prevent them from spanning the width of the <code>grid</code>.</p>
+                    <p>For the main-axis alignment test-cases the <code>g--fit</code> modifier class has been added to the <code>grid-cell</code> elements to prevent them from spanning the main axis of the <code>grid</code>.</p>
                 </div>
+
+                <h3>Start</h3>
 
                 <div class="test-callout test-callout--interface">
                     <p><code>grid--main-start</code> modifier class added to parent <code>grid</code> element. In theory this is unnecessary as it is the default setting, but now we have a class so that we can apply the setting declaratively.</p>
                 </div>
+
+                <h4>X-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--main-start">
@@ -323,10 +327,22 @@
                     </div>
                 </div>
 
+                <h4>Y-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--main-start" style="height: 75px;">
+                        <div class="grid-cell g--fit">Start</div>
+                        <div class="grid g--fit">Start</div>
+                    </div>
+                </div>
+
+                <h3>Center</h3>
 
                 <div class="test-callout test-callout--interface">
                     <p><code>grid--main-center</code> modifier class added to parent <code>grid</code> element.</p>
                 </div>
+
+                <h4>X-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--main-center">
@@ -335,10 +351,22 @@
                     </div>
                 </div>
 
+                <h4>Y-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--main-center" style="height: 75px;">
+                        <div class="grid-cell g--fit">Center</div>
+                        <div class="grid g--fit">Center</div>
+                    </div>
+                </div>
+
+                <h3>End</h3>
 
                 <div class="test-callout test-callout--interface">
                     <p><code>grid--main-end</code> modifier class added to parent <code>grid</code> element.</p>
                 </div>
+
+                <h4>X-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--main-end">
@@ -347,10 +375,22 @@
                     </div>
                 </div>
 
+                <h4>Y-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--main-end" style="height: 75px;">
+                        <div class="grid-cell g--fit">End</div>
+                        <div class="grid g--fit">End</div>
+                    </div>
+                </div>
+
+                <h3>Space Between</h3>
 
                 <div class="test-callout test-callout--interface">
                     <p><code>grid--main-space-between</code> modifier class added to parent <code>grid</code> element.</p>
                 </div>
+
+                <h4>X-Axis Grid</h4>
 
                 <div class="test-example">
                     <div class="grid grid--main-space-between">
@@ -359,13 +399,34 @@
                     </div>
                 </div>
 
+                <h4>Y-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--main-space-between" style="height: 75px;">
+                        <div class="grid-cell g--fit">Space-between</div>
+                        <div class="grid g--fit">Space-between</div>
+                    </div>
+                </div>
+
+                <h3>Space Around</h3>
 
                 <div class="test-callout test-callout--interface">
                     <p><code>grid--main-space-around</code> modifier class added to parent <code>grid</code> element.</p>
                 </div>
 
+                <h4>X-Axis Grid</h4>
+
                 <div class="test-example">
                     <div class="grid grid--main-space-around">
+                        <div class="grid-cell g--fit">Space-around</div>
+                        <div class="grid g--fit">Space-around</div>
+                    </div>
+                </div>
+
+                <h4>Y-Axis Grid</h4>
+
+                <div class="test-example">
+                    <div class="grid grid--y grid--main-space-around" style="height: 75px;">
                         <div class="grid-cell g--fit">Space-around</div>
                         <div class="grid g--fit">Space-around</div>
                     </div>
@@ -985,25 +1046,8 @@
                 <p>Proportional sizing of the individual <code>grid-cell</code> elements is achieved by applying a <code>g--XofX</code>, e.g. <code>g--1of2</code>, <code>g--1of3</code> etc., modifier class to the <code>grid-cell</code> elements that you want to size.</p>
 
                 <div class="test-example">
-
                     <div class="grid grid--cell-count">
-                        <div class="grid-cell g--1of2"><code>g--1of2</code></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count">
-                        <div class="grid-cell g--1of3"><code>g--1of3</code></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid grid--cell-count">
-                        <div class="grid-cell g--1of4"><code>g--1of4</code></div>
+                        <div class="grid-cell g--1of6"><code>g--1of6</code></div>
 
                         <div class="grid-cell"></div>
                     </div>
@@ -1019,11 +1063,50 @@
 
                 <div class="test-example">
                     <div class="grid grid--cell-count">
-                        <div class="grid-cell g--1of6"><code>g--1of6</code></div>
+                        <div class="grid-cell g--1of4"><code>g--1of4</code></div>
 
                         <div class="grid-cell"></div>
                     </div>
                 </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell g--1of3"><code>g--1of3</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell g--1of2"><code>g--1of2</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell g--2of3"><code>g--2of3</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="test-example">
+                    <div class="grid grid--cell-count">
+                        <div class="grid-cell g--3of4"><code>g--3of4</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
 
 
                 <h5>Mixed Example</h5>
@@ -1067,23 +1150,7 @@
 
                 <div class="test-example test-example--height100">
                     <div class="grid grid--y grid--stretch-height grid--cell-count">
-                        <div class="grid-cell g--1of2"><code>g--1of2</code></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example test-example--height100">
-                    <div class="grid grid--y grid--stretch-height grid--cell-count">
-                        <div class="grid-cell g--1of3"><code>g--1of3</code></div>
-
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="test-example test-example--height100">
-                    <div class="grid grid--y grid--stretch-height grid--cell-count">
-                        <div class="grid-cell g--1of4"><code>g--1of4</code></div>
+                        <div class="grid-cell g--1of6"><code>g--1of6</code></div>
 
                         <div class="grid-cell"></div>
                     </div>
@@ -1099,7 +1166,39 @@
 
                 <div class="test-example test-example--height100">
                     <div class="grid grid--y grid--stretch-height grid--cell-count">
-                        <div class="grid-cell g--1of6"><code>g--1of6</code></div>
+                        <div class="grid-cell g--1of4"><code>g--1of4</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
+                        <div class="grid-cell g--1of3"><code>g--1of3</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
+                        <div class="grid-cell g--1of2"><code>g--1of2</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
+                        <div class="grid-cell g--2of3"><code>g--2of3</code></div>
+
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="test-example test-example--height100">
+                    <div class="grid grid--y grid--stretch-height grid--cell-count">
+                        <div class="grid-cell g--3of4"><code>g--3of4</code></div>
 
                         <div class="grid-cell"></div>
                     </div>
