@@ -75,8 +75,6 @@ module.exports = function(grunt) {
     // Used when executing an "npm install" e.g. from the terminal
 
     grunt.registerTask('init', [
-        //'concat',
-        //'uglify',
         'less',
         'watch'
     ]);
@@ -95,9 +93,6 @@ module.exports = function(grunt) {
 //: Load dependencies
 ////////////////////////////////////////////////////////////////////////////////
 
-    //grunt.loadNpmTasks('grunt-contrib-concat');
-    //grunt.loadNpmTasks('grunt-contrib-jshint');
-    //grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
 };
