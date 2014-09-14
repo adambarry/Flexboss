@@ -1,6 +1,6 @@
 #Flexboss
 
-A powerful, versatile CSS3 flexible box (Flexbox) grid system for building great HTML5 user interface components and web applications with..
+A powerful, versatile CSS3 flexible box (Flexbox) grid system for building great HTML5 user interface components and web applications with.
 
 ##Basic syntax/structure
 The grid system is based on the following HTML structure:
