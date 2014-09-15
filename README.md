@@ -19,8 +19,8 @@ The grid system is based on the following HTML structure:
 
 The core CSS classes of the grid system are:
 - `grid`: A class name representing flex-container elements, which are only used as containers for `grid-cell` elements, i.e. the `grid` elements don't have any content of their own.
-- `grid-cell`: A class name representing flex-item elements, which are charactarized by sharing the space of the parent `grid` with its `grid-cell` siblings and have content of their own. 
-- `grid--`: An optional block modifier namespace exclusively for `grid` elements, which is used to modify the general behavior of the child `grid-cell` elements of the `grid` element to which the modifier class is applied.
+- `grid-cell`: A class name representing flex-item elements, which are charactarized by sharing the space of the parent `grid` with its `grid-cell` (and nested `grid`) siblings and have content of their own. 
+- `grid--`: An optional block modifier namespace exclusively for `grid` elements, which is used to modify the default behavior of the child `grid-cell` (and nested `grid`) elements of the `grid` element to which the modifier class is applied.
 - `g--`: An optional block modifier namespace used for both `grid` and `grid-cell` elements, which is used to modify the behavior of the element to which the modifier class is applied.
 
 For a full list of interfaces for the `grid--` and `g--` modifier classes, please refer to the test page: http://adambarry.github.io/Flexboss/test.html, but among other things, the modifiers enable:
@@ -28,7 +28,7 @@ For a full list of interfaces for the `grid--` and `g--` modifier classes, pleas
 - Adaptive or equal size grid-cells.
 - Fitted elements which only occupy the minimum required space.
 - Alignment - both for grids in general as well as for the individual grid-cell elements.
-- Gutters, i.e. spacing between elements.
+- Gutters, i.e. spacing between elements, for both general and for individual elements.
 - Grid-cell sizing.
 - Grid-cell wrapping within a grid.
 - Grid-cell scrolling.
@@ -68,7 +68,7 @@ To get started you can either grab the compiled CSS-files from the "compiled" fo
 Refer to the [documentation](#documentation) (see below) to get an overview of the full feature set and how to use it.
 
 ##Documentation
-Visit: http://adambarry.github.io/Flexboss/ to view the test page and single-page application (SPA) prototype.
+http://adambarry.github.io/Flexboss/
 
 ##(Un)licence
 This is free and unencumbered software released into the public domain.
