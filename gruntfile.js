@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         less: {
             style: {
                 files: {
-                    "compiled/css/grid.css": "source/css/grid.less" //Process the manifest "css/grid.less" and output to "compiled/css/grid.css"
+                    "compiled/css/grid.css": "less/grid.less" //Process the manifest "css/grid.less" and output to "compiled/css/grid.css"
                 }
             }
         },
