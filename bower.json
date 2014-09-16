@@ -1,0 +1,25 @@
+{
+  "name": "flexboss",
+  "homepage": "http://adambarry.github.io/Flexboss/",
+  "authors": [
+    "Adam Barry <admbarry@gmail.com>"
+  ],
+  "description": "A powerful, versatile CSS3 flexible box (Flexbox) grid system for building great HTML5 user interface components and web applications with",
+  "main": "source/css/grid-core.less",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "css3",
+    "grid",
+    "flexbox"
+  ],
+  "license": "Unlicense",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
