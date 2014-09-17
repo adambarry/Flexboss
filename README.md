@@ -63,7 +63,7 @@ Each `grid` element is a self-contained entity, which can be modified independen
 (* IE10 has an issue with scrollable grid-cell elements).
 
 ##Getting started
-To get started you can either grab the compiled CSS-files from the "compiled" folder, or use the un/preprocessed LESS files located in the "less" folder. 
+To get started you can either grab a HTML5 boilerplate from the "boilerplates" folder and the compiled CSS-files from the "compiled" folder, or use the un/preprocessed LESS files located in the "less" folder. 
 
 Refer to the [documentation](#documentation) (see below) to get an overview of the full feature set and how to use it.
 
