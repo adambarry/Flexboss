@@ -1,0 +1,159 @@
+<!doctype html>
+<html dir="ltr">
+    <head>
+        <title>Flexboss Flexbox Grid System</title>
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        <meta name="description" content="A powerful, versatile CSS3 flexible box (Flexbox) grid system for building great HTML5 user interface components and web applications with">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+        <link rel="stylesheet" href="../compiled/css/grid.css" />
+
+        <style>
+            html {
+                font-size: 62.5%;
+            }
+
+            body {
+                background-color: #3b4b54;
+                font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+                font-size: 14px;
+                font-size: 1.4rem;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-weight: 300;
+            }
+
+            .u-padding--y {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+
+            .Nav {
+                position: fixed !important;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                background-color: #26343f;
+                color: white;
+                box-shadow: 0px 0px 5pt 1pt rgba(0, 0, 0, .6);
+            }
+
+            .Nav-link {
+                border-left: 1px solid #b3b3b3;
+                padding-left: 8px;
+                color: #b3b3b3;
+                text-decoration: none;
+            }
+
+            .Nav-link:first-child {
+                border-left: none;
+            }
+
+            .Nav-link:hover {
+                color: white;
+            }
+
+            .Header {
+                margin-top: 33px;
+                background-color: #24313c;
+                color: white;
+            }
+
+            dt {
+                font-weight: bold;
+            }
+
+            dd {
+                margin-left: 0;
+            }
+
+            .section {}
+
+            .section--white {
+                background-color: white;
+                color: #3B4B54;
+            }
+
+            .Footer,
+            .Footer-link {
+                color: #b3b3b3;
+            }
+
+            .Footer {
+                background-color: #1b252d;
+            }
+
+            .Footer-link:hover {
+                color: white;
+            }
+
+            code {
+                border-radius: 4px;
+                padding: 2px 4px;
+                background-color: rgba(249, 242, 244, 1);
+                font-size: 90%;
+                color: #c7254e;
+                white-space: nowrap;
+            }
+
+            .Callout {
+                border-radius: 4px;
+                padding: 8px;
+                background-color: deeppink;
+                color: white;
+            }
+
+
+            .g--constrain-width {
+                max-width: 996px;
+                width: 996px !important;
+            }
+
+            .u-border {
+                border-radius: 4px;
+                border: 1px solid #26343f;
+            }
+        </style>
+    </head>
+    <body class="grid grid--SITE grid--y" dir="ltr">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using a browser that doesn't support some of the technologies used by this application. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="Nav grid g--fit grid--main-end grid--gutters-main grid--wrap">
+            <div class="grid-cell g--fit g--gutter-main u-padding--y">Flexboss</div>
+        </nav>
+
+
+        <header class="Header grid grid--y grid--cross-center g--fit">
+            <div class="grid g--constrain-width grid--gutters-main">
+                <div class="grid-cell">
+                    <div>
+                        <h1>Flexboss</h1>
+                        <p>A powerful, versatile CSS3 flexible box (Flexbox) grid system for building great HTML5 user interface components and web applications with.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <article class="grid grid--y grid--cross-center section--white">
+            Height spanning article
+        </article>
+
+
+        <footer class="Footer grid grid--y grid--cross-center- g--fit grid--gutters">
+            <div class="grid grid--y">
+                <div class="grid g--fit grid--gutters-between">
+                    <div class="grid-cell">
+                        <div>Sticky footer (if content doesn't fill out the vertical space)</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
