@@ -68,7 +68,7 @@ To get started you can either grab the compiled CSS-files from the "compiled" fo
 Refer to the [documentation](#documentation) (see below) to get an overview of the full feature set and how to use it.
 
 ###Install with Bower
-You can use the Bower package manager (http://bower.io/) to install Flexboss as part of your web application. To do so install Bower and execute the following command:
+You can also use the Bower package manager (http://bower.io/) to install Flexboss as part of your web application. To do so install Bower and execute the following command:
 
 `bower install flexboss`
 
