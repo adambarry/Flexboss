@@ -67,6 +67,21 @@ To get started you can either grab the compiled CSS-files from the "compiled" fo
 
 Refer to the [documentation](#documentation) (see below) to get an overview of the full feature set and how to use it.
 
+###Install with Bower
+You can use the Bower package manager (http://bower.io/) to install Flexboss as part of your web application. To do so install Bower and execute the following command:
+
+`bower install flexboss`
+
+When installed you will need to complete the following steps:
+
+1. Define the `@grid-cell-spacing` variable, e.g. `@grid-cell-spacing: 8px`, which defines the total distance between `grid-cell` elements when gutters are applied.
+2. Reference the grid LESS files in a LESS-manifest (like the less/grid.less manifest file), i.e.
+
+```css
+@import '/bower_components/flexboss/less/grid-core.less';
+@import '/bower_components/flexboss/less/grid-ext.less';
+```
+
 ##Documentation
 http://adambarry.github.io/Flexboss/
 
