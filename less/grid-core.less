@@ -684,11 +684,6 @@ html {
     .flex-item-width(@width) {
         //min-width: 0;
         max-width: @width;
-/*
-        -webkit-flex: 1 !important;
-        -ms-flex: 1 !important;
-        flex: 1 !important;
-*/
         -webkit-flex-basis: @width;
         -ms-flex: 1 0 @width;
         flex-basis: @width;
@@ -742,12 +737,9 @@ html {
     //////////////////////////////////////////////////////////////////////////////////
     .flex-item-height(@height) {
         max-height: @height;
-
-        /*
--webkit-flex: none !important;
-        -ms-flex: none !important;
-        flex: none !important;
-*/
+        //-webkit-flex: none !important;
+        //-ms-flex: none !important;
+        //flex: none !important;
         flex-basis: @height;
     }
 
