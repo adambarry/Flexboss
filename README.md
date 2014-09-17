@@ -21,7 +21,7 @@ The core CSS classes of the grid system are:
 - `grid`: A class name representing flex-container elements, which are only used as containers for `grid-cell` elements, i.e. the `grid` elements don't have any content of their own.
 - `grid-cell`: A class name representing flex-item elements, which are charactarized by sharing the space of the parent `grid` with its `grid-cell` (and nested `grid`) siblings and have content of their own. 
 - `grid--`: An optional block modifier namespace exclusively for `grid` elements, which is used to modify the default behavior of the child `grid-cell` (and nested `grid`) elements of the `grid` element to which the modifier class is applied.
-- `g--`: An optional block modifier namespace used for both `grid` and `grid-cell` elements, which is used to modify the behavior of the element to which the modifier class is applied.
+- `g--`: An optional modifier namespace used for both `grid` and `grid-cell` elements, which is used to modify the behavior of the element to which the modifier class is applied.
 
 For a full list of interfaces for the `grid--` and `g--` modifier classes, please refer to the test page: http://adambarry.github.io/Flexboss/test/test.html, but among other things, the modifiers enable:
 - Horizontal or vertical layout of grids.
