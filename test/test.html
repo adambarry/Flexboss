@@ -1446,9 +1446,9 @@
                 <p>By default, each flex-item has an <code>order: 0</code> (the equivalent of <code>box-ordinal-group: 1</code> in older browsers/versions of Flexbox) - and the higher the <code>order</code> value, the farther back the element will be rendered. This means that if you only specify an <code>order</code> value higher than 0 on a single <code>grid-cell</code> in a collection (leaving the rest unspecified), the element with the <code>order</code> value higher than 0 will be rendered at the end of the collection, as the rest of the elements will have <code>order: 0</code> by default.</p>
 
                 <div class="test-callout test-callout--danger">
-                    <h4>CSS Pseudo Classes Not Respected</h4>
-                    <p>When using flexbox's reordering capabilities it seems that style-definitions for the CSS pseudo classes <code>:first-child</code> and <code>:last-child</code> are not respected as content is rendered according to the HTML element order.</p>
-                    <p>The <code>grid--gutters</code> modifier class has been added to the <code>grid</code> elements to showcase the problem.</p>
+                    <h4>CSS Pseudo Classes Still Respected Although Visual Order Has Changed</h4>
+                    <p>When using flexbox's reordering capabilities the style-definitions for the CSS pseudo classes <code>:first-child</code> and <code>:last-child</code> still follow the HTML element order.</p>
+                    <p>The <code>grid--gutters</code> modifier class has been added to the <code>grid</code> elements to showcase the problem, i.e. that gutters which should have been applied at the start and end of the <code>grid</code> are instead applied between the <code>grid-cell</code> elements. Although this is not a deal-breaker, it's something to be aware of when developing flexbox components.</p>
                 </div>
 
                 <div class="test-callout test-callout--interface">
@@ -1473,184 +1473,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <div class="test-section">
-                <h2>Buttons</h2>
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Styles Inlined in Test-Section</h4>
-                    <p>This test section contains very specific use cases for grids used for buttons. For this reason the styles related to the <code>.btn</code> block (includeing icon-font) have been inlined, as they are not part of the <code>grid</code> framework.</p>
-                </div>
-
-                <style type="text/css">
-                    /*IcoMoon Fonts, source: icomoon.io */
-                    @font-face {
-                    	font-family: 'icon-font';
-                    	src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMggi/MYAAAC8AAAAYGNtYXAaRcx3AAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5ZmzhaVkAAAFwAAAA2GhlYWQBZX1NAAACSAAAADZoaGVhA+IB5gAAAoAAAAAkaG10eAMAAAAAAAKkAAAAFGxvY2EAKACAAAACuAAAAAxtYXhwAAoAMgAAAsQAAAAgbmFtZYdb3eEAAALkAAABV3Bvc3QAAwAAAAAEPAAAACAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmEAHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIOYQ//3//wAAAAAAIOYQ//3//wAB/+MZ9AADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAABAAA/+ACAAHgABwAJAApAC8AAAUhIiYnLgE1ETQ2Nz4BMyEHIxEhNTcRFAYHDgEjJTUBMxcVASM/AScHFw8BFTM3JwHg/kAHCwUEBQUEBQsHAUBA4AGAQAUEBQsH/qABICBA/uBgkLAgsCBQICAgICAFBAULBwHABwsFBAVA/oDgQP7ABwsFBAWAYAEgQCD+4HCwILAgECAgICAAAQAAAAEAAP/w/H5fDzz1AAsCAAAAAADQIx5IAAAAANAjHkgAAP/gAgAB4AAAAAgAAgAAAAAAAAABAAAB4P/gAAACAAAAAAACAAABAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAKABQAHgBsAAEAAAAFADAABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQASAAAAAQAAAAAAAgAOAFUAAQAAAAAAAwASACgAAQAAAAAABAASAGMAAQAAAAAABQAWABIAAQAAAAAABgAJADoAAQAAAAAACgA0AHUAAwABBAkAAQASAAAAAwABBAkAAgAOAFUAAwABBAkAAwASACgAAwABBAkABAASAGMAAwABBAkABQAWABIAAwABBAkABgASAEMAAwABBAkACgA0AHUAaQBjAG8AbgAtAGYAbwBuAHQAVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG4ALQBmAG8AbgB0aWNvbi1mb250AGkAYwBvAG4ALQBmAG8AbgB0AFIAZQBnAHUAbABhAHIAaQBjAG8AbgAtAGYAbwBuAHQARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('truetype'),
-                    		 url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAASoAAoAAAAABGAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAARAAAAEQ2Aneuk9TLzIAAAIEAAAAYAAAAGAIIvzGY21hcAAAAmQAAABMAAAATBpFzHdnYXNwAAACsAAAAAgAAAAIAAAAEGhlYWQAAAK4AAAANgAAADYBZX1NaGhlYQAAAvAAAAAkAAAAJAPiAeZobXR4AAADFAAAABQAAAAUAwAAAG1heHAAAAMoAAAABgAAAAYABVAAbmFtZQAAAzAAAAFXAAABV4db3eFwb3N0AAAEiAAAACAAAAAgAAMAAAEABAQAAQEBCmljb24tZm9udAABAgABADr4HAL4GwP4GAQeCgAZU/+Lix4KABlT/4uLDAeLa/iU+HQFHQAAAHwPHQAAAIERHQAAAAkdAAABBxIABgEBChMVFxofaWNvbi1mb250aWNvbi1mb250dTB1MXUyMHVFNjEwAAACAYkAAwAFAQEEBwoNfvyUDvyUDvyUDvuUDvh0axX8VIsFeYt9mYudCIv4VAWLnZmZnYsI99SLS0v7dIuL/BT4FIuL93TLy4v71AWLeX19eYsI+/T3FBWL6/e097Sri8tLi2v7tPu0K4sF9yT3BBX3RPdEa6v7RPtEq2sFO3sVa2uLa6uLq6trqwUO+JQU+JQViwwKAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA5hAB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDmEP/9//8AAAAAACDmEP/9//8AAf/jGfQAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAABAABrPLVWXw889QALAgAAAAAA0CMeSAAAAADQIx5IAAD/4AIAAeAAAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAAgAAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAABAAAAAgAAAAAAUAAABQAAAAAADgCuAAEAAAAAAAEAEgAAAAEAAAAAAAIADgBVAAEAAAAAAAMAEgAoAAEAAAAAAAQAEgBjAAEAAAAAAAUAFgASAAEAAAAAAAYACQA6AAEAAAAAAAoANAB1AAMAAQQJAAEAEgAAAAMAAQQJAAIADgBVAAMAAQQJAAMAEgAoAAMAAQQJAAQAEgBjAAMAAQQJAAUAFgASAAMAAQQJAAYAEgBDAAMAAQQJAAoANAB1AGkAYwBvAG4ALQBmAG8AbgB0AFYAZQByAHMAaQBvAG4AIAAxAC4AMABpAGMAbwBuAC0AZgBvAG4AdGljb24tZm9udABpAGMAbwBuAC0AZgBvAG4AdABSAGUAZwB1AGwAYQByAGkAYwBvAG4ALQBmAG8AbgB0AEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('woff');
-                    	font-weight: normal;
-                    	font-style: normal;
-                    }
-
-                    [class^="icon-"], [class*=" icon-"] {
-                    	font-family: 'icon-font';
-                    	speak: none;
-                    	font-style: normal;
-                    	font-weight: normal;
-                    	font-variant: normal;
-                    	text-transform: none;
-                    	line-height: 1;
-
-                    	/* Better Font Rendering =========== */
-                    	-webkit-font-smoothing: antialiased;
-                    	-moz-osx-font-smoothing: grayscale;
-                    }
-
-                    .icon-compose:before {
-                    	content: "\e610";
-                    }
-
-                    .btn {
-                        padding: 4px;
-                    }
-
-                    .btn-label {
-                        font-weight: normal;
-                        display: block !important;
-                    }
-                </style>
-
-                <div class="test-callout test-callout--warning">
-                    <h4>Browser bug requiring additional element</h4>
-                    <p>There is (presumably) a bug in the browsers which prevents the use of the Flexbox  <code>justify-content</code> (main-axis, <code>.grid--main-</code>) as well as <code>align-items</code> (<code>.grid--cross-</code>) and <code>align-self</code> (<code>.g--cross-</code>) (cross-axis) alignment properties. Hence, inserting an additional <code>.grid</code> element to contain the button elements is required for <code>.grid</code> buttons.</p>
-                </div>
-
-                <div class="test-example grid">
-                    <button type="button" class="btn grid grid--main-center grid--cross-center">
-                        <!-- <span class="grid grid--main-center grid--cross-center"> -->
-                            <i class="icon-pencil grid-cell g--fit"></i>
-                            <b class="btn-label grid-cell g--fit">Label</b>
-                        <!-- </span> -->
-                    </button>
-                </div>
-
-
-                <h4>Browser bug example</h4>
-
-                <div class="test-example highlight--danger grid test-example--height100">
-                    <button type="button" class="btn grid grid--main-center grid--cross-center">
-                        <i class="grid-cell g--fit icon-compose"></i>
-                        <b class="grid-cell g--fit btn-label" style="height: 50px;">Label</b>
-                    </button>
-                </div>
-
-                <div class="test-example grid test-example--height100">
-                    <button type="button" class="btn grid">
-                        <span class="grid grid--main-center grid--cross-center grid--stretch-height">
-                            <i class="grid-cell g--fit icon-compose"></i>
-                            <b class="grid-cell g--fit btn-label" style="height: 50px;">Label</b>
-                        </span>
-                    </button>
-                </div>
-
-                <div class="test-example">
-                    <button type="button" class="grid btn">
-                        <span class="grid grid--cross-center grid--gutters-between">
-                            <b class="grid-cell btn-label">Label</b>
-                        </span>
-                    </button>
-                </div>
-
-                <div class="test-example">
-                    <button type="button" class="grid btn">
-                        <span class="grid grid--cross-center grid--gutters-between">
-                            <i class="grid-cell icon-compose"></i>
-                            <b class="grid-cell btn-label">Label</b>
-                        </span>
-                    </button>
-                </div>
-
-                <div class="test-example">
-                    <button type="button" class="grid btn">
-                        <span class="grid grid--cross-center grid--gutters-between">
-                            <b class="grid-cell btn-label">Label</b>
-                            <i class="grid-cell icon-compose"></i>
-                        </span>
-                    </button>
-                </div>
-
-
-                <h3>Buttons in a Grid Context</h3>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <button type="button" class="grid btn">
-                            <span class="grid grid--cross-center grid--gutters-between">
-                                <b class="grid-cell btn-label">Label</b>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <button type="button" class="grid btn">
-                            <span class="grid grid--cross-start grid--gutters-between">
-                                <i class="grid-cell g--fit icon-compose"></i>
-                                <b class="grid-cell btn-label">Label</b>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <button type="button" class="grid btn">
-                            <span class="grid grid--cross-center grid--gutters-between">
-                                <b class="grid-cell btn-label">Label</b>
-                                <i class="grid-cell g--fit icon-compose"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-
-                <h3>Fitted Buttons in a Grid Context</h3>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <button type="button" class="grid g--fit btn">
-                            <span class="grid grid--cross-center grid--gutters-between">
-                                <b class="grid-cell g--fit btn-label">Label</b>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <button type="button" class="grid g--fit btn">
-                            <span class="grid grid--cross-center grid--gutters-between">
-                                <i class="grid-cell icon-compose"></i>
-                                <b class="grid-cell btn-label">Label</b>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="test-example">
-                    <div class="grid">
-                        <button type="button" class="grid g--fit btn">
-                            <span class="grid grid--cross-center grid--gutters-between">
-                                <b class="grid-cell btn-label">Label</b>
-                                <i class="grid-cell icon-compose"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
         </article>
 
         <script type="text/javascript">
@@ -1659,4 +1481,4 @@
             }
         </script>
     </body>
-</html>
+	</html>
