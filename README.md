@@ -2,6 +2,8 @@
 
 A powerful, versatile CSS3 flexible box (Flexbox) grid system for building great HTML5 user interface components and web applications.
 
+For a visual introduction, please refer to: [documentation](#documentation).
+
 ##Basic syntax/structure
 The grid system is based on the following HTML structure:
 
