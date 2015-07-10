@@ -58,10 +58,9 @@ Each `grid` element is a self-contained entity, which can be modified independen
 - Google Chrome
 - Apple Safari (including Mobile Safari)
 - Mozilla Firefox
-- Microsoft Internet Explorer 10* & 11 (IE10/IE11)
 - Microsoft Edge (Project Spartan)
-
-(* IE10 has an issue with scrollable grid-cell elements).
+- Microsoft Internet Explorer 11/IE11
+- Microsoft Internet Explorer 10/IE10 (with limited support for scrollable grid-cell elements)
 
 ##Getting started
 To get started you can grab a HTML5 boilerplate from the "boilerplates" folder and either the compiled CSS-files from the "compiled" folder, or use the un/preprocessed LESS files located in the "less" folder. 
