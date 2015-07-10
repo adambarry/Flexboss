@@ -48,8 +48,8 @@ html {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.grid--equals:not(.grid--y) > .grid,
-.grid--equals:not(.grid--y) > .grid-cell {
+.grid--even:not(.grid--y) > .grid,
+.grid--even:not(.grid--y) > .grid-cell {
   -webkit-flex: 1 1 0px !important;
   flex: 1 1 0px !important;
 }
