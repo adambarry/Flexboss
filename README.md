@@ -59,7 +59,7 @@ Each `grid` element is a self-contained entity, which can be modified independen
 - Safari (including Mobile Safari)
 - Firefox
 - Internet Explorer 10* & 11 (IE10/IE11)
-- Microsoft Edge
+- Microsoft Edge (Project Spartan)
 
 (* IE10 has an issue with scrollable grid-cell elements).
 
