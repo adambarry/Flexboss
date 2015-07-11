@@ -59,8 +59,8 @@
             <ul>
                 <li><code>grid</code>: A grid element, i.e. a <em>flex container</em>. The grid element is only intended to be used as a wrapper for <code>grid-cell</code> elements (see below) and should not contain any actual content. In nested grids <code>grid</code> elements behave as <code>grid-cell</code> and <code>grid</code> elements alike.</li>
                 <li><code>grid-cell</code>: A grid cell element, i.e. a <em>flex item</em>. The cells are the elements that contain actual content.</li>
-                <li><code>grid--</code>: An optional modifier/utility class exclusively for <code>grid</code> elements.</li>
-                <li><code>g--</code>: An optional modifier/utility class for both <code>grid</code> and <code>grid-cell</code> elements.</li>
+                <li><code>grid--</code>: An optional modifier/utility class exclusively for <code>grid</code> elements, which determines the general behavior of the grid's child <code>grid-cell</code> elements.</li>
+                <li><code>g--</code>: An optional modifier/utility class for both <code>grid</code> and <code>grid-cell</code> elements, which enables modification of the individual/specific element, e.g. overriding behavior specified by a parent <code>grid--</code> modifier.</li>
             </ul>
 
             <div class="test-callout test-callout--info">
