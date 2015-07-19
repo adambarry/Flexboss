@@ -133,11 +133,9 @@
             .icon-cancel-circle:before {
                 content: "\e600";
             }
-
-
         </style>
     </head>
-    <body class="grid grid--SPA grid--y">
+    <body class="test">
 
         <script>
 
@@ -163,57 +161,65 @@
 
         </script>
 
+        <!-- Wrapper: Start-->
+        <div class="grid">
 
-        <div class="Modal grid grid--y grid--cross-center u-padding-l" >
-            <div class="Modal-container grid workbench-view workbench-view--bunit">
-                <div class="Modal-window grid grid--y">
-                    <div class="Modal-header grid g--fit grid--gutters">
-                        <div class="Modal-heading grid">
-                            <div class="grid grid--cross-center">
-                                <div class="grid">
-                                    <b class="grid-cell t-ellipsis">Heading (with support for multiple lines)</b>
+            <div class="Modal grid grid--y grid--cross-center u-padding-l">
+                <div class="Modal-container grid workbench-view workbench-view--bunit">
+                    <div class="Modal-window grid grid--y">
+                        <div class="Modal-header grid g--fit grid--gutters">
+                            <div class="Modal-heading grid">
+                                <div class="grid grid--cross-center">
+                                    <div class="grid">
+                                        <b class="grid-cell t-ellipsis">Heading (with support for multiple lines)</b>
+                                    </div>
                                 </div>
                             </div>
+
+                            <button type="button" class="Modal-close btn btn--icon grid g--fit g--cross-center">
+                                <i class="icon-cancel-circle grid-cell"></i>
+                            </button>
                         </div>
 
-                        <button type="button" class="Modal-close btn btn--icon grid g--fit g--cross-center">
-                            <i class="icon-cancel-circle grid-cell"></i>
-                        </button>
-                    </div>
+                        <div class="Modal-body grid grid--y g--scroll">
+                            <div class="grid grid--y">
+                                <div class="Modal-content grid grid--y g--fit">
+                                    <div class="grid grid--y">
+                                        <div class="u-padding-l">
+                                            <h2>Flexboss Modal</h2>
+                                            <p>This page demonstrates a Flexboss based modal approach which enables the modal to:</p>
+                                            <ul>
+                                                <li>Horizontally centered.</li>
+                                                <li>Self-expand according to its content.</li>
+                                                <li>Shrinks horizontally upon limited horizontal space.</li>
+                                                <li>Scroll when content exceeds the (vertical) viewport.</li>
+                                                <li>Have a fixed header which is always displayed, even though the content exceeds the viewport.</li>
+                                            </ul>
 
-                    <div class="Modal-body grid grid--y g--scroll">
-                        <div class="grid grid--y">
-                            <div class="Modal-content grid grid--y g--fit">
-                                <div class="grid grid--y">
-                                    <div class="u-padding-l">
-                                        <h2>Flexboss Modal</h2>
-                                        <p>This page demonstrates a Flexboss based modal approach which enables the modal to:</p>
-                                        <ul>
-                                            <li>Horizontally centered.</li>
-                                            <li>Self-expand according to its content.</li>
-                                            <li>Shrinks horizontally upon limited horizontal space.</li>
-                                            <li>Scroll when content exceeds the (vertical) viewport.</li>
-                                            <li>Have a fixed header which is always displayed, even though the content exceeds the viewport.</li>
-                                        </ul>
+                                            <div class="test-callout test-callout--info">
+                                                <h4>Inlined styles</h4>
+                                                <p>The CSS styles for the modal have been inlined in the HTML code.</p>
+                                            </div>
 
-                                        <div class="test-callout test-callout--info">
-                                            <h4>Inlined styles</h4>
-                                            <p>The CSS styles for the modal have been inlined in the HTML code.</p>
+                                            <div class="test-callout test-callout--interface">
+                                                <h4>Required wrapper class</h4>
+                                                <p>The <code>Modal</code> element must be contained in a <code>.grid</code> element in order for modal width specifications to work. The wrapper in this case is most likely the <code>body</code> element.</p>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-actions grid g--fit grid--gutters-between grid--main-end grid--wrap u-padding-l">
-                                        <button type="submit" class="btn btn--primary grid-cell g--fit">
-                                            <span class="grid grid--cross-center">
-                                                <b class="btn-label">Button</b>
-                                            </span>
-                                        </button>
+                                        <div class="form-actions grid g--fit grid--gutters-between grid--main-end grid--wrap u-padding-l">
+                                            <button type="submit" class="btn btn--primary grid-cell g--fit">
+                                                <span class="grid grid--cross-center">
+                                                    <b class="btn-label">Button</b>
+                                                </span>
+                                            </button>
 
-                                        <button type="submit" class="btn btn--primary grid-cell g--fit">
-                                            <span class="grid grid--cross-center">
-                                                <b class="btn-label">2nd button</b>
-                                            </span>
-                                        </button>
+                                            <button type="submit" class="btn btn--primary grid-cell g--fit">
+                                                <span class="grid grid--cross-center">
+                                                    <b class="btn-label">2nd button</b>
+                                                </span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -221,6 +227,8 @@
                     </div>
                 </div>
             </div>
+
+        <!-- Wrapper: End -->
         </div>
 
         <script type="text/javascript">
