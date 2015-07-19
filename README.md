@@ -76,7 +76,7 @@ You can also use the Bower package manager (http://bower.io/) to install Flexbos
 
 When installed you will need to complete the following steps:
 
-1. Define the `@grid-cell-spacing` variable, e.g. `@grid-cell-spacing: 8px`, which defines the total distance between `grid-cell` elements when gutters are applied.
+1. Define the `@grid-cell-spacing` variable, e.g. `@grid-cell-spacing: 8px`, which defines the total distance between `grid-cell` elements when gutters are applied (currently specified in the `/less/grid-vars.less` file).
 2. Reference the grid LESS files in a LESS-manifest (like the less/grid.less manifest file), i.e.
 
 ```css
