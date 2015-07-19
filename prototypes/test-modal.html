@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Flexboss Modal Test Page</title>
+        <meta name="description" content="Flexboss Modal Test Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if IE)><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif[-->
+        <link rel="stylesheet" type="text/css" href="../compiled/css/grid.css" />
+        <link rel="stylesheet" href="../test/test-grid.css" />
+        <link rel="stylesheet" href="../test/test.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+
+        <!-- SyntaxHighlighter -->
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.css" />
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shAutoloader.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+
+        <style type="text/css">
+            .Modal {
+                background-color: rgba(0,0,0,0.5);
+                position: absolute !important;
+                top: 0; right: 0; bottom: 0; left: 0; /* stretch element to fill the entire viewport */
+                display: block;
+                z-index: 10000;
+                cursor: pointer;
+            }
+
+            .Modal-container{
+                width: auto;
+                max-height: 100%;
+                overflow: auto;
+                position: absolute;
+                z-index: 1;
+                color: inherit;
+                cursor: default;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .Modal > .Modal-container:not(:last-child) {
+                display: none !important; /* only display one (the last) modal container at a time, enabling stacked modals */
+            }
+
+            .Modal-window {
+                width: 465px;
+                max-width: 465px !important; /* for Safari */
+                overflow: auto;
+                position: relative;
+                background-color: transparent;
+                color: inherit;
+            }
+
+            .Modal-header{
+                background-color: #26343f;
+                color: white;
+            }
+
+            .Modal-close {
+                color: black;
+            }
+
+            .Modal-body {
+                cursor: pointer;
+            }
+
+            .Modal-content {
+                background-color: white;
+                cursor: default;
+            }
+
+            .Modal-content .form-actions {
+                margin-top: 15px;
+                border-top: 1px solid #e0e0e0;
+            }
+
+
+            /* Utility classes */
+
+            .u-padding-l {
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <script>
+
+            (function disableViewportScroll() {
+                var initialWindowSize,
+                    newWindowSize,
+                    sizeDelta;
+
+                // Disable page scroll
+                initialWindowSize = document.documentElement.scrollWidth;
+
+                //Remove the scrollbars on supported browsers (i.e. not Internet Explorer 6)
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+                //Calculate the difference between the window-size before and after "overflow: hidden"
+                newWindowSize = document.documentElement.scrollWidth;
+                sizeDelta = initialWindowSize - newWindowSize;
+
+                //Move the entire page left to compensate for missing scroll-bars to make sure that the content stays in the same place
+                sizeDelta = (sizeDelta === 0 ? sizeDelta : sizeDelta + "px");
+                document.getElementsByTagName("body")[0].style.marginLeft = sizeDelta;
+            }());
+
+        </script>
+
+
+        <div class="Modal grid grid--y grid--cross-center grid--gutters-edge">
+            <div class="Modal-container grid grid--main-center">
+                <div class="Modal-window grid grid--y">
+                    <div class="Modal-header grid g--fit grid--gutters">
+                        <div class="grid-cell">Heading (with support for multiple lines)</div>
+
+                        <button type="button" class="Modal-close btn btn--icon grid g--fit g--cross-center">
+                            <b class="btn-label">Close</b>
+                        </button>
+                    </div>
+
+                    <div class="Modal-body grid grid--y g--scroll">
+                        <div class="Modal-content grid-cell g--fit">
+                            <div class="grid grid--y">
+                                <div class="u-padding-l">
+                                    <h2>Flexboss Modal</h2>
+                                    <p>This page demonstrates a Flexboss based modal approach which enables the modal to:</p>
+                                    <ul>
+                                        <li>Horizontally centered.</li>
+                                        <li>Self-expand according to its content.</li>
+                                        <li>Shrinks horizontally upon limited horizontal space.</li>
+                                        <li>Scroll when content exceeds the (vertical) viewport.</li>
+                                        <li>Have a fixed header which is always displayed, even though the content exceeds the viewport.</li>
+                                    </ul>
+
+                                    <div class="test-callout test-callout--info">
+                                        <h4>Inlined styles</h4>
+                                        <p>The CSS styles for the modal have been inlined in the HTML code.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions grid g--fit grid--gutters-between grid--main-end grid--wrap u-padding-l">
+                                    <button type="submit" class="btn btn--primary grid-cell g--fit">
+                                        <span class="grid grid--cross-center">
+                                            <b class="btn-label">Button</b>
+                                        </span>
+                                    </button>
+
+                                    <button type="submit" class="btn btn--primary grid-cell g--fit">
+                                        <span class="grid grid--cross-center">
+                                            <b class="btn-label">2nd button</b>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            if (SyntaxHighlighter) {
+                SyntaxHighlighter.all();
+            }
+        </script>
+    </body>
+</html>
