@@ -447,16 +447,14 @@ body.grid--SPA {
   overflow-x: auto;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .g--scroll-x {
-  overflow-x: auto;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
 }
 .g--scroll-y {
   overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 }
 /*******************************************************************************
 GRID EXTENSIONS

@@ -875,6 +875,11 @@ html {
     //
     //      IE seems to need this property.
     //      2014-08-17: IE doesn't need this property after all
+    //
+    //  2:  Rendering and scrolling performance are substantially increased by adding
+    //      hardware acceleration. Limitation and solution was discovered when a
+    //      scroll element was used with a massive 6 column table with approx. 6000
+    //      rows.
     ////////////////////////////////////////////////////////////////////////////////
 
     &scroll {
@@ -883,16 +888,15 @@ html {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
 
+        -webkit-transform: translateZ(0); //2
+        transform: translateZ(0); //2
+
         &-x {
-            overflow-x: auto;
             overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
         }
 
         &-y {
             overflow-x: hidden;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
         }
     }
 }
