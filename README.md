@@ -36,7 +36,7 @@ For a full list of interfaces for the `grid--` and `g--` modifier classes, pleas
 - Grid-cell scrolling.
 - Grid-cell ordering.
 
-Each `grid` element is a self-contained entity, which can be modified independently of its ancestors, which means e.g. that if a base grid is horizontally oriented (which is the default behavior for a grid) a child grid can be laid out vertically (using the `grid--y` modifier class) i.e.:
+Each `grid` element is a self-contained entity, which can be modified independently of its ancestors, e.g. if a grid is horizontally oriented (default behavior) a child grid can be laid out vertically (using the `grid--y` modifier class) i.e.:
 	
 ```html
 <div class="grid">
