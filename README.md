@@ -1,10 +1,10 @@
-#Flexboss
+# Flexboss
 
 A powerful, versatile CSS3 flexible box (Flexbox) grid system for building great HTML5 user interface components and web applications.
 
 For a visual introduction, please refer to: [documentation](#documentation).
 
-##Basic syntax/structure
+## Basic syntax/structure
 The grid system is based on the following HTML structure:
 
 ```html
@@ -56,7 +56,7 @@ Each `grid` element is a self-contained entity, which can be modified independen
 </div>
 ```
 
-##Browser support
+## Browser support
 - Google Chrome
 - Apple Safari (including Mobile Safari)
 - Mozilla Firefox
@@ -64,12 +64,12 @@ Each `grid` element is a self-contained entity, which can be modified independen
 - Microsoft Internet Explorer 11/IE11
 - Microsoft Internet Explorer 10/IE10 (with limited support for scrollable grid-cell elements)
 
-##Getting started
+## Getting started
 To get started you can grab a HTML5 boilerplate from the "boilerplates" folder and either the compiled CSS-files from the "compiled" folder, or use the un/preprocessed LESS files located in the "less" folder. 
 
 Refer to the [documentation](#documentation) (see below) to get an overview of the full feature set and how to use it.
 
-###Install with Bower
+### Install with Bower
 You can also use the Bower package manager (http://bower.io/) to install Flexboss as part of your web application. To do so install Bower and execute the following command:
 
 `bower install flexboss`
@@ -84,10 +84,10 @@ When installed you will need to complete the following steps:
 @import '/bower_components/flexboss/less/grid-ext.less';
 ```
 
-##Documentation
+## Documentation
 http://adambarry.github.io/Flexboss/
 
-##(Un)licence
+## (Un)licence
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
