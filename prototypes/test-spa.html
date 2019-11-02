@@ -1,152 +1,208 @@
-
 <!doctype html>
 <html dir="ltr">
-    <head>
-        <title>Flexboss Grid SPA Prototype</title>
-        <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-        <meta name="description" content="Flexbox Grid SPA Prototype">
 
-        <!-- iOS home screen app settings -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <meta name="apple-mobile-web-app-title" content="Flexbox Grid SPA Prototype" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="format-detection" content="telephone = no" />
+<head>
+    <title>Flexboss Grid SPA Prototype</title>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="description" content="Flexbox Grid SPA Prototype">
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
-        <link rel="stylesheet" href="../compiled/css/grid.css" />
+    <!-- iOS home screen app settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-title" content="Flexbox Grid SPA Prototype" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone = no" />
 
-        <style type="text/css">
-            html {
-                font-size: 62.5%;
-            }
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="../compiled/css/grid.css" />
+    <link rel="stylesheet" href="../test/test-grid.css" />
 
-            body {
-                font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-                font-size: 14px;
-                font-size: 1.4rem;
-            }
+    <style type="text/css">
+        html {
+            font-size: 62.5%;
+        }
+        
+        body {
+            font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+            font-size: 14px;
+            font-size: 1.4rem;
+        }
+        
+        .btn-label {
+            font-weight: normal;
+        }
+    </style>
+</head>
 
-            .border--top {
-                border-top: 1px solid #c0c0c0;
-            }
+<body class="grid grid--y grid--SPA grid--y test--grids" dir="ltr">
+    <!--
+        Disable the "test--grids" class in the <body> element to remove the grid borders.
+    -->
 
-            .border--right {
-                border-right: 1px solid #c0c0c0;
-            }
-
-            .border--bottom {
-                border-bottom: 1px solid #c0c0c0;
-            }
-
-            .border--left {
-                border-left: 1px solid #c0c0c0;
-            }
-
-            .pane--padding-right {
-                padding-right: 8px;
-            }
-
-            .pane--padding-left {
-                padding-left: 8px;
-            }
-
-            .btn-label {
-                font-weight: normal;
-            }
-
-        </style>
-    </head>
-    <body class="grid grid--SPA grid--y" dir="ltr">
-        <!--[if lt IE 10]>
+    <!--[if lt IE 10]>
             <p class="browsehappy">You are using a browser that doesn't support some of the technologies used by this application. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="grid grid--y grid--gutters">
-            <div class="grid g--fit">
-                <div class="grid-cell g--fit"><img src="http://placehold.it/200x50" alt="" /></div>
+    <header class="grid g--fit grid--gutters">
+        <div class="grid-cell g--fit"><img src="http://placehold.it/200x50" alt="" /></div>
 
-                <div class="grid grid--main-end grid--gutters-between grid--wrap">
-                    <button type="button" class="grid-cell g--fit g--cross-center btn">
-                        <b class="btn-label">Settings</b>
-                    </button>
+        <div class="grid grid--main-end grid--gutters-between grid--wrap">
+            <button type="button" class="grid-cell g--fit g--cross-center btn" onclick="toggleTestGrids()">
+                <b class="btn-label">Toggle test grid</b>
+            </button>
 
-                    <button type="button" class="grid-cell g--fit g--cross-center btn">
-                        <b class="btn-label">Sign out</b>
-                    </button>
-                </div>
+            <div class="grid grid--main-end grid--gutters-between">
+                <button type="button" class="grid-cell g--fit g--cross-center btn">
+                    <b class="btn-label">Dummy</b>
+                </button>
+
+                <button type="button" class="grid-cell g--fit g--cross-center btn">
+                    <b class="btn-label">Dummy</b>
+                </button>
             </div>
+        </div>
+    </header>
 
-            <article class="grid grid--y grid--gutters-between">
-                <div class="grid grid--even g--by3">
-                    <div class="grid g--1of3 g--gutter-right border--top border--right border--bottom">
-                        <div class="grid-cell g--scroll">
-                            <div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
+    <article class="grid grid--y grid--gutters-between g--scroll">
+        <!--
+            This section auto-sizes according to the size of the browser-window.
 
-                                <p>Vivamus faucibus nec risus ac aliquet. Morbi eu ligula ac diam bibendum malesuada. Sed quis urna in lectus vulputate condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam non orci eu urna condimentum viverra tincidunt at leo. In elementum leo est. Donec id ornare tellus, ac consequat justo. Proin non leo non lacus laoreet volutpat. Nulla eget erat risus. Fusce id vehicula libero, vitae vestibulum enim. Pellentesque at tempor neque. Ut lobortis interdum velit, in porta nulla faucibus a. Ut id risus convallis, auctor odio id, posuere velit.</p>
+            IMPORTANT:  The "g--scroll" class in the above element needs to be present in order
+                        for the subordinate elements to adapt their individual sizes correctly.
+        -->
 
-                                <p>Vivamus sit amet massa ante. Cras metus ligula, ullamcorper pellentesque neque sed, dapibus fringilla purus. Donec dignissim venenatis convallis. Fusce facilisis nisi nibh, sit amet commodo quam sodales a. Praesent elementum commodo urna, eget fringilla felis vestibulum pellentesque. Quisque fermentum, sem ut rhoncus dictum, nisi quam tincidunt neque, a dapibus justo velit vitae orci. Vivamus pellentesque in ante eu blandit. Vestibulum convallis diam nec erat vestibulum, eu venenatis nisl fringilla. Pellentesque ac nisl aliquet, lobortis mauris non, rutrum sapien. Donec malesuada enim dolor, a facilisis odio mattis dignissim. Donec malesuada interdum tellus eu mattis. Proin tempor lectus ut mollis imperdiet. Ut odio lorem, rhoncus quis iaculis eu, egestas non ante. Nullam sem velit, dictum quis nibh ac, volutpat feugiat urna.</p>
+        <div class="grid grid--even grid--gutters-between g--2of3">
+            <section class="grid g--1of4 g--scroll">
+                <!--
+                    This section has scrollable content (if necessary)
+                -->
 
-                                <p>Maecenas id felis dictum, elementum magna ac, ullamcorper nulla. Maecenas tempor, odio posuere viverra aliquam, libero magna pellentesque velit, vitae luctus ligula lacus eget lectus. Duis quis augue nec odio aliquet volutpat. In eget erat vitae tellus laoreet convallis nec a metus. Curabitur accumsan lacinia erat, ac pulvinar sem lacinia non. Cras commodo vestibulum neque, sed lobortis elit posuere vitae. Aenean nisi lacus, rutrum vel eleifend at, rhoncus at lacus. Duis id diam sapien. Vestibulum vel tincidunt ligula, sit amet dignissim risus. Curabitur at eros porta, eleifend sapien eu, vulputate nibh.</p>
+                <div class="grid-cell">
+                    <div>
+                        <h2>This content scrolls if necessary</h2>
 
-                                <p>Proin adipiscing quam mauris, ornare condimentum ipsum tincidunt at. Donec feugiat nulla a mauris porta, quis convallis velit bibendum. Cras nec odio a ligula rhoncus sollicitudin et et odio. Pellentesque eget tellus et felis dapibus vulputate sed vitae dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed hendrerit ipsum. Aenean eleifend mauris risus, eu condimentum nisi auctor suscipit. Aliquam erat volutpat.</p>
-                            </div>
-                        </div>
-                    </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie
+                            nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor
+                            turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
 
-                    <div class="grid border--top border--bottom border--left pane--padding-left">
-                        <div class="grid-cell g--scroll">
-                            <div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
+                        <p>Vivamus faucibus nec risus ac aliquet. Morbi eu ligula ac diam bibendum malesuada. Sed quis urna in lectus vulputate condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam non orci eu urna condimentum
+                            viverra tincidunt at leo. In elementum leo est. Donec id ornare tellus, ac consequat justo. Proin non leo non lacus laoreet volutpat. Nulla eget erat risus. Fusce id vehicula libero, vitae vestibulum enim. Pellentesque at tempor
+                            neque. Ut lobortis interdum velit, in porta nulla faucibus a. Ut id risus convallis, auctor odio id, posuere velit.</p>
 
-                                <p>Vivamus faucibus nec risus ac aliquet. Morbi eu ligula ac diam bibendum malesuada. Sed quis urna in lectus vulputate condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam non orci eu urna condimentum viverra tincidunt at leo. In elementum leo est. Donec id ornare tellus, ac consequat justo. Proin non leo non lacus laoreet volutpat. Nulla eget erat risus. Fusce id vehicula libero, vitae vestibulum enim. Pellentesque at tempor neque. Ut lobortis interdum velit, in porta nulla faucibus a. Ut id risus convallis, auctor odio id, posuere velit.</p>
+                        <p>Vivamus sit amet massa ante. Cras metus ligula, ullamcorper pellentesque neque sed, dapibus fringilla purus. Donec dignissim venenatis convallis. Fusce facilisis nisi nibh, sit amet commodo quam sodales a. Praesent elementum commodo
+                            urna, eget fringilla felis vestibulum pellentesque. Quisque fermentum, sem ut rhoncus dictum, nisi quam tincidunt neque, a dapibus justo velit vitae orci. Vivamus pellentesque in ante eu blandit. Vestibulum convallis diam nec
+                            erat vestibulum, eu venenatis nisl fringilla. Pellentesque ac nisl aliquet, lobortis mauris non, rutrum sapien. Donec malesuada enim dolor, a facilisis odio mattis dignissim. Donec malesuada interdum tellus eu mattis. Proin
+                            tempor lectus ut mollis imperdiet. Ut odio lorem, rhoncus quis iaculis eu, egestas non ante. Nullam sem velit, dictum quis nibh ac, volutpat feugiat urna.</p>
 
-                                <p>Vivamus sit amet massa ante. Cras metus ligula, ullamcorper pellentesque neque sed, dapibus fringilla purus. Donec dignissim venenatis convallis. Fusce facilisis nisi nibh, sit amet commodo quam sodales a. Praesent elementum commodo urna, eget fringilla felis vestibulum pellentesque. Quisque fermentum, sem ut rhoncus dictum, nisi quam tincidunt neque, a dapibus justo velit vitae orci. Vivamus pellentesque in ante eu blandit. Vestibulum convallis diam nec erat vestibulum, eu venenatis nisl fringilla. Pellentesque ac nisl aliquet, lobortis mauris non, rutrum sapien. Donec malesuada enim dolor, a facilisis odio mattis dignissim. Donec malesuada interdum tellus eu mattis. Proin tempor lectus ut mollis imperdiet. Ut odio lorem, rhoncus quis iaculis eu, egestas non ante. Nullam sem velit, dictum quis nibh ac, volutpat feugiat urna.</p>
+                        <p>Maecenas id felis dictum, elementum magna ac, ullamcorper nulla. Maecenas tempor, odio posuere viverra aliquam, libero magna pellentesque velit, vitae luctus ligula lacus eget lectus. Duis quis augue nec odio aliquet volutpat.
+                            In eget erat vitae tellus laoreet convallis nec a metus. Curabitur accumsan lacinia erat, ac pulvinar sem lacinia non. Cras commodo vestibulum neque, sed lobortis elit posuere vitae. Aenean nisi lacus, rutrum vel eleifend at,
+                            rhoncus at lacus. Duis id diam sapien. Vestibulum vel tincidunt ligula, sit amet dignissim risus. Curabitur at eros porta, eleifend sapien eu, vulputate nibh.</p>
 
-                                <p>Maecenas id felis dictum, elementum magna ac, ullamcorper nulla. Maecenas tempor, odio posuere viverra aliquam, libero magna pellentesque velit, vitae luctus ligula lacus eget lectus. Duis quis augue nec odio aliquet volutpat. In eget erat vitae tellus laoreet convallis nec a metus. Curabitur accumsan lacinia erat, ac pulvinar sem lacinia non. Cras commodo vestibulum neque, sed lobortis elit posuere vitae. Aenean nisi lacus, rutrum vel eleifend at, rhoncus at lacus. Duis id diam sapien. Vestibulum vel tincidunt ligula, sit amet dignissim risus. Curabitur at eros porta, eleifend sapien eu, vulputate nibh.</p>
-
-                                <p>Proin adipiscing quam mauris, ornare condimentum ipsum tincidunt at. Donec feugiat nulla a mauris porta, quis convallis velit bibendum. Cras nec odio a ligula rhoncus sollicitudin et et odio. Pellentesque eget tellus et felis dapibus vulputate sed vitae dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed hendrerit ipsum. Aenean eleifend mauris risus, eu condimentum nisi auctor suscipit. Aliquam erat volutpat.</p>
-                            </div>
-                        </div>
+                        <p>Proin adipiscing quam mauris, ornare condimentum ipsum tincidunt at. Donec feugiat nulla a mauris porta, quis convallis velit bibendum. Cras nec odio a ligula rhoncus sollicitudin et et odio. Pellentesque eget tellus et felis dapibus
+                            vulputate sed vitae dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed hendrerit ipsum. Aenean eleifend mauris risus, eu condimentum nisi auctor suscipit. Aliquam erat volutpat.</p>
                     </div>
                 </div>
+            </section>
 
-                <div class="grid border--top border--bottom">
-                    <div class="grid-cell g--scroll">
+            <section class="grid grid--y">
+                <div class="grid g--fit grid--gutters grid--wrap">
+                    <button type="button" class="grid-cell g--fit g--cross-center btn">
+                        <b class="btn-label">Dummy</b>
+                    </button>
+
+                    <button type="button" class="grid-cell g--fit g--cross-center btn">
+                        <b class="btn-label">Dummy</b>
+                    </button>
+                </div>
+
+                <div class="grid g--scroll">
+                    <!--
+                        This section has scrollable content (if necessary)
+                    -->
+
+                    <div class="grid-cell">
                         <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
+                            <h2>This content scrolls if necessary</h2>
 
-                            <p>Vivamus faucibus nec risus ac aliquet. Morbi eu ligula ac diam bibendum malesuada. Sed quis urna in lectus vulputate condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam non orci eu urna condimentum viverra tincidunt at leo. In elementum leo est. Donec id ornare tellus, ac consequat justo. Proin non leo non lacus laoreet volutpat. Nulla eget erat risus. Fusce id vehicula libero, vitae vestibulum enim. Pellentesque at tempor neque. Ut lobortis interdum velit, in porta nulla faucibus a. Ut id risus convallis, auctor odio id, posuere velit.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque,
+                                molestie nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis
+                                tortor turpis sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.
+                            </p>
 
-                            <p>Vivamus sit amet massa ante. Cras metus ligula, ullamcorper pellentesque neque sed, dapibus fringilla purus. Donec dignissim venenatis convallis. Fusce facilisis nisi nibh, sit amet commodo quam sodales a. Praesent elementum commodo urna, eget fringilla felis vestibulum pellentesque. Quisque fermentum, sem ut rhoncus dictum, nisi quam tincidunt neque, a dapibus justo velit vitae orci. Vivamus pellentesque in ante eu blandit. Vestibulum convallis diam nec erat vestibulum, eu venenatis nisl fringilla. Pellentesque ac nisl aliquet, lobortis mauris non, rutrum sapien. Donec malesuada enim dolor, a facilisis odio mattis dignissim. Donec malesuada interdum tellus eu mattis. Proin tempor lectus ut mollis imperdiet. Ut odio lorem, rhoncus quis iaculis eu, egestas non ante. Nullam sem velit, dictum quis nibh ac, volutpat feugiat urna.</p>
+                            <p>Vivamus faucibus nec risus ac aliquet. Morbi eu ligula ac diam bibendum malesuada. Sed quis urna in lectus vulputate condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam non orci eu urna condimentum
+                                viverra tincidunt at leo. In elementum leo est. Donec id ornare tellus, ac consequat justo. Proin non leo non lacus laoreet volutpat. Nulla eget erat risus. Fusce id vehicula libero, vitae vestibulum enim. Pellentesque
+                                at tempor neque. Ut lobortis interdum velit, in porta nulla faucibus a. Ut id risus convallis, auctor odio id, posuere velit.</p>
 
-                            <p>Maecenas id felis dictum, elementum magna ac, ullamcorper nulla. Maecenas tempor, odio posuere viverra aliquam, libero magna pellentesque velit, vitae luctus ligula lacus eget lectus. Duis quis augue nec odio aliquet volutpat. In eget erat vitae tellus laoreet convallis nec a metus. Curabitur accumsan lacinia erat, ac pulvinar sem lacinia non. Cras commodo vestibulum neque, sed lobortis elit posuere vitae. Aenean nisi lacus, rutrum vel eleifend at, rhoncus at lacus. Duis id diam sapien. Vestibulum vel tincidunt ligula, sit amet dignissim risus. Curabitur at eros porta, eleifend sapien eu, vulputate nibh.</p>
+                            <p>Vivamus sit amet massa ante. Cras metus ligula, ullamcorper pellentesque neque sed, dapibus fringilla purus. Donec dignissim venenatis convallis. Fusce facilisis nisi nibh, sit amet commodo quam sodales a. Praesent elementum
+                                commodo urna, eget fringilla felis vestibulum pellentesque. Quisque fermentum, sem ut rhoncus dictum, nisi quam tincidunt neque, a dapibus justo velit vitae orci. Vivamus pellentesque in ante eu blandit. Vestibulum convallis
+                                diam nec erat vestibulum, eu venenatis nisl fringilla. Pellentesque ac nisl aliquet, lobortis mauris non, rutrum sapien. Donec malesuada enim dolor, a facilisis odio mattis dignissim. Donec malesuada interdum tellus eu
+                                mattis. Proin tempor lectus ut mollis imperdiet. Ut odio lorem, rhoncus quis iaculis eu, egestas non ante. Nullam sem velit, dictum quis nibh ac, volutpat feugiat urna.</p>
 
-                            <p>Proin adipiscing quam mauris, ornare condimentum ipsum tincidunt at. Donec feugiat nulla a mauris porta, quis convallis velit bibendum. Cras nec odio a ligula rhoncus sollicitudin et et odio. Pellentesque eget tellus et felis dapibus vulputate sed vitae dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed hendrerit ipsum. Aenean eleifend mauris risus, eu condimentum nisi auctor suscipit. Aliquam erat volutpat.</p>
+                            <p>Maecenas id felis dictum, elementum magna ac, ullamcorper nulla. Maecenas tempor, odio posuere viverra aliquam, libero magna pellentesque velit, vitae luctus ligula lacus eget lectus. Duis quis augue nec odio aliquet volutpat.
+                                In eget erat vitae tellus laoreet convallis nec a metus. Curabitur accumsan lacinia erat, ac pulvinar sem lacinia non. Cras commodo vestibulum neque, sed lobortis elit posuere vitae. Aenean nisi lacus, rutrum vel eleifend
+                                at, rhoncus at lacus. Duis id diam sapien. Vestibulum vel tincidunt ligula, sit amet dignissim risus. Curabitur at eros porta, eleifend sapien eu, vulputate nibh.</p>
+
+                            <p>Proin adipiscing quam mauris, ornare condimentum ipsum tincidunt at. Donec feugiat nulla a mauris porta, quis convallis velit bibendum. Cras nec odio a ligula rhoncus sollicitudin et et odio. Pellentesque eget tellus et felis
+                                dapibus vulputate sed vitae dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed hendrerit ipsum. Aenean eleifend mauris risus, eu condimentum nisi auctor suscipit. Aliquam erat volutpat.</p>
                         </div>
                     </div>
                 </div>
-            </article>
-
-            <div class="grid g--fit">Footer</div>
+            </section>
         </div>
 
-        <script type="text/javascript">
-            /*
-(function preventElasticScrolling_iOS() {
-                document.addEventListener(
-                    'touchmove',
+        <section class="grid g--scroll">
+            <!--
+                This section has scrollable content (if necessary)
+            -->
 
-                    function(e) {
-                        e.preventDefault();
-                    },
-                    false
-                );
-            }());
-*/
-        </script>
-        <script src="//localhost:35729/livereload.js"></script>
-    </body>
+            <div class="grid-cell">
+                <div>
+                    <h2>This content scrolls if necessary</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam elementum turpis, non fringilla lorem ullamcorper et. Cras dapibus vel ante a viverra. Aliquam in metus vitae lacus lacinia pharetra. Curabitur elit neque, molestie
+                        nec dictum id, ultricies quis purus. Nullam ac aliquam lacus. Nam rhoncus tortor eu mi ultrices interdum. Donec in varius nisl. Phasellus tincidunt, mauris vitae feugiat rhoncus, urna nibh rutrum lacus, eget sagittis tortor turpis
+                        sed justo. Donec nibh libero, consectetur ut hendrerit id, gravida vel felis. Nam faucibus eget augue in porta. Duis aliquam orci erat, id lacinia leo pharetra eget.</p>
+
+                    <p>Vivamus faucibus nec risus ac aliquet. Morbi eu ligula ac diam bibendum malesuada. Sed quis urna in lectus vulputate condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam non orci eu urna condimentum viverra
+                        tincidunt at leo. In elementum leo est. Donec id ornare tellus, ac consequat justo. Proin non leo non lacus laoreet volutpat. Nulla eget erat risus. Fusce id vehicula libero, vitae vestibulum enim. Pellentesque at tempor neque.
+                        Ut lobortis interdum velit, in porta nulla faucibus a. Ut id risus convallis, auctor odio id, posuere velit.</p>
+
+                    <p>Vivamus sit amet massa ante. Cras metus ligula, ullamcorper pellentesque neque sed, dapibus fringilla purus. Donec dignissim venenatis convallis. Fusce facilisis nisi nibh, sit amet commodo quam sodales a. Praesent elementum commodo
+                        urna, eget fringilla felis vestibulum pellentesque. Quisque fermentum, sem ut rhoncus dictum, nisi quam tincidunt neque, a dapibus justo velit vitae orci. Vivamus pellentesque in ante eu blandit. Vestibulum convallis diam nec erat
+                        vestibulum, eu venenatis nisl fringilla. Pellentesque ac nisl aliquet, lobortis mauris non, rutrum sapien. Donec malesuada enim dolor, a facilisis odio mattis dignissim. Donec malesuada interdum tellus eu mattis. Proin tempor lectus
+                        ut mollis imperdiet. Ut odio lorem, rhoncus quis iaculis eu, egestas non ante. Nullam sem velit, dictum quis nibh ac, volutpat feugiat urna.</p>
+
+                    <p>Maecenas id felis dictum, elementum magna ac, ullamcorper nulla. Maecenas tempor, odio posuere viverra aliquam, libero magna pellentesque velit, vitae luctus ligula lacus eget lectus. Duis quis augue nec odio aliquet volutpat. In eget
+                        erat vitae tellus laoreet convallis nec a metus. Curabitur accumsan lacinia erat, ac pulvinar sem lacinia non. Cras commodo vestibulum neque, sed lobortis elit posuere vitae. Aenean nisi lacus, rutrum vel eleifend at, rhoncus at
+                        lacus. Duis id diam sapien. Vestibulum vel tincidunt ligula, sit amet dignissim risus. Curabitur at eros porta, eleifend sapien eu, vulputate nibh.</p>
+
+                    <p>Proin adipiscing quam mauris, ornare condimentum ipsum tincidunt at. Donec feugiat nulla a mauris porta, quis convallis velit bibendum. Cras nec odio a ligula rhoncus sollicitudin et et odio. Pellentesque eget tellus et felis dapibus
+                        vulputate sed vitae dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed hendrerit ipsum. Aenean eleifend mauris risus, eu condimentum nisi auctor suscipit. Aliquam erat volutpat.</p>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <footer class="grid g--fit">Footer</footer>
+
+    <script type="text/javascript">
+        (function preventElasticScrolling_iOS() {
+            document.addEventListener(
+                'touchmove',
+
+                function(e) {
+                    e.preventDefault();
+                },
+                false
+            );
+        }());
+
+        function toggleTestGrids() {
+            //Toggle the test-grid
+            document.body.classList.toggle("test--grids");
+        }
+    </script>
+</body>
+
 </html>
