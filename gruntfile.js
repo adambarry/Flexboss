@@ -79,6 +79,11 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
+    // Compile
+    // Compile the LESS/CSS files
+    grund.registerTask('compile', [
+        'less'
+    ]);
 
     // Watch
     // Compile the JavaScript and LESS/CSS files when saving the files and

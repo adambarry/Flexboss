@@ -1,12 +1,17 @@
 {
-    "name": "Cloud-Portal-UI",
-    "version": "0.0.1",
-    "dependencies": {
+    "name": "flexboss",
+    "version": "3.0.0",
+    "description": "X- and Y-axis CSS3 flexible box (Flexbox) grid system",
+    "author": "admbarry@gmail.com",
+    "license": "(Un)licence",
+    "repository": "https://github.com/adambarry/Flexboss",
+    "main": "compiled/grid.css",
+    "devdependencies": {
         "grunt-cli": "latest",
         "grunt-contrib-less": "latest",
         "grunt-contrib-watch": "latest"
     },
     "scripts": {
-        "postinstall": "grunt init"
+        "postinstall": "grunt compile"
     }
 }
