@@ -85,7 +85,7 @@ Once part of your project, you need to reference the compiled CSS-file or raw LE
 - Pure CSS:
     - Reference the CSS-file in the `<head>` section of your HTML, e.g.:
 
-        ```css
+        ```html
         <link rel="stylesheet" href="path/to/css/grid.css" />
         ```
 - LESS:
